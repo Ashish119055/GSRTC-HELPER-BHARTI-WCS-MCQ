@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GSRTC હેલ્પર – બેઝિક કોમ્પ્યુટર MCQ</title>
+<meta name="description" content="GSRTC હેલ્પર ભરતી પરીક્ષા માટે બેઝિક કોમ્પ્યુટર જ્ઞાનના 500 ગુજરાતી MCQ, દરેક પ્રશ્ન સાચા જવાબ અને સમજૂતી સાથે. ક્વિઝ, મોક ટેસ્ટ અને સ્પીડ રાઉન્ડ.">
+<meta name="theme-color" content="#0E9F8E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EAF4F4;--bg2:#DCEDEE;--card:#FFFFFF;--ink:#0F2530;--muted:#587380;--line:#CFE2E5;--soft:#F2F8F8;
+--pri:#0E9F8E;--pri2:#0A7468;--priT:#E0F5F2;--amb:#F5A524;--amb2:#C98105;--ok:#16A34A;--okbg:#E5F7EC;--bad:#E5484D;--badbg:#FDECEC;--term:#0B1A20;--termInk:#7CF5D9;
+--mono:"JetBrains Mono",ui-monospace,Consolas,monospace;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#081217;--bg2:#0C1B21;--card:#10232B;--ink:#E3F3F1;--muted:#8DAEB6;--line:#1E3A44;--soft:#0D1D24;--priT:#0F3532;--okbg:#0E3220;--badbg:#3D1517;--pri:#22C5B0;--pri2:#11907F;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#081217;--bg2:#0C1B21;--card:#10232B;--ink:#E3F3F1;--muted:#8DAEB6;--line:#1E3A44;--soft:#0D1D24;--priT:#0F3532;--okbg:#0E3220;--badbg:#3D1517;--pri:#22C5B0;--pri2:#11907F;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:22px 22px;color:var(--ink);font-family:"Noto Sans Gujarati","Hind Vadodara",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-tap-highlight-color:transparent;overflow-x:hidden;padding-bottom:calc(78px + env(safe-area-inset-bottom,0px))}
+.wrap{max-width:680px;margin:0 auto;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 24px}
+.hide{display:none!important}
+/* ---------- window header ---------- */
+.win{background:var(--term);color:#D7F7EF;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px -12px rgba(8,40,45,.55);border:1px solid rgba(124,245,217,.15)}
+.wbar{display:flex;align-items:center;gap:7px;padding:9px 12px;background:rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.07)}
+.dot{width:11px;height:11px;border-radius:50%}
+.wbar .t{flex:1;text-align:center;font-family:var(--mono);font-size:.72rem;opacity:.7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wbtn{border:0;background:rgba(255,255,255,.1);color:#fff;width:34px;height:30px;border-radius:9px;font-size:.95rem;cursor:pointer}
+.wbody{padding:12px 14px 14px}
+.prompt{font-family:var(--mono);font-size:.82rem;color:var(--termInk);opacity:.9}
+.prompt .cur{display:inline-block;width:8px;height:1em;background:var(--termInk);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+h1{margin:4px 0 2px;font-size:1.32rem;line-height:1.3;font-weight:800;color:#fff}
+.sub{font-size:.82rem;opacity:.75}
+.hgrid{display:grid;grid-template-columns:92px 1fr;gap:12px;margin-top:12px;align-items:center}
+.ring{position:relative;width:92px;height:92px}
+.ring svg{width:92px;height:92px;transform:rotate(-90deg)}
+.ring .bgc{stroke:rgba(255,255,255,.12)}
+.ring .fg{stroke:var(--termInk);transition:stroke-dashoffset .9s cubic-bezier(.3,1.3,.5,1)}
+.ring .v{position:absolute;inset:0;display:grid;place-items:center;text-align:center;line-height:1.1}
+.ring .v b{font-family:var(--mono);font-size:1.25rem;color:#fff}
+.ring .v small{display:block;font-size:.62rem;opacity:.75}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}
+.kpi{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:6px 9px}
+.kpi b{font-family:var(--mono);font-size:1.02rem;color:#fff;display:block;line-height:1.2;font-variant-numeric:tabular-nums}
+.kpi span{font-size:.68rem;opacity:.75}
+.lvl{margin-top:11px;display:flex;align-items:center;gap:9px;font-size:.78rem}
+.lvl .nm{font-weight:700;white-space:nowrap;color:var(--termInk)}
+.lbar{flex:1;height:9px;border-radius:5px;background:rgba(255,255,255,.12);overflow:hidden}
+.lbar i{display:block;height:100%;width:0;background:repeating-linear-gradient(90deg,var(--termInk) 0 8px,#3FD9B8 8px 10px);transition:width .8s}
+.visits{margin-top:9px;font-family:var(--mono);font-size:.72rem;opacity:.7}
+/* ---------- chips / search ---------- */
+.sect-h{display:flex;justify-content:space-between;align-items:baseline;margin:16px 2px 4px}
+.sect-h h2{margin:0;font-size:1.05rem}
+.sect-h span{font-size:.8rem;color:var(--muted)}
+.chips{display:flex;gap:7px;overflow-x:auto;padding:8px 2px 6px;scrollbar-width:none;margin:0 -16px;padding-left:16px;padding-right:16px}
+.chips::-webkit-scrollbar{display:none}
+.chips button{flex:0 0 auto;font:inherit;font-size:.82rem;font-weight:600;padding:6px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;white-space:nowrap}
+.chips button.on{background:var(--pri);border-color:var(--pri2);color:#fff}
+.search{width:100%;font:inherit;padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);margin-top:6px}
+.info{font-size:.85rem;color:var(--muted);margin:8px 2px}
+.info b{color:var(--ink)}
+/* ---------- question card ---------- */
+.qcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 14px 12px;margin-top:12px;box-shadow:0 2px 0 var(--line);animation:up .35s ease}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.qmeta{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.75rem;color:var(--muted)}
+.qno{font-family:var(--mono);font-weight:700;color:var(--pri)}
+.tag{background:var(--priT);color:var(--pri2);border-radius:7px;padding:2px 8px;font-weight:600;max-width:60vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+:root[data-theme="dark"] .tag{color:var(--pri)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tag{color:var(--pri)}}
+.bm{border:0;background:none;font-size:1.05rem;cursor:pointer;filter:grayscale(1);opacity:.45;padding:2px}
+.bm.on{filter:none;opacity:1}
+.qt{font-weight:700;font-size:1.06rem;margin:8px 0 12px;line-height:1.55}
+.opts{display:grid;gap:9px}
+.opt{display:flex;align-items:center;gap:11px;width:100%;text-align:left;font:inherit;font-size:.98rem;padding:9px 11px;border-radius:12px;border:1px solid var(--line);background:var(--soft);color:var(--ink);cursor:pointer;transition:transform .08s,border-color .15s}
+.opt:hover:not(:disabled){border-color:var(--pri)}
+.opt:active:not(:disabled){transform:translateY(2px)}
+.opt .k{flex:0 0 auto;width:32px;height:32px;display:grid;place-items:center;font-family:var(--mono);font-weight:800;font-size:.9rem;border-radius:8px;background:var(--card);border:1px solid var(--line);box-shadow:0 3px 0 var(--line);color:var(--muted)}
+.opt.right{background:var(--okbg);border-color:var(--ok)}
+.opt.right .k{background:var(--ok);border-color:var(--ok);color:#fff;box-shadow:0 3px 0 #0E7A35}
+.opt.wrong{background:var(--badbg);border-color:var(--bad);animation:shake .35s}
+.opt.wrong .k{background:var(--bad);border-color:var(--bad);color:#fff;box-shadow:0 3px 0 #A8262B}
+.opt:disabled{cursor:default}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.exp{margin-top:11px;padding:10px 12px;border-radius:12px;background:var(--soft);border-left:4px solid var(--pri);font-size:.93rem}
+.exp b{display:block;margin-bottom:3px}
+.exp.no{border-left-color:var(--bad)}
+/* ---------- buttons ---------- */
+.btn{display:block;width:100%;margin-top:12px;font:inherit;font-weight:700;padding:12px;border-radius:12px;border:0;background:var(--pri);color:#fff;cursor:pointer;box-shadow:0 4px 0 var(--pri2)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--pri2)}
+.btn.alt{background:var(--card);color:var(--ink);border:1px solid var(--line);box-shadow:0 3px 0 var(--line)}
+.btn.amb{background:var(--amb);color:#2E1D00;box-shadow:0 4px 0 var(--amb2)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 16px;margin-top:12px;text-align:center}
+.panel .ico{font-size:2.4rem;line-height:1}
+.panel h2{margin:8px 0 4px;font-size:1.15rem}
+.panel p{margin:4px 0;color:var(--muted);font-size:.9rem}
+.big{font-family:var(--mono);font-size:3rem;font-weight:800;color:var(--pri);line-height:1.1}
+.pbar{height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin-top:12px}
+.pbar i{display:block;height:100%;width:0;background:var(--pri);transition:width .4s}
+.pbar.t i{background:var(--amb);transition:width .2s linear}
+.mtop{display:flex;justify-content:space-between;margin-top:8px;font-family:var(--mono);font-weight:700;font-size:.88rem;color:var(--muted)}
+.empty{text-align:center;color:var(--muted);padding:28px 10px}
+.note{font-size:.8rem;color:var(--muted);background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:10px 12px;margin-top:20px}
+footer{text-align:center;color:var(--muted);font-size:.8rem;margin-top:14px;line-height:1.9}
+footer a{color:var(--pri);font-weight:700;text-decoration:none}
+/* ---------- bottom nav ---------- */
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--card);border-top:1px solid var(--line);padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 20px -14px rgba(0,0,0,.4)}
+.nav .in{max-width:680px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.nav button{border:0;background:none;font:inherit;font-size:.7rem;font-weight:600;color:var(--muted);padding:5px 2px;border-radius:12px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:1px}
+.nav button i{font-style:normal;font-size:1.25rem;line-height:1.2}
+.nav button.on{color:var(--pri);background:var(--priT)}
+/* ---------- toast / modal / fx ---------- */
+.toast{position:fixed;left:50%;top:calc(12px + env(safe-area-inset-top,0px));transform:translate(-50%,-160%);z-index:50;display:flex;gap:10px;align-items:center;max-width:92vw;padding:9px 14px;border-radius:14px;color:#fff;font-size:.9rem;box-shadow:0 8px 20px -8px rgba(0,0,0,.4);transition:transform .3s cubic-bezier(.2,1.4,.4,1)}
+.toast.on{transform:translate(-50%,0)}
+.toast.ok{background:var(--ok)}.toast.no{background:var(--bad)}
+.toast .ti{font-family:var(--mono);font-weight:800;font-size:1.2rem}
+.modal{position:fixed;inset:0;z-index:60;display:none;place-items:center;background:rgba(5,15,18,.65);padding:20px}
+.modal.on{display:grid}
+.mbox{background:var(--card);border-radius:18px;padding:24px 20px;text-align:center;max-width:340px;width:100%;border:1px solid var(--line);animation:up .4s}
+.mbox .ico{font-size:3.2rem}
+.mbox h2{margin:6px 0;color:var(--pri)}
+.xpf{position:fixed;left:50%;top:40%;transform:translateX(-50%);z-index:45;font-family:var(--mono);font-weight:800;font-size:1.3rem;color:var(--pri);pointer-events:none;animation:xpf .9s ease forwards}
+@keyframes xpf{from{opacity:1;transform:translate(-50%,0)}to{opacity:0;transform:translate(-50%,-60px)}}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
+button:focus-visible,input:focus-visible{outline:3px solid var(--amb);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:360px){.hgrid{grid-template-columns:1fr}.ring{margin:0 auto}}
+</style>
+</head>
+<body>
+<canvas id="confetti"></canvas>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="modal" id="lvup"><div class="mbox"><div class="ico">🏅</div><h2 id="lvTitle">લેવલ અપ!</h2><p id="lvText"></p><button class="btn amb" id="lvOk">આગળ વધો 🚀</button></div></div>
+
+<div class="wrap">
+<header class="win">
+  <div class="wbar"><span class="dot" style="background:#FF5F57"></span><span class="dot" style="background:#FEBC2E"></span><span class="dot" style="background:#28C840"></span><span class="t">C:\GSRTC\કોમ્પ્યુટર_MCQ.exe</span><button class="wbtn" id="theme" aria-label="થીમ બદલો">🌓</button><button class="wbtn" id="snd" aria-label="અવાજ ચાલુ/બંધ">🔊</button></div>
+  <div class="wbody">
+    <div class="prompt">C:\GSRTC&gt; run helper_exam <span class="cur"></span></div>
+    <h1>💻 બેઝિક કોમ્પ્યુટર MCQ</h1>
+    <div class="sub">GSRTC હેલ્પર ભરતી · <span id="totalQ">500</span> પ્રશ્નો · જવાબ અને સમજૂતી સાથે</div>
+    <div class="hgrid">
+      <div class="ring" aria-label="ચોકસાઈ"><svg viewBox="0 0 100 100"><circle class="bgc" cx="50" cy="50" r="42" fill="none" stroke-width="10"/><circle class="fg" id="ringFg" cx="50" cy="50" r="42" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="263.9"/></svg><div class="v"><div><b id="kPct">0%</b><small>ચોકસાઈ</small></div></div></div>
+      <div class="kpis">
+        <div class="kpi"><b id="kDone">0/0</b><span>📝 કર્યા</span></div>
+        <div class="kpi"><b id="kOk">0</b><span>✅ સાચા</span></div>
+        <div class="kpi"><b id="kStreak">0</b><span>🔥 બેસ્ટ સ્ટ્રીક</span></div>
+        <div class="kpi"><b id="kXp">0</b><span>⚡ XP</span></div>
+      </div>
+    </div>
+    <div class="lvl"><span class="nm" id="lvName">લેવલ 1</span><div class="lbar"><i id="lvBar"></i></div></div>
+    <div class="visits hide" id="visits">&gt; કુલ મુલાકાત: <b id="vCount">0</b><span id="vTodayWrap" class="hide"> · આજે: <b id="vToday">0</b></span></div>
+  </div>
+</header>
+
+<section id="quiz">
+  <div class="sect-h"><h2>🎯 પ્રેક્ટિસ ક્વિઝ</h2><span>વિષય પસંદ કરો</span></div>
+  <div class="chips" id="qChips"></div>
+  <div id="qBox"></div>
+</section>
+
+<section id="speed" class="hide">
+  <div id="sStart" class="panel"><div class="ico">⚡</div><h2>60 સેકન્ડ સ્પીડ રાઉન્ડ</h2><p>એક મિનિટમાં વધુમાં વધુ સાચા જવાબ આપો!</p><p style="font-weight:700;color:var(--ink)">🏅 તમારો બેસ્ટ: <span id="sBest">0</span></p><button class="btn amb" id="sGo">▶ શરૂ કરો</button></div>
+  <div id="sRun" class="hide"><div class="pbar t"><i id="sBar"></i></div><div class="mtop"><span id="sTime">⏱ 60</span><span id="sScore">⚡ 0</span></div><div id="sQ"></div></div>
+  <div id="sEnd" class="hide"></div>
+</section>
+
+<section id="mock" class="hide">
+  <div id="mStart" class="panel"><div class="ico">⏱</div><h2>મોક ટેસ્ટ: 25 પ્રશ્ન · 20 મિનિટ</h2><p>અસલી પરીક્ષા જેવી પ્રેક્ટિસ. બધા વિષયમાંથી રેન્ડમ પ્રશ્નો અને અંતે સ્કોર.</p><button class="btn" id="mGo">▶ ટેસ્ટ શરૂ કરો</button></div>
+  <div id="mRun" class="hide"><div class="pbar"><i id="mBar"></i></div><div class="mtop"><span id="mPos">1 / 25</span><span id="mTime">⏱ 20:00</span><span id="mScore">✅ 0</span></div><div id="mQ"></div><button class="btn hide" id="mNext">આગળ →</button></div>
+  <div id="mEnd" class="hide"></div>
+</section>
+
+<section id="all" class="hide">
+  <div class="sect-h"><h2>📚 બધા પ્રશ્નો</h2><span>જવાબ સાથે વાંચો</span></div>
+  <div class="chips" id="aChips"></div>
+  <input class="search" id="search" type="search" placeholder="🔍 શબ્દ શોધો (દા.ત. RAM, Excel, વાયરસ)">
+  <div class="info" id="aInfo"></div>
+  <div id="aList"></div>
+  <button class="btn alt" id="aMore">વધુ પ્રશ્નો બતાવો</button>
+</section>
+
+<section id="wrong" class="hide">
+  <div class="sect-h"><h2>❌ મારી ભૂલો</h2><span>ફરી પ્રયત્ન કરો</span></div>
+  <div class="info" id="wInfo"></div>
+  <div id="wList"></div>
+</section>
+
+<div class="note">ℹ️ આ પરીક્ષાની તૈયારી માટેનું <b>સ્વતંત્ર પ્રેક્ટિસ પેજ</b> છે, GSRTC નું સત્તાવાર પેજ નથી. ભરતીની સત્તાવાર માહિતી માટે gsrtc.in અને ojas.gujarat.gov.in જુઓ. MS Office ના પ્રશ્નો Office 2007 અને પછીના વર્ઝન મુજબ છે.</div>
+<button class="btn alt" id="reset">↺ મારી પ્રગતિ ફરીથી શરૂ કરો</button>
+<footer>
+  આ પણ જુઓ: <a href="./">WCS MCQ</a> · <a href="https://ashish119055.github.io/GSRTC-HELPER-BHARTI/">એન્જિન MCQ</a> · <a href="https://ashish119055.github.io/GSRTC-HELPER-BHARTI-FUEL-SUPPLY-SYSTEM-MCQ/">ફ્યુઅલ MCQ</a> · <a href="https://ashish119055.github.io/GSRTC-HELPER-BHARTI-ELECTRICAL-MCQ/">ઇલેક્ટ્રિકલ MCQ</a><br>
+  સિમ્યુલેટર: <a href="https://ashish119055.github.io/Micrometer/">માઇક્રોમીટર</a> · <a href="https://ashish119055.github.io/Vernier-Caliper-Simulator/">વર્નિયર</a> · <a href="https://ashish119055.github.io/Digital-Multimeter-Simulator/">મલ્ટિમીટર</a>
+</footer>
+</div>
+
+<nav class="nav"><div class="in">
+  <button data-tab="quiz" class="on"><i>🎯</i>ક્વિઝ</button>
+  <button data-tab="speed"><i>⚡</i>સ્પીડ</button>
+  <button data-tab="mock"><i>⏱</i>મોક ટેસ્ટ</button>
+  <button data-tab="all"><i>📚</i>બધા</button>
+  <button data-tab="wrong"><i>❌</i>ભૂલો</button>
+</div></nav>
+
+<script>
+window.TOPICS=["કોમ્પ્યુટર પરિચય અને ઇતિહાસ","હાર્ડવેર અને ઇનપુટ-આઉટપુટ","મેમરી અને સ્ટોરેજ","સોફ્ટવેર અને Windows","MS Word","MS Excel","PowerPoint અને MS Office","ઇન્ટરનેટ, ઇમેઇલ અને નેટવર્ક","સાયબર સુરક્ષા અને ડિજિટલ ઇન્ડિયા","શોર્ટકટ કી","ફુલ ફોર્મ અને નંબર સિસ્ટમ"];
+window.MCQ=[
+[0,"કોમ્પ્યુટરના પિતા (Father of Computer) તરીકે કોણ ઓળખાય છે?",["ચાર્લ્સ બેબેજ","ટિમ બર્નર્સ-લી","બિલ ગેટ્સ","એલન ટ્યુરિંગ"],0,"ચાર્લ્સ બેબેજે 'ડિફરન્સ એન્જિન' અને 'એનાલિટિકલ એન્જિન' ની રચના કરી હતી, તેથી તેમને કોમ્પ્યુટરના પિતા કહે છે."],
+[0,"વિશ્વના પ્રથમ કોમ્પ્યુટર પ્રોગ્રામર કોણ ગણાય છે?",["એડા લવલેસ","વોન ન્યુમેન","ચાર્લ્સ બેબેજ","બ્લેઝ પાસ્કલ"],0,"એડા લવલેસે બેબેજના એનાલિટિકલ એન્જિન માટે પ્રથમ પ્રોગ્રામ (અલ્ગોરિધમ) લખ્યો હતો."],
+[0,"'Computer' શબ્દ કયા શબ્દ પરથી બન્યો છે?",["Compress","Complete","Compile","Compute"],3,"Compute એટલે ગણતરી કરવી. શરૂઆતમાં કોમ્પ્યુટર ફક્ત ગણતરી માટે બન્યું હતું."],
+[0,"પ્રથમ સંપૂર્ણ ઇલેક્ટ્રોનિક જનરલ પર્પઝ કોમ્પ્યુટર કયું હતું?",["EDSAC","PARAM","ENIAC","UNIVAC"],2,"ENIAC (Electronic Numerical Integrator and Computer) 1946 માં બન્યું હતું, તેમાં લગભગ 18,000 વેક્યૂમ ટ્યૂબ હતી."],
+[0,"પ્રથમ પેઢી (First Generation) ના કોમ્પ્યુટરમાં કયું ઉપકરણ વપરાતું હતું?",["ઇન્ટિગ્રેટેડ સર્કિટ (IC)","માઇક્રોપ્રોસેસર","વેક્યૂમ ટ્યૂબ","ટ્રાન્ઝિસ્ટર"],2,"પ્રથમ પેઢી (આશરે 1940–1956) માં વેક્યૂમ ટ્યૂબ વપરાતી, જે કદમાં મોટી અને ખૂબ ગરમી પેદા કરતી."],
+[0,"બીજી પેઢીના કોમ્પ્યુટરમાં કયું ઉપકરણ વપરાયું?",["VLSI","ટ્રાન્ઝિસ્ટર","IC","વેક્યૂમ ટ્યૂબ"],1,"બીજી પેઢી (આશરે 1956–1963) માં ટ્રાન્ઝિસ્ટર આવ્યા, જે વેક્યૂમ ટ્યૂબ કરતાં નાના, સસ્તા અને ઝડપી હતા."],
+[0,"ત્રીજી પેઢીના કોમ્પ્યુટરની મુખ્ય ઓળખ શું છે?",["ઇન્ટિગ્રેટેડ સર્કિટ (IC)","વેક્યૂમ ટ્યૂબ","ટ્રાન્ઝિસ્ટર","આર્ટિફિશિયલ ઇન્ટેલિજન્સ"],0,"ત્રીજી પેઢી (આશરે 1964–1971) માં IC વપરાઈ, એક ચિપમાં ઘણા ટ્રાન્ઝિસ્ટર સમાઈ ગયા."],
+[0,"ચોથી પેઢીના કોમ્પ્યુટરમાં કઈ ટેક્નોલોજી વપરાય છે?",["માઇક્રોપ્રોસેસર (VLSI)","ટ્રાન્ઝિસ્ટર","વેક્યૂમ ટ્યૂબ","મેગ્નેટિક ડ્રમ"],0,"ચોથી પેઢી (1971 થી) માં VLSI ટેક્નોલોજીવાળા માઇક્રોપ્રોસેસર આવ્યા, જેથી પર્સનલ કોમ્પ્યુટર (PC) શક્ય બન્યા."],
+[0,"પાંચમી પેઢીના કોમ્પ્યુટર મુખ્યત્વે શેના પર આધારિત છે?",["પંચ કાર્ડ","ટ્રાન્ઝિસ્ટર","આર્ટિફિશિયલ ઇન્ટેલિજન્સ (AI)","વેક્યૂમ ટ્યૂબ"],2,"પાંચમી પેઢી AI, પેરેલલ પ્રોસેસિંગ અને નેચરલ લેંગ્વેજ સમજવા પર આધારિત છે."],
+[0,"વિશ્વનું પ્રથમ માઇક્રોપ્રોસેસર કયું હતું?",["Intel Core i3","Intel 4004","Pentium","Intel 8085"],1,"Intel 4004 વર્ષ 1971 માં બન્યું, તે 4-બિટ માઇક્રોપ્રોસેસર હતું."],
+[0,"ભારતનું પ્રથમ સુપર કોમ્પ્યુટર કયું છે?",["PARAM 8000","Pratyush","Mihir","Aaditya"],0,"PARAM 8000 વર્ષ 1991 માં C-DAC, પુણે દ્વારા વિજય ભાટકરના નેતૃત્વમાં બન્યું."],
+[0,"ભારતના સુપર કોમ્પ્યુટરના પિતા કોણ ગણાય છે?",["વિજય ભાટકર","અબ્દુલ કલામ","નંદન નીલેકણી","સામ પિત્રોડા"],0,"વિજય ભાટકરે C-DAC માં PARAM સુપર કોમ્પ્યુટરનું નેતૃત્વ કર્યું હતું."],
+[0,"C-DAC નું મુખ્ય મથક ક્યાં આવેલું છે?",["દિલ્હી","ચેન્નાઈ","બેંગલુરુ","પુણે"],3,"C-DAC (Centre for Development of Advanced Computing) નું મુખ્ય મથક પુણે માં છે."],
+[0,"ભારતમાં બનેલું પ્રથમ ડિજિટલ કોમ્પ્યુટર કયું હતું?",["PARAM","TIFRAC","SIDDHARTH","ENIAC"],1,"TIFRAC (Tata Institute of Fundamental Research Automatic Calculator) 1960 આસપાસ મુંબઈમાં બન્યું."],
+[0,"સૌથી પ્રાચીન ગણતરીનું સાધન કયું ગણાય છે?",["પાસ્કલાઇન","નેપિયર બોન્સ","અબેકસ","કેલ્ક્યુલેટર"],2,"અબેકસ (ગણતરીનું મણકાવાળું ચોકઠું) સૌથી જૂનું ગણતરીનું સાધન છે, જે ચીનમાં વપરાતું."],
+[0,"પાસ્કલાઇન (Pascaline) ગણતરી યંત્ર કોણે બનાવ્યું?",["જોન નેપિયર","હર્મન હોલેરિથ","ચાર્લ્સ બેબેજ","બ્લેઝ પાસ્કલ"],3,"બ્લેઝ પાસ્કલે 1642 માં સરવાળા-બાદબાકી કરતું યાંત્રિક કેલ્ક્યુલેટર બનાવ્યું હતું."],
+[0,"પંચ કાર્ડ આધારિત ટેબ્યુલેટિંગ મશીન કોણે બનાવ્યું?",["હર્મન હોલેરિથ","એડા લવલેસ","બ્લેઝ પાસ્કલ","વોન ન્યુમેન"],0,"હર્મન હોલેરિથે અમેરિકાની વસ્તી ગણતરી માટે પંચ કાર્ડ મશીન બનાવ્યું, તેમની કંપની આગળ જતાં IBM બની."],
+[0,"'સ્ટોર્ડ પ્રોગ્રામ' નો ખ્યાલ કોણે આપ્યો?",["ચાર્લ્સ બેબેજ","જોન વોન ન્યુમેન","ડેનિસ રિચી","બિલ ગેટ્સ"],1,"વોન ન્યુમેને પ્રોગ્રામ અને ડેટા બંનેને મેમરીમાં રાખવાનો ખ્યાલ આપ્યો. આજના કોમ્પ્યુટર આ જ રચના પર ચાલે છે."],
+[0,"કોમ્પ્યુટર કયા સિદ્ધાંત પર કામ કરે છે?",["ઇનપુટ – પ્રોસેસ – આઉટપુટ","પ્રોસેસ – ઇનપુટ – આઉટપુટ","ઇનપુટ – આઉટપુટ – પ્રોસેસ","આઉટપુટ – ઇનપુટ – પ્રોસેસ"],0,"કોમ્પ્યુટર ડેટા લે (ઇનપુટ), તેના પર ક્રિયા કરે (પ્રોસેસ) અને પરિણામ આપે (આઉટપુટ). સાથે સ્ટોરેજ પણ હોય છે."],
+[0,"કોમ્પ્યુટરને આપવામાં આવતી કાચી માહિતીને શું કહે છે?",["આઉટપુટ","પ્રોગ્રામ","ડેટા","ઇન્ફોર્મેશન"],2,"ડેટા એટલે કાચી, પ્રક્રિયા ન થયેલી હકીકતો. પ્રક્રિયા પછી તે ઇન્ફોર્મેશન (માહિતી) બને છે."],
+[0,"પ્રક્રિયા (પ્રોસેસ) થયેલા અર્થપૂર્ણ ડેટાને શું કહે છે?",["ઇન્ફોર્મેશન","ઇનપુટ","રો ડેટા","સિગ્નલ"],0,"ડેટા પર પ્રક્રિયા કર્યા પછી જે અર્થપૂર્ણ પરિણામ મળે તેને ઇન્ફોર્મેશન કહે છે."],
+[0,"GIGO નો અર્થ શું છે?",["Garbage In Garbage Out","General Input General Output","Good Input Good Output","Go In Go Out"],0,"ખોટું ઇનપુટ આપો તો ખોટું જ આઉટપુટ મળે. કોમ્પ્યુટર પોતે ભૂલ સુધારતું નથી."],
+[0,"કોમ્પ્યુટરની કઈ ખામી છે?",["તે જાતે વિચારી શકતું નથી (IQ શૂન્ય)","તે ચોક્કસ છે","તે થાકતું નથી","તે ઝડપી છે"],0,"કોમ્પ્યુટર ઝડપી, ચોક્કસ અને થાક્યા વગર કામ કરે છે, પરંતુ તેની પાસે પોતાની બુદ્ધિ કે નિર્ણયશક્તિ નથી."],
+[0,"કોમ્પ્યુટર લાંબા સમય સુધી થાક્યા વગર સતત કામ કરી શકે છે, આ ગુણને શું કહે છે?",["સ્ટોરેજ","એક્યુરસી","ડિલિજન્સ (Diligence)","વર્સેટિલિટી"],2,"Diligence એટલે ખંત. કોમ્પ્યુટર થાક કે કંટાળા વગર કલાકો સુધી એક સરખું કામ કરે છે."],
+[0,"કોમ્પ્યુટર અલગ-અલગ પ્રકારનાં ઘણાં કામ કરી શકે છે, આ ગુણને શું કહે છે?",["વર્સેટિલિટી (Versatility)","એક્યુરસી","સ્પીડ","ડિલિજન્સ"],0,"Versatility એટલે બહુમુખી પ્રતિભા. એક જ કોમ્પ્યુટર પર ટાઇપિંગ, ગણતરી, ગીત, ઇન્ટરનેટ બધું થાય છે."],
+[0,"સતત બદલાતી ભૌતિક રાશિ (જેમ કે તાપમાન, દબાણ) માપતા કોમ્પ્યુટરને શું કહે છે?",["માઇક્રો કોમ્પ્યુટર","એનાલોગ કોમ્પ્યુટર","હાઇબ્રિડ કોમ્પ્યુટર","ડિજિટલ કોમ્પ્યુટર"],1,"એનાલોગ કોમ્પ્યુટર સતત બદલાતા સિગ્નલ પર કામ કરે છે, જેમ કે થર્મોમીટર, સ્પીડોમીટર."],
+[0,"0 અને 1 (બાઇનરી) પર કામ કરતા કોમ્પ્યુટરને શું કહે છે?",["એનાલોગ કોમ્પ્યુટર","ડિજિટલ કોમ્પ્યુટર","હાઇબ્રિડ કોમ્પ્યુટર","મેકેનિકલ કોમ્પ્યુટર"],1,"આજના મોટાભાગના કોમ્પ્યુટર ડિજિટલ છે, તે બાઇનરી અંકો 0 અને 1 માં કામ કરે છે."],
+[0,"એનાલોગ અને ડિજિટલ બંનેના ગુણ ધરાવતા કોમ્પ્યુટરને શું કહે છે?",["સુપર કોમ્પ્યુટર","મેઇનફ્રેમ","હાઇબ્રિડ કોમ્પ્યુટર","મિની કોમ્પ્યુટર"],2,"હાઇબ્રિડ કોમ્પ્યુટર હોસ્પિટલના ICU, પેટ્રોલ પંપ વગેરે જગ્યાએ વપરાય છે."],
+[0,"હોસ્પિટલના ICU માં દર્દીના ધબકારા માપીને ડિજિટલ રૂપમાં બતાવતું કોમ્પ્યુટર કયા પ્રકારનું છે?",["ડિજિટલ","સુપર","એનાલોગ","હાઇબ્રિડ"],3,"તે એનાલોગ સિગ્નલ (ધબકારા) લઈને ડિજિટલ આંકડામાં બતાવે છે, તેથી હાઇબ્રિડ છે."],
+[0,"કદ અને ક્ષમતાની દૃષ્ટિએ સૌથી શક્તિશાળી કોમ્પ્યુટર કયું છે?",["સુપર કોમ્પ્યુટર","માઇક્રો કોમ્પ્યુટર","મેઇનફ્રેમ કોમ્પ્યુટર","મિની કોમ્પ્યુટર"],0,"સુપર કોમ્પ્યુટર સૌથી ઝડપી છે, તે હવામાન આગાહી, અવકાશ સંશોધન જેવાં કામ માટે વપરાય છે."],
+[0,"સુપર કોમ્પ્યુટરની ઝડપ શેમાં મપાય છે?",["RPM","FLOPS","BPS","MIPS"],1,"FLOPS = Floating Point Operations Per Second. સુપર કોમ્પ્યુટરની ઝડપ પેટાફ્લોપ્સમાં મપાય છે."],
+[0,"બેંક, રેલવે રિઝર્વેશન જેવી મોટી સંસ્થાઓમાં હજારો યુઝર એકસાથે વાપરી શકે તેવું કોમ્પ્યુટર કયું?",["મેઇનફ્રેમ કોમ્પ્યુટર","માઇક્રો કોમ્પ્યુટર","પામટોપ","લેપટોપ"],0,"મેઇનફ્રેમ કોમ્પ્યુટર ઘણા ટર્મિનલ સાથે જોડાઈને એક સાથે ઘણા યુઝરનું કામ સંભાળે છે."],
+[0,"પર્સનલ કોમ્પ્યુટર (PC) કયા પ્રકારનું કોમ્પ્યુટર છે?",["મિની કોમ્પ્યુટર","માઇક્રો કોમ્પ્યુટર","મેઇનફ્રેમ","સુપર કોમ્પ્યુટર"],1,"PC, લેપટોપ, ટેબ્લેટ બધાં માઇક્રો કોમ્પ્યુટર છે, કારણ કે તેમાં માઇક્રોપ્રોસેસર વપરાય છે."],
+[0,"પ્રથમ પર્સનલ કોમ્પ્યુટર (IBM PC) કઈ કંપનીએ 1981 માં રજૂ કર્યું?",["Intel","Microsoft","Apple","IBM"],3,"IBM એ 1981 માં IBM PC રજૂ કર્યું, ત્યારથી 'PC' શબ્દ લોકપ્રિય બન્યો."],
+[0,"લેપટોપને બીજા કયા નામથી ઓળખવામાં આવે છે?",["વર્કસ્ટેશન","સર્વર","મેઇનફ્રેમ","નોટબુક કોમ્પ્યુટર"],3,"લેપટોપ ખોળામાં રાખીને વાપરી શકાય તેવું પોર્ટેબલ કોમ્પ્યુટર છે, તેને નોટબુક પણ કહે છે."],
+[0,"નેટવર્કમાં બીજા કોમ્પ્યુટરને સેવા (ફાઇલ, વેબસાઇટ, ડેટા) પૂરી પાડતું કોમ્પ્યુટર શું કહેવાય?",["સર્વર","ક્લાયન્ટ","ટર્મિનલ","નોડ"],0,"સર્વર સેવા આપે છે અને ક્લાયન્ટ તે સેવાનો ઉપયોગ કરે છે."],
+[0,"ભૌતિક રીતે સ્પર્શી શકાય તેવા કોમ્પ્યુટરના ભાગોને શું કહે છે?",["હાર્ડવેર","સોફ્ટવેર","ડેટા","ફર્મવેર"],0,"કીબોર્ડ, માઉસ, મોનિટર, CPU વગેરે હાર્ડવેર છે, જેને આપણે અડી શકીએ."],
+[0,"હાર્ડવેર અને સોફ્ટવેર સિવાય કોમ્પ્યુટર સિસ્ટમનો ત્રીજો ભાગ કયો છે, જે કોમ્પ્યુટર ચલાવે છે?",["મેલવેર","ફર્મવેર","લાઇવવેર (યુઝર)","શેરવેર"],2,"કોમ્પ્યુટર વાપરનાર વ્યક્તિને લાઇવવેર (Liveware / Humanware) કહે છે."],
+[0,"કોમ્પ્યુટરનું 'મગજ' કોને કહેવાય છે?",["CPU","RAM","હાર્ડ ડિસ્ક","મોનિટર"],0,"CPU (સેન્ટ્રલ પ્રોસેસિંગ યુનિટ) બધી ગણતરી અને નિયંત્રણ કરે છે, તેથી તેને કોમ્પ્યુટરનું મગજ કહે છે."],
+[0,"'Bug' શબ્દ કોમ્પ્યુટરમાં શું દર્શાવે છે?",["પ્રોગ્રામમાં ભૂલ","વાયરસ","હાર્ડવેર","ઇનપુટ ડિવાઇસ"],0,"Bug એટલે પ્રોગ્રામની ભૂલ અને તેને શોધીને દૂર કરવાની ક્રિયાને Debugging કહે છે."],
+[0,"પ્રોગ્રામમાંથી ભૂલ શોધીને દૂર કરવાની ક્રિયાને શું કહે છે?",["કમ્પાઇલિંગ","બૂટિંગ","ફોર્મેટિંગ","ડીબગિંગ"],3,"Debugging એટલે બગ (ભૂલ) દૂર કરવી."],
+[0,"વિશ્વ કોમ્પ્યુટર સાક્ષરતા દિવસ (World Computer Literacy Day) ક્યારે ઉજવાય છે?",["5 સપ્ટેમ્બર","2 ડિસેમ્બર","1 જુલાઈ","14 નવેમ્બર"],1,"2 ડિસેમ્બરે વિશ્વ કોમ્પ્યુટર સાક્ષરતા દિવસ ઉજવાય છે, શરૂઆત ભારતીય કંપની NIIT એ 2001 માં કરી હતી."],
+[0,"આર્ટિફિશિયલ ઇન્ટેલિજન્સ (AI) શબ્દ કોણે આપ્યો?",["બિલ ગેટ્સ","ચાર્લ્સ બેબેજ","એલન ટ્યુરિંગ","જોન મેકાર્થી"],3,"જોન મેકાર્થીએ 1956 માં 'Artificial Intelligence' શબ્દ આપ્યો, તેમને AI ના પિતા કહે છે."],
+[0,"મશીન માણસ જેવી બુદ્ધિ ધરાવે છે કે નહીં તે ચકાસતી કસોટી કઈ છે?",["બેબેજ ટેસ્ટ","ટ્યુરિંગ ટેસ્ટ","CAPTCHA ટેસ્ટ","પાસ્કલ ટેસ્ટ"],1,"એલન ટ્યુરિંગે 1950 માં આ કસોટી સૂચવી હતી. તેમને આધુનિક કોમ્પ્યુટર વિજ્ઞાનના પિતા કહે છે."],
+[0,"એક જ કોમ્પ્યુટર પર એક સમયે ફક્ત એક જ વ્યક્તિ કામ કરી શકે તે માટે બનેલા કોમ્પ્યુટરને શું કહે છે?",["મેઇનફ્રેમ","પર્સનલ કોમ્પ્યુટર (PC)","સુપર કોમ્પ્યુટર","સર્વર"],1,"PC એક વ્યક્તિના ઉપયોગ માટે બનેલું છે, જ્યારે મેઇનફ્રેમ અને સર્વર ઘણા યુઝર એક સાથે વાપરે છે."],
+[1,"CPU નું પૂરું નામ શું છે?",["Central Program Unit","Control Processing Unit","Computer Processing Unit","Central Processing Unit"],3,"CPU = Central Processing Unit, તે કોમ્પ્યુટરનો મુખ્ય પ્રક્રિયા કરનાર ભાગ છે."],
+[1,"CPU ના મુખ્ય ત્રણ ભાગ કયા છે?",["ALU, CU અને મેમરી (રજિસ્ટર)","RAM, ROM અને હાર્ડ ડિસ્ક","કીબોર્ડ, માઉસ અને મોનિટર","ઇનપુટ, આઉટપુટ અને પ્રિન્ટર"],0,"CPU માં ALU (ગણતરી), CU (નિયંત્રણ) અને મેમરી યુનિટ/રજિસ્ટર હોય છે."],
+[1,"ALU નું પૂરું નામ શું છે?",["Array Logic Unit","Arithmetic Logic Unit","Advanced Logic Unit","Arithmetic Line Unit"],1,"ALU = Arithmetic Logic Unit, તે સરવાળો-બાદબાકી અને સરખામણી (લોજિકલ) કામ કરે છે."],
+[1,"સરવાળો, બાદબાકી, ગુણાકાર અને સરખામણી (>, <, =) CPU ના કયા ભાગમાં થાય છે?",["CU","RAM","ALU","કેશ"],2,"ALU ગાણિતિક અને તાર્કિક બંને પ્રકારની ક્રિયાઓ કરે છે."],
+[1,"કોમ્પ્યુટરના બધા ભાગો વચ્ચે સંકલન અને નિયંત્રણ કોણ કરે છે?",["ALU","મોનિટર","હાર્ડ ડિસ્ક","કંટ્રોલ યુનિટ (CU)"],3,"CU સૂચનાઓ વાંચીને દરેક ભાગને શું કરવું તે કહે છે, તે ટ્રાફિક પોલીસ જેવું કામ કરે છે."],
+[1,"CPU ની અંદર આવેલી સૌથી ઝડપી નાની મેમરી કઈ છે?",["ROM","RAM","હાર્ડ ડિસ્ક","રજિસ્ટર"],3,"રજિસ્ટર CPU ની અંદર જ હોય છે, તેથી સૌથી ઝડપી છે. પછી કેશ, પછી RAM આવે છે."],
+[1,"CPU ની ઝડપ (ક્લોક સ્પીડ) શેમાં મપાય છે?",["bps","dpi","ગીગાબાઇટ (GB)","ગીગાહર્ટ્ઝ (GHz)"],3,"ક્લોક સ્પીડ હર્ટ્ઝમાં મપાય છે. આજના પ્રોસેસર સામાન્ય રીતે 2 થી 5 GHz ના હોય છે."],
+[1,"કોમ્પ્યુટરના બધા ભાગ જેના પર જોડાયેલા હોય છે તે મુખ્ય સર્કિટ બોર્ડ કયું છે?",["કી બોર્ડ","મધરબોર્ડ","ગ્રાફિક્સ કાર્ડ","સાઉન્ડ કાર્ડ"],1,"મધરબોર્ડ પર CPU, RAM, સ્લોટ, પોર્ટ વગેરે લાગેલા હોય છે."],
+[1,"કોમ્પ્યુટરના ભાગો વચ્ચે ડેટા લઈ જતા વાયરના સમૂહને શું કહે છે?",["સ્લોટ","પોર્ટ","ચિપ","બસ (Bus)"],3,"બસના ત્રણ પ્રકાર છે: ડેટા બસ, એડ્રેસ બસ અને કંટ્રોલ બસ."],
+[1,"SMPS નું કામ શું છે?",["ઇન્ટરનેટ જોડવું","AC વીજળીને કોમ્પ્યુટર માટે જરૂરી DC માં ફેરવવી","ડેટા સંગ્રહ કરવો","પ્રિન્ટ કાઢવી"],1,"SMPS (Switched Mode Power Supply) 230V AC ને 12V, 5V, 3.3V DC માં ફેરવીને કોમ્પ્યુટરના ભાગોને આપે છે."],
+[1,"વીજળી જતી રહે ત્યારે કોમ્પ્યુટરને થોડા સમય માટે પાવર આપતું ઉપકરણ કયું છે?",["સ્ટેબિલાઇઝર","UPS","SMPS","મોડેમ"],1,"UPS (Uninterruptible Power Supply) માં બેટરી હોય છે, જેથી ડેટા સેવ કરીને કોમ્પ્યુટર બંધ કરવાનો સમય મળે."],
+[1,"CPU ને ઠંડુ રાખવા માટે તેના પર શું લગાવવામાં આવે છે?",["SMPS","મોડેમ","હીટ સિંક અને પંખો","પ્રિન્ટર"],2,"હીટ સિંક ગરમી શોષે છે અને પંખો હવા ફેંકીને તેને ઠંડુ કરે છે."],
+[1,"નીચેનામાંથી ઇનપુટ ડિવાઇસ કયું છે?",["પ્રિન્ટર","કીબોર્ડ","મોનિટર","સ્પીકર"],1,"કીબોર્ડ દ્વારા આપણે કોમ્પ્યુટરને ડેટા આપીએ છીએ, તેથી તે ઇનપુટ ડિવાઇસ છે."],
+[1,"નીચેનામાંથી આઉટપુટ ડિવાઇસ કયું છે?",["સ્કેનર","માઉસ","પ્રિન્ટર","માઇક્રોફોન"],2,"પ્રિન્ટર કોમ્પ્યુટરનું પરિણામ કાગળ પર આપે છે, તેથી તે આઉટપુટ ડિવાઇસ છે."],
+[1,"ઇનપુટ અને આઉટપુટ બંને રીતે કામ કરતું ઉપકરણ કયું છે?",["ટચ સ્ક્રીન","સ્કેનર","પ્રિન્ટર","કીબોર્ડ"],0,"ટચ સ્ક્રીન પર સ્પર્શથી ઇનપુટ આપીએ અને તે જ સ્ક્રીન પર આઉટપુટ દેખાય છે."],
+[1,"સામાન્ય કીબોર્ડમાં લગભગ કેટલી કી હોય છે?",["200","26","50 થી 60","101 થી 104"],3,"સામાન્ય ડેસ્કટોપ કીબોર્ડમાં 101 થી 104 કી હોય છે."],
+[1,"કીબોર્ડમાં ફંક્શન કી કેટલી હોય છે?",["15","12 (F1 થી F12)","9","10"],1,"ઉપરની હરોળમાં F1 થી F12 એમ 12 ફંક્શન કી હોય છે."],
+[1,"કીબોર્ડની સૌથી લાંબી કી કઈ છે?",["બેકસ્પેસ","શિફ્ટ","સ્પેસબાર","એન્ટર"],2,"સ્પેસબાર બે શબ્દો વચ્ચે ખાલી જગ્યા આપવા માટે વપરાય છે અને તે સૌથી લાંબી કી છે."],
+[1,"આપણા કીબોર્ડનું લેઆઉટ કયા નામથી ઓળખાય છે?",["DVORAK","AZERTY","QWERTY","ABCDEF"],2,"અક્ષરોની પ્રથમ હરોળના પહેલા 6 અક્ષર Q-W-E-R-T-Y છે, તેથી તેને QWERTY કીબોર્ડ કહે છે."],
+[1,"કર્સરની ડાબી બાજુનો અક્ષર ભૂંસવા કઈ કી વપરાય છે?",["Insert","Home","Delete","Backspace"],3,"Backspace ડાબી બાજુનો અક્ષર અને Delete કર્સરની જમણી બાજુનો અક્ષર ભૂંસે છે."],
+[1,"કર્સરની જમણી બાજુનો અક્ષર ભૂંસવા કઈ કી વપરાય છે?",["Delete","Esc","Tab","Backspace"],0,"Delete કી કર્સરની આગળ (જમણી બાજુ) નો અક્ષર ભૂંસે છે."],
+[1,"બધા અક્ષરો કેપિટલ (મોટા) ટાઇપ કરવા માટે કઈ કી ચાલુ કરવી પડે?",["Num Lock","Caps Lock","Scroll Lock","Shift"],1,"Caps Lock ચાલુ કરવાથી A-Z બધા અક્ષરો કેપિટલ ટાઇપ થાય છે."],
+[1,"કીબોર્ડની જમણી બાજુનું ન્યુમેરિક કીપેડ ચાલુ કરવા કઈ કી વપરાય છે?",["Fn","Alt","Caps Lock","Num Lock"],3,"Num Lock ચાલુ હોય ત્યારે જ જમણી બાજુના આંકડા ટાઇપ થાય છે."],
+[1,"ચાલુ ક્રિયા રદ કરવા કે ડાયલોગ બોક્સ બંધ કરવા કઈ કી વપરાય છે?",["Enter","Esc","Alt","Tab"],1,"Esc = Escape, તે ચાલુ ક્રિયા રદ કરે છે."],
+[1,"Ctrl, Alt અને Shift જેવી કીને શું કહે છે?",["મોડિફાયર (કોમ્બિનેશન) કી","ટોગલ કી","ફંક્શન કી","નેવિગેશન કી"],0,"આ કી બીજી કી સાથે દબાવીને જ કામ કરે છે, જેમ કે Ctrl+C."],
+[1,"Caps Lock, Num Lock અને Scroll Lock ને શું કહે છે?",["મોડિફાયર કી","એરો કી","ફંક્શન કી","ટોગલ કી"],3,"ટોગલ કી એક વાર દબાવતાં ચાલુ અને ફરી દબાવતાં બંધ થાય છે."],
+[1,"માઉસની શોધ કોણે કરી હતી?",["ડગ્લાસ એન્ગલબર્ટ","ચાર્લ્સ બેબેજ","સ્ટીવ જોબ્સ","બિલ ગેટ્સ"],0,"ડગ્લાસ એન્ગલબર્ટે 1960 ના દાયકામાં લાકડાનું પ્રથમ માઉસ બનાવ્યું હતું."],
+[1,"માઉસ કયા પ્રકારનું ઉપકરણ છે?",["પોઇન્ટિંગ ઇનપુટ ડિવાઇસ","પ્રોસેસિંગ ડિવાઇસ","આઉટપુટ ડિવાઇસ","સ્ટોરેજ ડિવાઇસ"],0,"માઉસથી સ્ક્રીન પરના પોઇન્ટરને ખસેડી શકાય છે, તેથી તે પોઇન્ટિંગ ડિવાઇસ છે."],
+[1,"માઉસનું રાઇટ ક્લિક સામાન્ય રીતે શું ખોલે છે?",["કોન્ટેક્સ્ટ (શોર્ટકટ) મેનુ","સ્ટાર્ટ મેનુ","નવી વિન્ડો","કંટ્રોલ પેનલ"],0,"રાઇટ ક્લિક કરવાથી તે જગ્યાને લગતા વિકલ્પોનું મેનુ ખુલે છે."],
+[1,"લેપટોપમાં માઉસનું કામ કરતી સપાટ સ્પર્શ સપાટીને શું કહે છે?",["લાઇટ પેન","જોયસ્ટિક","ટ્રેકબોલ","ટચપેડ (ટ્રેકપેડ)"],3,"ટચપેડ પર આંગળી ફેરવવાથી કર્સર ખસે છે."],
+[1,"વિડિયો ગેમ રમવા માટે વપરાતું ઇનપુટ ડિવાઇસ કયું છે?",["પ્લોટર","સ્કેનર","જોયસ્ટિક","પ્રોજેક્ટર"],2,"જોયસ્ટિકમાં લીવર જેવો દંડો હોય છે, જે ગેમ અને સિમ્યુલેટરમાં વપરાય છે."],
+[1,"કાગળ પરનું લખાણ કે ફોટો કોમ્પ્યુટરમાં ડિજિટલ રૂપે લેવા કયું ઉપકરણ વપરાય છે?",["સ્કેનર","પ્લોટર","પ્રિન્ટર","સ્પીકર"],0,"સ્કેનર કાગળની ઇમેજ કોમ્પ્યુટરમાં લાવે છે, તે ઇનપુટ ડિવાઇસ છે."],
+[1,"દુકાનમાં વસ્તુ પરના કાળા-સફેદ પટ્ટા વાંચવા કયું ઉપકરણ વપરાય છે?",["લાઇટ પેન","બારકોડ રીડર","OMR","MICR"],1,"બારકોડ રીડર વસ્તુની કિંમત અને માહિતી તરત કોમ્પ્યુટરમાં લઈ આવે છે."],
+[1,"બેંકમાં ચેક પરના ખાસ શાહીથી છપાયેલા નંબર વાંચવા કઈ ટેક્નોલોજી વપરાય છે?",["OMR","MICR","બારકોડ","OCR"],1,"MICR = Magnetic Ink Character Recognition, ચેકની નીચે છાપેલો નંબર ચુંબકીય શાહીમાં હોય છે."],
+[1,"MCQ પરીક્ષાની OMR શીટ તપાસવા કયું ઉપકરણ વપરાય છે?",["OCR","OMR","પ્લોટર","MICR"],1,"OMR = Optical Mark Reader, તે પેન્સિલ/પેનથી ભરેલા ગોળા (માર્ક) ઓળખે છે."],
+[1,"છાપેલા લખાણને સ્કેન કરીને એડિટ થઈ શકે તેવા ટેક્સ્ટમાં ફેરવતી ટેક્નોલોજી કઈ છે?",["OCR","MICR","OMR","GPS"],0,"OCR = Optical Character Recognition, તે ફોટોમાંના અક્ષરો ઓળખીને ટેક્સ્ટ બનાવે છે."],
+[1,"અંગૂઠાની છાપ (ફિંગરપ્રિન્ટ) લઈને હાજરી પૂરવા માટે કયું ઉપકરણ વપરાય છે?",["બારકોડ રીડર","વેબકેમ","બાયોમેટ્રિક સ્કેનર","પ્લોટર"],2,"બાયોમેટ્રિક ઉપકરણ શરીરની ઓળખ (આંગળી, આંખ, ચહેરો) થી વ્યક્તિને ઓળખે છે."],
+[1,"મોનિટરને બીજા કયા નામથી ઓળખવામાં આવે છે?",["VGA","UPS","CPU","VDU (Visual Display Unit)"],3,"મોનિટર સોફ્ટ કોપી આઉટપુટ આપે છે, તેને VDU પણ કહે છે."],
+[1,"મોનિટરની સ્ક્રીન પરના નાનામાં નાના બિંદુને શું કહે છે?",["ડોટ પેન","બિટ","પિક્સેલ","બાઇટ"],2,"Pixel = Picture Element. જેટલા વધુ પિક્સેલ, તેટલું ચિત્ર વધુ સ્પષ્ટ (રિઝોલ્યુશન)."],
+[1,"જૂના ભારે ટીવી જેવા મોનિટરમાં કઈ ટેક્નોલોજી વપરાતી?",["OLED","CRT","LED","LCD"],1,"CRT = Cathode Ray Tube, તે ભારે અને વધુ વીજળી વાપરતા હતા."],
+[1,"સ્ક્રીન પર દેખાતું આઉટપુટ કયા પ્રકારનું ગણાય છે?",["હાર્ડ કોપી","બેકઅપ","ઇનપુટ","સોફ્ટ કોપી"],3,"સ્ક્રીન પરનું આઉટપુટ સોફ્ટ કોપી અને કાગળ પર છપાયેલું આઉટપુટ હાર્ડ કોપી કહેવાય."],
+[1,"પ્રિન્ટરથી કાગળ પર મળતું આઉટપુટ શું કહેવાય છે?",["ડ્રાફ્ટ","સોફ્ટ કોપી","હાર્ડ કોપી","ઇમેજ"],2,"કાગળ પરનું છાપેલું પરિણામ હાર્ડ કોપી છે, જેને હાથમાં લઈ શકાય."],
+[1,"પ્રિન્ટરની ગુણવત્તા (રિઝોલ્યુશન) શેમાં મપાય છે?",["DPI","bps","GHz","RPM"],0,"DPI = Dots Per Inch, એક ઇંચમાં કેટલાં ટપકાં છપાય છે."],
+[1,"પિન કાગળ પર રિબન સાથે અથડાઈને છાપે તેવા પ્રિન્ટરને શું કહે છે?",["થર્મલ પ્રિન્ટર","ઇમ્પેક્ટ પ્રિન્ટર (ડોટ મેટ્રિક્સ)","ઇંકજેટ પ્રિન્ટર","લેસર પ્રિન્ટર"],1,"ડોટ મેટ્રિક્સ ઇમ્પેક્ટ પ્રિન્ટર છે, તે અવાજ કરે છે અને બસ ટિકિટ/બિલમાં કાર્બન કોપી માટે વપરાતા."],
+[1,"ઝેરોક્સ મશીન જેવી ટેક્નોલોજી (ટોનર) વાપરીને ઝડપી અને ઉત્તમ પ્રિન્ટ આપતું પ્રિન્ટર કયું છે?",["ડોટ મેટ્રિક્સ","ડેઝી વ્હીલ","લેસર પ્રિન્ટર","લાઇન પ્રિન્ટર"],2,"લેસર પ્રિન્ટર ટોનર પાવડર અને ડ્રમ વાપરે છે, તે નોન-ઇમ્પેક્ટ પ્રિન્ટર છે."],
+[1,"શાહીના નાના ટીપાં છાંટીને છાપતું પ્રિન્ટર કયું છે?",["ઇંકજેટ પ્રિન્ટર","પ્લોટર","લેસર પ્રિન્ટર","ડોટ મેટ્રિક્સ"],0,"ઇંકજેટ પ્રિન્ટર શાહીની કાર્ટ્રિજ વાપરે છે અને રંગીન ફોટા સારા છાપે છે."],
+[1,"એન્જિનિયરિંગ ડ્રોઇંગ, નકશા અને મોટા બેનર છાપવા કયું ઉપકરણ વપરાય છે?",["સ્કેનર","ડોટ મેટ્રિક્સ પ્રિન્ટર","પ્લોટર","પ્રોજેક્ટર"],2,"પ્લોટર પેન કે શાહીથી મોટા કાગળ પર ચોક્કસ રેખાઓ દોરે છે."],
+[1,"બસ કંડક્ટરના ટિકિટ મશીન અને ATM ની સ્લિપમાં સામાન્ય રીતે કયું પ્રિન્ટર વપરાય છે?",["થર્મલ પ્રિન્ટર","લેસર પ્રિન્ટર","ઇંકજેટ પ્રિન્ટર","પ્લોટર"],0,"થર્મલ પ્રિન્ટર ગરમીથી ખાસ કાગળ પર છાપે છે, તેને શાહી જોઈતી નથી."],
+[1,"કોમ્પ્યુટરની સ્ક્રીનને મોટા પડદા પર બતાવવા કયું ઉપકરણ વપરાય છે?",["વેબકેમ","પ્રોજેક્ટર","પ્લોટર","સ્કેનર"],1,"પ્રોજેક્ટર આઉટપુટ ડિવાઇસ છે, જે વર્ગખંડ અને મીટિંગમાં વપરાય છે."],
+[1,"માઇક્રોફોન કયા પ્રકારનું ઉપકરણ છે?",["ઇનપુટ","સ્ટોરેજ","પ્રોસેસિંગ","આઉટપુટ"],0,"માઇક્રોફોન અવાજને કોમ્પ્યુટરમાં લઈ જાય છે, તેથી તે ઇનપુટ ડિવાઇસ છે."],
+[1,"કોમ્પ્યુટર સાથે કીબોર્ડ, માઉસ, પેનડ્રાઇવ જોડવા સૌથી વધુ કયો પોર્ટ વપરાય છે?",["HDMI","USB","VGA","RJ-45"],1,"USB = Universal Serial Bus, તે મોટાભાગનાં બાહ્ય ઉપકરણો માટે વપરાય છે."],
+[1,"મોનિટર કે ટીવીને ઓડિયો અને વિડિયો બંને એક જ કેબલથી આપતો પોર્ટ કયો છે?",["USB 1.0","VGA","HDMI","PS/2"],2,"HDMI = High Definition Multimedia Interface, તેમાં વિડિયો અને ઓડિયો બંને જાય છે."],
+[1,"LAN (ઇથરનેટ) કેબલ કોમ્પ્યુટર સાથે કયા કનેક્ટરથી જોડાય છે?",["HDMI","VGA","RJ-45","RJ-11"],2,"RJ-45 ઇથરનેટ નેટવર્ક માટે અને RJ-11 ટેલિફોન લાઇન માટે વપરાય છે."],
+[1,"ઇનપુટ ડિવાઇસને કોમ્પ્યુટર સાથે જોડવા અને ચલાવવા માટે જરૂરી નાના સોફ્ટવેરને શું કહે છે?",["ડ્રાઇવર","બ્રાઉઝર","ફર્મવેર","વાયરસ"],0,"પ્રિન્ટર, સાઉન્ડ કાર્ડ વગેરે ચલાવવા માટે તેમનો ડિવાઇસ ડ્રાઇવર ઇન્સ્ટોલ કરવો પડે છે."],
+[1,"ઇનપુટ ડિવાઇસ અને આઉટપુટ ડિવાઇસ બંનેને સાથે મળીને શું કહે છે?",["પેરિફેરલ (બાહ્ય) ઉપકરણો","પ્રોસેસર","મધરબોર્ડ","ફર્મવેર"],0,"CPU સિવાયનાં બહારથી જોડાતાં ઉપકરણો (કીબોર્ડ, પ્રિન્ટર, સ્કેનર વગેરે) પેરિફેરલ કહેવાય."],
+[2,"કોમ્પ્યુટરની મેમરીનો સૌથી નાનો એકમ કયો છે?",["નિબલ","બાઇટ","કિલોબાઇટ","બિટ"],3,"Bit = Binary Digit, તેની કિંમત 0 અથવા 1 હોય છે."],
+[2,"1 બાઇટ = કેટલા બિટ?",["8 બિટ","16 બિટ","4 બિટ","1024 બિટ"],0,"8 બિટ મળીને 1 બાઇટ બને છે. એક અક્ષર સંગ્રહ કરવા સામાન્ય રીતે 1 બાઇટ જોઈએ."],
+[2,"4 બિટના સમૂહને શું કહે છે?",["કિલોબાઇટ","બાઇટ","નિબલ","વર્ડ"],2,"4 બિટ = 1 નિબલ, એટલે અડધો બાઇટ."],
+[2,"1 કિલોબાઇટ (KB) = કેટલા બાઇટ?",["8 બાઇટ","1000 બિટ","100 બાઇટ","1024 બાઇટ"],3,"કોમ્પ્યુટરમાં 2¹⁰ = 1024 ના ગુણાંકમાં એકમ વધે છે, એટલે 1 KB = 1024 બાઇટ."],
+[2,"1 મેગાબાઇટ (MB) = કેટલા કિલોબાઇટ?",["1000 KB","100 KB","1024 KB","512 KB"],2,"1 MB = 1024 KB."],
+[2,"1 ગીગાબાઇટ (GB) = કેટલા મેગાબાઇટ?",["2048 MB","100 MB","1000 MB","1024 MB"],3,"1 GB = 1024 MB."],
+[2,"1 ટેરાબાઇટ (TB) = કેટલા ગીગાબાઇટ?",["1000 MB","512 GB","1024 GB","100 GB"],2,"1 TB = 1024 GB."],
+[2,"મેમરીના એકમનો સાચો ચડતો ક્રમ કયો છે?",["KB, MB, GB, TB","MB, KB, GB, TB","KB, GB, MB, TB","GB, MB, KB, TB"],0,"કિલો → મેગા → ગીગા → ટેરા → પેટા, દરેક આગળનો એકમ 1024 ગણો મોટો છે."],
+[2,"નીચેનામાંથી સૌથી મોટો મેમરી એકમ કયો છે?",["ટેરાબાઇટ (TB)","પેટાબાઇટ (PB)","મેગાબાઇટ (MB)","ગીગાબાઇટ (GB)"],1,"1 PB = 1024 TB. આપેલા વિકલ્પોમાં પેટાબાઇટ સૌથી મોટો છે."],
+[2,"2 GB પેનડ્રાઇવમાં કુલ કેટલા MB ડેટા સમાય?",["2000 MB","4096 MB","1024 MB","2048 MB"],3,"2 × 1024 = 2048 MB."],
+[2,"કોમ્પ્યુટરની મેમરીના મુખ્ય બે પ્રકાર કયા છે?",["હાર્ડ અને સોફ્ટ","પ્રાઇમરી અને સેકન્ડરી","લોકલ અને ગ્લોબલ","ઇનપુટ અને આઉટપુટ"],1,"પ્રાઇમરી (RAM, ROM) સીધી CPU સાથે કામ કરે અને સેકન્ડરી (હાર્ડ ડિસ્ક, પેનડ્રાઇવ) કાયમી સંગ્રહ કરે."],
+[2,"RAM નું પૂરું નામ શું છે?",["Read Access Memory","Rapid Access Memory","Run Access Memory","Random Access Memory"],3,"RAM = Random Access Memory, તેમાં કોઈ પણ જગ્યાનો ડેટા સીધો વાંચી-લખી શકાય."],
+[2,"વીજળી બંધ થતાં જેનો ડેટા ભૂંસાઈ જાય તે મેમરી કઈ છે?",["RAM","હાર્ડ ડિસ્ક","પેનડ્રાઇવ","ROM"],0,"RAM વોલેટાઇલ (અસ્થાયી) મેમરી છે, પાવર જતાં તેનો ડેટા ઊડી જાય છે."],
+[2,"વોલેટાઇલ મેમરી એટલે શું?",["કાયમી મેમરી","બહારની મેમરી","ફક્ત વાંચી શકાય તેવી મેમરી","પાવર બંધ થતાં ડેટા ભૂંસાઈ જાય તેવી મેમરી"],3,"Volatile = અસ્થાયી. RAM અને કેશ વોલેટાઇલ છે."],
+[2,"ROM નું પૂરું નામ શું છે?",["Read Only Memory","Read Open Memory","Random Only Memory","Run Only Memory"],0,"ROM = Read Only Memory, તેમાં ઉત્પાદક દ્વારા લખાયેલો ડેટા ફક્ત વાંચી શકાય છે."],
+[2,"ROM કયા પ્રકારની મેમરી છે?",["નોન-વોલેટાઇલ (કાયમી)","વોલેટાઇલ","વર્ચ્યુઅલ","કેશ"],0,"ROM નો ડેટા પાવર બંધ થયા પછી પણ જળવાઈ રહે છે."],
+[2,"કોમ્પ્યુટર ચાલુ કરતાં જ શરૂ થતો BIOS પ્રોગ્રામ ક્યાં સંગ્રહાયેલો હોય છે?",["RAM","કેશ","હાર્ડ ડિસ્ક","ROM (ફર્મવેર ચિપ)"],3,"BIOS મધરબોર્ડ પરની ROM/ફ્લેશ ચિપમાં હોય છે, જેથી પાવર જતાં ભૂંસાય નહીં."],
+[2,"EPROM નો ડેટા કેવી રીતે ભૂંસી શકાય છે?",["વીજળીથી","ચુંબકથી","પાણીથી","અલ્ટ્રાવાયોલેટ (UV) કિરણોથી"],3,"EPROM = Erasable Programmable ROM, તેને UV પ્રકાશમાં રાખીને ભૂંસાય છે."],
+[2,"EEPROM નો ડેટા શેના દ્વારા ભૂંસાય છે?",["વિદ્યુત (ઇલેક્ટ્રિકલ) સિગ્નલથી","UV કિરણોથી","ગરમીથી","ભૂંસી શકાતો નથી"],0,"EEPROM = Electrically Erasable PROM. પેનડ્રાઇવની ફ્લેશ મેમરી તેનું જ સ્વરૂપ છે."],
+[2,"PROM માં કેટલી વાર પ્રોગ્રામ લખી શકાય છે?",["દસ વાર","બે વાર","અમર્યાદિત","ફક્ત એક જ વાર"],3,"PROM = Programmable ROM, તેમાં યુઝર ફક્ત એક જ વાર પ્રોગ્રામ લખી શકે."],
+[2,"CPU અને RAM વચ્ચે આવેલી અત્યંત ઝડપી મેમરી કઈ છે?",["કેશ મેમરી","ROM","હાર્ડ ડિસ્ક","વર્ચ્યુઅલ મેમરી"],0,"કેશ મેમરી વારંવાર વપરાતો ડેટા રાખે છે, જેથી CPU ને રાહ ન જોવી પડે."],
+[2,"RAM ઓછી પડે ત્યારે હાર્ડ ડિસ્કના ભાગને RAM તરીકે વાપરવાની પદ્ધતિને શું કહે છે?",["કેશ મેમરી","વર્ચ્યુઅલ મેમરી","ROM","ફ્લેશ મેમરી"],1,"વર્ચ્યુઅલ મેમરીથી મોટા પ્રોગ્રામ પણ ઓછી RAM માં ચાલી શકે, પણ ઝડપ ઘટે."],
+[2,"મેમરીનો ઝડપ પ્રમાણે સાચો ઉતરતો ક્રમ કયો છે?",["કેશ > રજિસ્ટર > હાર્ડ ડિસ્ક > RAM","હાર્ડ ડિસ્ક > RAM > કેશ > રજિસ્ટર","RAM > કેશ > રજિસ્ટર > હાર્ડ ડિસ્ક","રજિસ્ટર > કેશ > RAM > હાર્ડ ડિસ્ક"],3,"CPU ની સૌથી નજીકની મેમરી સૌથી ઝડપી અને મોંઘી હોય છે."],
+[2,"DRAM ને ડેટા જાળવવા માટે શું કરવું પડે છે?",["કંઈ નહીં","ફોર્મેટ કરવું પડે","UV પ્રકાશ આપવો પડે","વારંવાર રિફ્રેશ કરવું પડે"],3,"DRAM કેપેસિટરમાં ડેટા રાખે છે, જે ધીમે ધીમે ખાલી થાય છે, તેથી સતત રિફ્રેશ કરવું પડે."],
+[2,"કેશ મેમરી બનાવવા માટે કઈ RAM વપરાય છે?",["SDRAM","SRAM","PROM","DRAM"],1,"SRAM (Static RAM) ને રિફ્રેશ નથી કરવી પડતી, તે ઝડપી પણ મોંઘી છે."],
+[2,"નીચેનામાંથી સેકન્ડરી સ્ટોરેજ ડિવાઇસ કયું છે?",["હાર્ડ ડિસ્ક","RAM","કેશ","રજિસ્ટર"],0,"હાર્ડ ડિસ્કમાં ડેટા કાયમી રહે છે, તે સેકન્ડરી મેમરી છે."],
+[2,"HDD નું પૂરું નામ શું છે?",["Hard Data Device","Hard Disk Drive","High Density Disk","Hybrid Disk Drive"],1,"HDD ફરતી ચુંબકીય પ્લેટર પર ડેટા સંગ્રહ કરે છે."],
+[2,"હાર્ડ ડિસ્કની ફરવાની ઝડપ શેમાં મપાય છે?",["GHz","DPI","bps","RPM"],3,"RPM = Revolutions Per Minute. સામાન્ય HDD 5400 કે 7200 RPM ની હોય છે."],
+[2,"હાર્ડ ડિસ્કની પ્લેટરને ગોળ રિંગમાં વહેંચવામાં આવે છે, તે રિંગને શું કહે છે?",["સિલિન્ડર","ટ્રેક","ક્લસ્ટર","સેક્ટર"],1,"ટ્રેક ગોળ રિંગ છે અને ટ્રેકના નાના ભાગને સેક્ટર કહે છે."],
+[2,"SSD નું પૂરું નામ શું છે?",["System State Drive","Solid Storage Device","Super Storage Disk","Solid State Drive"],3,"SSD માં કોઈ ફરતો ભાગ નથી, તે ફ્લેશ ચિપ વાપરે છે, તેથી HDD કરતાં ઘણી ઝડપી છે."],
+[2,"પેનડ્રાઇવમાં કઈ મેમરી વપરાય છે?",["ઓપ્ટિકલ મેમરી","મેગ્નેટિક મેમરી","કેશ મેમરી","ફ્લેશ મેમરી"],3,"પેનડ્રાઇવ (USB ફ્લેશ ડ્રાઇવ) ફ્લેશ મેમરી વાપરે છે, જે નોન-વોલેટાઇલ છે."],
+[2,"CD, DVD અને Blu-ray કયા પ્રકારનાં સ્ટોરેજ ડિવાઇસ છે?",["મેગ્નેટિક","સેમિકન્ડક્ટર","ઓપ્ટિકલ","ફ્લેશ"],2,"આ ડિસ્ક લેસર કિરણથી વંચાય છે, તેથી ઓપ્ટિકલ સ્ટોરેજ કહેવાય."],
+[2,"સામાન્ય CD ની સંગ્રહ ક્ષમતા કેટલી હોય છે?",["આશરે 700 MB","1.44 MB","4.7 GB","25 GB"],0,"CD માં આશરે 650 થી 700 MB ડેટા સમાય છે."],
+[2,"સિંગલ લેયર DVD ની સંગ્રહ ક્ષમતા કેટલી હોય છે?",["1.44 MB","4.7 GB","25 GB","700 MB"],1,"સિંગલ લેયર DVD = 4.7 GB, ડ્યુઅલ લેયર = 8.5 GB."],
+[2,"સિંગલ લેયર Blu-ray ડિસ્કની ક્ષમતા કેટલી હોય છે?",["2 GB","4.7 GB","25 GB","700 MB"],2,"Blu-ray માં વાદળી-જાંબલી લેસર વપરાય છે, સિંગલ લેયર 25 GB ની હોય છે."],
+[2,"3.5 ઇંચની ફ્લોપી ડિસ્કની ક્ષમતા કેટલી હતી?",["1.44 MB","100 MB","4.7 GB","700 MB"],0,"ફ્લોપી ડિસ્ક ચુંબકીય હતી અને તેમાં 1.44 MB ડેટા સમાતો."],
+[2,"CD-ROM માં ROM નો અર્થ શું સૂચવે છે?",["ડેટા છુપાવી શકાય","ડેટા ફક્ત વાંચી શકાય, ફરી લખી ન શકાય","ડેટા વારંવાર લખી શકાય","ડેટા ભૂંસાઈ જાય"],1,"CD-ROM = Compact Disc Read Only Memory."],
+[2,"જે CD પર વારંવાર ડેટા લખી અને ભૂંસી શકાય તેને શું કહે છે?",["CD-ROM","CD-R","CD-RW","DVD-ROM"],2,"CD-RW = ReWritable. CD-R માં ફક્ત એક જ વાર લખી શકાય."],
+[2,"મેગ્નેટિક ટેપમાં ડેટા કઈ રીતે વંચાય છે?",["વાંચી શકાતો નથી","ક્રમિક (Sequential) રીતે","સીધો (Random)","ઓપ્ટિકલ રીતે"],1,"ટેપમાં ડેટા ક્રમમાં હોય છે, વચ્ચેનો ડેટા જોઈએ તો પહેલાંનો ભાગ પસાર કરવો પડે. તે બેકઅપ માટે વપરાય છે."],
+[2,"મોબાઇલ અને કેમેરામાં વપરાતું નાનું સ્ટોરેજ કાર્ડ કયું છે?",["માઇક્રો SD કાર્ડ","SIM કાર્ડ","સાઉન્ડ કાર્ડ","ગ્રાફિક્સ કાર્ડ"],0,"SD = Secure Digital, માઇક્રો SD કાર્ડમાં ફ્લેશ મેમરી હોય છે."],
+[2,"ઇન્ટરનેટ પર ડેટા સંગ્રહ કરવાની સુવિધા (જેમ કે Google Drive) ને શું કહે છે?",["ક્લાઉડ સ્ટોરેજ","કેશ સ્ટોરેજ","લોકલ સ્ટોરેજ","ઓપ્ટિકલ સ્ટોરેજ"],0,"ક્લાઉડ સ્ટોરેજમાં ફાઇલ બીજાના સર્વર પર રહે છે અને ગમે ત્યાંથી ઇન્ટરનેટ દ્વારા ખોલી શકાય."],
+[2,"નવી હાર્ડ ડિસ્ક કે પેનડ્રાઇવને વાપરવા લાયક બનાવવાની (બધો ડેટા ભૂંસીને) પ્રક્રિયાને શું કહે છે?",["ફોર્મેટિંગ","કમ્પ્રેસિંગ","બૂટિંગ","સ્કેનિંગ"],0,"ફોર્મેટ કરવાથી ડ્રાઇવ પર ફાઇલ સિસ્ટમ (NTFS, FAT32) બને છે અને જૂનો ડેટા ભૂંસાય છે."],
+[2,"હાર્ડ ડિસ્ક પર વેરવિખેર પડેલા ફાઇલના ટુકડાને એક સાથે ગોઠવવાની ક્રિયાને શું કહે છે?",["બેકઅપ","ડિફ્રેગમેન્ટેશન","પાર્ટીશન","ફોર્મેટિંગ"],1,"ડિફ્રેગમેન્ટેશનથી HDD ની ઝડપ વધે છે."],
+[2,"એક હાર્ડ ડિસ્કને C:, D:, E: જેવા અલગ ભાગમાં વહેંચવાને શું કહે છે?",["ફોર્મેટિંગ","પાર્ટીશન","ડિફ્રેગ","ક્લસ્ટર"],1,"પાર્ટીશનથી એક જ ડિસ્ક જુદી જુદી ડ્રાઇવ તરીકે દેખાય છે."],
+[2,"Windows માં સામાન્ય રીતે ઓપરેટિંગ સિસ્ટમ કઈ ડ્રાઇવમાં ઇન્સ્ટોલ હોય છે?",["D: ડ્રાઇવ","E: ડ્રાઇવ","C: ડ્રાઇવ","A: ડ્રાઇવ"],2,"A: અને B: પહેલાં ફ્લોપી માટે હતી, તેથી હાર્ડ ડિસ્કની પહેલી ડ્રાઇવ C: છે."],
+[2,"ડેટાની વધારાની નકલ બીજી જગ્યાએ સાચવી રાખવાને શું કહે છે?",["ફોર્મેટ","બેકઅપ","ડિલીટ","રિસ્ટોર"],1,"બેકઅપ હોય તો કોમ્પ્યુટર બગડે કે વાયરસ આવે ત્યારે પણ ડેટા પાછો મેળવી (રિસ્ટોર) શકાય."],
+[2,"ફાઇલનું કદ નાનું કરવાની પ્રક્રિયાને શું કહે છે?",["ફોર્મેટિંગ","એન્ક્રિપ્શન","કમ્પ્રેશન (ઝિપ કરવું)","ડિફ્રેગ"],2,"ZIP, RAR જેવા ફોર્મેટમાં ફાઇલ કમ્પ્રેસ કરવાથી તે ઓછી જગ્યા લે અને ઝડપથી મોકલી શકાય."],
+[2,"મેમરીમાં દરેક જગ્યાને ઓળખવા માટે આપેલા અનન્ય નંબરને શું કહે છે?",["URL","IP એડ્રેસ","મેમરી એડ્રેસ","MAC એડ્રેસ"],2,"CPU એડ્રેસ બસ દ્વારા મેમરી એડ્રેસ મોકલીને જરૂરી ડેટા મેળવે છે."],
+[2,"RAM વધારવાથી કોમ્પ્યુટરમાં મુખ્યત્વે શો ફાયદો થાય છે?",["એક સાથે વધુ પ્રોગ્રામ ઝડપથી ચાલે છે","હાર્ડ ડિસ્કની જગ્યા વધે છે","ઇન્ટરનેટ ઝડપી થાય છે","સ્ક્રીન મોટી થાય છે"],0,"RAM એ કામ કરવાની મેમરી છે, વધુ RAM હોય તો ઘણા પ્રોગ્રામ એક સાથે સરળતાથી ચાલે."],
+[2,"512 MB ની બે ફાઇલ મળીને કુલ કેટલું કદ થાય?",["1 GB","1 TB","2 GB","512 KB"],0,"512 + 512 = 1024 MB = 1 GB."],
+[3,"કોમ્પ્યુટરને શું કરવું તે જણાવતી સૂચનાઓના સમૂહને શું કહે છે?",["સોફ્ટવેર (પ્રોગ્રામ)","ડેટા","હાર્ડવેર","નેટવર્ક"],0,"સોફ્ટવેર એ પ્રોગ્રામનો સમૂહ છે, તેને અડી શકાતું નથી."],
+[3,"સોફ્ટવેરના મુખ્ય બે પ્રકાર કયા છે?",["હાર્ડ અને સોફ્ટ સોફ્ટવેર","ઇનપુટ અને આઉટપુટ સોફ્ટવેર","લોકલ અને ઓનલાઇન સોફ્ટવેર","સિસ્ટમ સોફ્ટવેર અને એપ્લિકેશન સોફ્ટવેર"],3,"સિસ્ટમ સોફ્ટવેર કોમ્પ્યુટર ચલાવે છે અને એપ્લિકેશન સોફ્ટવેર યુઝરનું ખાસ કામ કરે છે."],
+[3,"નીચેનામાંથી સિસ્ટમ સોફ્ટવેર કયું છે?",["MS Word","ઓપરેટિંગ સિસ્ટમ","Photoshop","Tally"],1,"ઓપરેટિંગ સિસ્ટમ, ડ્રાઇવર, યુટિલિટી વગેરે સિસ્ટમ સોફ્ટવેર છે."],
+[3,"નીચેનામાંથી એપ્લિકેશન સોફ્ટવેર કયું છે?",["BIOS","Windows","MS Excel","Linux"],2,"MS Excel ખાસ કામ (સ્પ્રેડશીટ) માટે છે, તેથી એપ્લિકેશન સોફ્ટવેર છે."],
+[3,"યુઝર અને હાર્ડવેર વચ્ચે મધ્યસ્થી (ઇન્ટરફેસ) તરીકે કામ કરતું સોફ્ટવેર કયું છે?",["એન્ટિવાયરસ","ઓપરેટિંગ સિસ્ટમ","કમ્પાઇલર","વેબ બ્રાઉઝર"],1,"OS હાર્ડવેર, મેમરી, ફાઇલ અને પ્રોગ્રામનું સંચાલન કરે છે."],
+[3,"નીચેનામાંથી ઓપરેટિંગ સિસ્ટમ કયું નથી?",["Linux","Windows","Google Chrome","Android"],2,"Google Chrome વેબ બ્રાઉઝર છે, ઓપરેટિંગ સિસ્ટમ નથી."],
+[3,"Windows ઓપરેટિંગ સિસ્ટમ કઈ કંપનીએ બનાવી છે?",["Google","Microsoft","Apple","IBM"],1,"Microsoft ની સ્થાપના બિલ ગેટ્સ અને પોલ એલને 1975 માં કરી હતી."],
+[3,"Android ઓપરેટિંગ સિસ્ટમ હાલ કઈ કંપનીની છે?",["Apple","Microsoft","Google","Samsung"],2,"Android Linux કર્નલ પર આધારિત છે અને Google તેનો વિકાસ કરે છે."],
+[3,"iPhone માં કઈ ઓપરેટિંગ સિસ્ટમ વપરાય છે?",["Android","iOS","Symbian","Windows"],1,"iOS એ Apple ની મોબાઇલ ઓપરેટિંગ સિસ્ટમ છે."],
+[3,"Apple ના Mac કોમ્પ્યુટરમાં કઈ ઓપરેટિંગ સિસ્ટમ હોય છે?",["Android","Windows","DOS","macOS"],3,"Mac કોમ્પ્યુટરમાં macOS ઓપરેટિંગ સિસ્ટમ આવે છે."],
+[3,"નીચેનામાંથી ઓપન સોર્સ (મફત, કોડ જાહેર) ઓપરેટિંગ સિસ્ટમ કઈ છે?",["iOS","Linux","macOS","Windows"],1,"Linux નો સોર્સ કોડ જાહેર છે અને કોઈ પણ તેને બદલી શકે છે. તેની શરૂઆત લિનસ ટોરવાલ્ડ્સે કરી."],
+[3,"Linux ની શરૂઆત કોણે કરી હતી?",["સ્ટીવ જોબ્સ","લિનસ ટોરવાલ્ડ્સ","બિલ ગેટ્સ","ડેનિસ રિચી"],1,"લિનસ ટોરવાલ્ડ્સે 1991 માં Linux કર્નલ બનાવ્યું."],
+[3,"MS-DOS કયા પ્રકારની ઓપરેટિંગ સિસ્ટમ છે?",["નેટવર્ક OS","ગ્રાફિકલ (GUI)","મોબાઇલ OS","કેરેક્ટર યુઝર ઇન્ટરફેસ (CUI) – કમાન્ડ આધારિત"],3,"DOS માં માઉસ કે ચિત્રો નહીં, ફક્ત ટાઇપ કરેલા કમાન્ડથી કામ થાય છે."],
+[3,"GUI નું પૂરું નામ શું છે?",["Graphical Unique Interface","Global User Interface","Graphical User Interface","General User Interface"],2,"GUI માં આઇકન, વિન્ડો, મેનુ અને માઉસથી કામ થાય છે, જેમ કે Windows."],
+[3,"કોમ્પ્યુટર ચાલુ કરતાં ઓપરેટિંગ સિસ્ટમ મેમરીમાં લોડ થવાની પ્રક્રિયાને શું કહે છે?",["ફોર્મેટિંગ","બૂટિંગ","લોગિંગ","સ્કેનિંગ"],1,"બૂટિંગ દરમિયાન BIOS હાર્ડવેર તપાસે છે અને પછી OS લોડ થાય છે."],
+[3,"બંધ કોમ્પ્યુટરને પાવર બટનથી ચાલુ કરવાને શું કહે છે?",["રીસ્ટાર્ટ","વોર્મ બૂટિંગ","કોલ્ડ બૂટિંગ","સ્લીપ"],2,"બંધ સ્થિતિમાંથી ચાલુ કરવું કોલ્ડ બૂટ અને ચાલુ કોમ્પ્યુટરને રીસ્ટાર્ટ કરવું વોર્મ બૂટ કહેવાય."],
+[3,"ચાલુ કોમ્પ્યુટરને Restart કરવાને શું કહે છે?",["વોર્મ બૂટિંગ","કોલ્ડ બૂટિંગ","હાઇબરનેટ","શટડાઉન"],0,"વોર્મ બૂટમાં પાવર બંધ કર્યા વગર કોમ્પ્યુટર ફરી શરૂ થાય છે."],
+[3,"બૂટિંગ વખતે હાર્ડવેર બરાબર છે કે નહીં તે તપાસતી પ્રક્રિયાને શું કહે છે?",["CMOS","POST","BIOS","DOS"],1,"POST = Power On Self Test. ભૂલ હોય તો બીપ અવાજ આવે છે."],
+[3,"BIOS નું પૂરું નામ શું છે?",["Basic Internal Operating System","Binary Input Output System","Base Input Output Software","Basic Input Output System"],3,"BIOS કોમ્પ્યુટર ચાલુ થતાં સૌ પ્રથમ ચાલતો પ્રોગ્રામ છે."],
+[3,"હાર્ડવેર ચિપમાં કાયમ માટે લખેલા સોફ્ટવેર (જેમ કે BIOS) ને શું કહે છે?",["ફ્રીવેર","ફર્મવેર","મેલવેર","શેરવેર"],1,"ફર્મવેર હાર્ડવેર અને સોફ્ટવેર વચ્ચેની વસ્તુ છે, તે ROM/ફ્લેશ ચિપમાં હોય છે."],
+[3,"મફતમાં વાપરવા મળતા સોફ્ટવેરને શું કહે છે?",["ફ્રીવેર","મેલવેર","ફર્મવેર","શેરવેર"],0,"ફ્રીવેર કોઈ પણ ચાર્જ વગર કાયમ વાપરી શકાય છે."],
+[3,"થોડા દિવસ મફત (ટ્રાયલ) વાપરવા આપે અને પછી પૈસા ભરવા પડે તેવા સોફ્ટવેરને શું કહે છે?",["શેરવેર","ઓપન સોર્સ","ફ્રીવેર","ફર્મવેર"],0,"શેરવેર ટ્રાયલ વર્ઝન તરીકે મળે છે, જેમ કે WinRAR."],
+[3,"માણસની ભાષા જેવી હાઇ-લેવલ ભાષાના આખા પ્રોગ્રામને એક સાથે મશીન ભાષામાં ફેરવતું સોફ્ટવેર કયું છે?",["લોડર","એસેમ્બલર","ઇન્ટરપ્રીટર","કમ્પાઇલર"],3,"કમ્પાઇલર આખો પ્રોગ્રામ એક સાથે અનુવાદ કરે છે, જેમ કે C ભાષા."],
+[3,"હાઇ-લેવલ પ્રોગ્રામને લાઇન-બાય-લાઇન મશીન ભાષામાં ફેરવતું સોફ્ટવેર કયું છે?",["એડિટર","એસેમ્બલર","કમ્પાઇલર","ઇન્ટરપ્રીટર"],3,"ઇન્ટરપ્રીટર એક-એક લાઇન વાંચીને ચલાવે છે, જેમ કે Python."],
+[3,"એસેમ્બલી ભાષાને મશીન ભાષામાં ફેરવતું સોફ્ટવેર કયું છે?",["ઇન્ટરપ્રીટર","એસેમ્બલર","લિંકર","કમ્પાઇલર"],1,"એસેમ્બલી ભાષામાં ADD, MOV જેવા ટૂંકા શબ્દો (નેમોનિક) વપરાય છે."],
+[3,"કોમ્પ્યુટર સીધી સમજી શકે તેવી ભાષા કઈ છે?",["C ભાષા","મશીન ભાષા (0 અને 1)","અંગ્રેજી","Java"],1,"મશીન ભાષા બાઇનરી કોડમાં હોય છે, તેને અનુવાદની જરૂર નથી."],
+[3,"C પ્રોગ્રામિંગ ભાષા કોણે બનાવી?",["બિલ ગેટ્સ","લિનસ ટોરવાલ્ડ્સ","જેમ્સ ગોસલિંગ","ડેનિસ રિચી"],3,"ડેનિસ રિચીએ 1972 માં બેલ લેબ્સમાં C ભાષા બનાવી."],
+[3,"Java પ્રોગ્રામિંગ ભાષાના પિતા કોણ ગણાય છે?",["ડેનિસ રિચી","જેમ્સ ગોસલિંગ","બ્યાર્ને સ્ટ્રાઉસ્ટ્રપ","ગ્વિડો વાન રોસમ"],1,"જેમ્સ ગોસલિંગે Sun Microsystems માં Java બનાવી હતી."],
+[3,"વેબ પેજ બનાવવા માટે વપરાતી ભાષા કઈ છે?",["COBOL","HTML","FORTRAN","BASIC"],1,"HTML = HyperText Markup Language, તે વેબ પેજનું માળખું બનાવે છે."],
+[3,"Windows નું મુખ્ય સ્ક્રીન, જે કોમ્પ્યુટર ચાલુ થયા પછી દેખાય છે, તેને શું કહે છે?",["ફોલ્ડર","ટાસ્કબાર","વિન્ડો","ડેસ્કટોપ"],3,"ડેસ્કટોપ પર આઇકન, વોલપેપર અને નીચે ટાસ્કબાર હોય છે."],
+[3,"Windows માં સ્ક્રીનની નીચે આવેલી પટ્ટી, જેમાં ખુલ્લા પ્રોગ્રામ દેખાય છે, તેને શું કહે છે?",["ટાસ્કબાર","મેનુ બાર","ટાઇટલ બાર","સ્ટેટસ બાર"],0,"ટાસ્કબારમાં સ્ટાર્ટ બટન, ખુલ્લા પ્રોગ્રામ અને ઘડિયાળ હોય છે."],
+[3,"ડેસ્કટોપ પર પ્રોગ્રામ કે ફાઇલને દર્શાવતાં નાનાં ચિત્રોને શું કહે છે?",["આઇકન","કર્સર","પિક્સેલ","વિજેટ"],0,"આઇકન પર ડબલ ક્લિક કરવાથી તે પ્રોગ્રામ કે ફાઇલ ખુલે છે."],
+[3,"Windows માં ડિલીટ કરેલી ફાઇલ સૌ પ્રથમ ક્યાં જાય છે?",["રિસાયકલ બિન","કંટ્રોલ પેનલ","માય ડોક્યુમેન્ટ્સ","ડેસ્કટોપ"],0,"રિસાયકલ બિનમાંથી ફાઇલ પાછી (Restore) લાવી શકાય છે."],
+[3,"ફાઇલને રિસાયકલ બિનમાં મોકલ્યા વગર કાયમ માટે ડિલીટ કરવા કઈ કી વાપરવી?",["Ctrl + Delete","Shift + Delete","Alt + Delete","Delete"],1,"Shift+Delete થી ફાઇલ સીધી કાયમ માટે ભૂંસાય છે, રિસાયકલ બિનમાં જતી નથી."],
+[3,"ફાઇલો અને ફોલ્ડરનું સંચાલન કરવા Windows માં કયો પ્રોગ્રામ વપરાય છે?",["Task Manager","Paint","File Explorer (Windows Explorer)","Notepad"],2,"File Explorer થી ફાઇલ ખોલવી, કોપી, મૂવ, ડિલીટ કરી શકાય છે."],
+[3,"ફાઇલોને ગોઠવીને રાખવા માટે બનાવેલા ખાનાને શું કહે છે?",["ફોલ્ડર (ડિરેક્ટરી)","શોર્ટકટ","આઇકન","ટાસ્કબાર"],0,"ફોલ્ડરમાં ફાઇલો અને બીજાં ફોલ્ડર (સબ-ફોલ્ડર) રાખી શકાય છે."],
+[3,"Windows નાં સેટિંગ (પ્રિન્ટર, યુઝર, પ્રોગ્રામ ઇન્સ્ટોલ/અનઇન્સ્ટોલ) બદલવા માટે શું વપરાય છે?",["કંટ્રોલ પેનલ","રિસાયકલ બિન","વર્ડપેડ","ટાસ્કબાર"],0,"કંટ્રોલ પેનલ (અને નવા Windows માં Settings) માંથી સિસ્ટમ સેટિંગ બદલાય છે."],
+[3,"અટકી ગયેલો (Not Responding) પ્રોગ્રામ બંધ કરવા Windows માં શું ખોલવું પડે?",["નોટપેડ","કંટ્રોલ પેનલ","પેઇન્ટ","ટાસ્ક મેનેજર"],3,"Ctrl+Shift+Esc થી ટાસ્ક મેનેજર ખોલીને 'End Task' કરી શકાય."],
+[3,"Windows માં સાદું લખાણ લખવા માટેનો સૌથી સરળ ટેક્સ્ટ એડિટર કયો છે?",["PowerPoint","Excel","Paint","Notepad"],3,"Notepad માં .txt ફાઇલ બને છે, તેમાં ફોન્ટ ફોર્મેટિંગ ઓછું હોય છે."],
+[3,"Windows માં ચિત્ર દોરવા માટેનો પ્રોગ્રામ કયો છે?",["MS Paint","Calculator","Notepad","WordPad"],0,"MS Paint માં ચિત્ર દોરી .bmp, .png, .jpg માં સેવ કરી શકાય."],
+[3,"Windows માં ફાઇલના નામમાં નીચેનામાંથી કયો અક્ષર વાપરી શકાતો નથી?",["1 (આંકડો)","- (હાયફન)","_ (અંડરસ્કોર)","? (પ્રશ્નાર્થ ચિહ્ન)"],3,"ફાઇલ નામમાં \\ / : * ? \" < > | આ નવ અક્ષરો વાપરી શકાતા નથી."],
+[3,"ફાઇલના નામમાં બિંદુ (.) પછી આવતા ભાગને (જેમ કે .docx) શું કહે છે?",["ફોલ્ડર","એક્સ્ટેન્શન","આઇકન","પાથ"],1,"એક્સ્ટેન્શનથી ખબર પડે કે ફાઇલ કયા પ્રકારની છે અને કયા પ્રોગ્રામથી ખુલશે."],
+[3,"Windows ની વિન્ડોમાં સૌથી ઉપર પ્રોગ્રામ અને ફાઇલનું નામ દર્શાવતી પટ્ટી કઈ છે?",["ટાઇટલ બાર","સ્ક્રોલ બાર","સ્ટેટસ બાર","ટાસ્કબાર"],0,"ટાઇટલ બારની જમણી બાજુ Minimize, Maximize અને Close બટન હોય છે."],
+[3,"વિન્ડોને બંધ કર્યા વગર ટાસ્કબારમાં નાની કરી દેવાના બટનને શું કહે છે?",["મિનિમાઇઝ","ક્લોઝ","મેક્સિમાઇઝ","રિસ્ટોર"],0,"Minimize કરવાથી પ્રોગ્રામ ચાલુ રહે છે અને ટાસ્કબારમાં જતો રહે છે."],
+[3,"એક સાથે અનેક પ્રોગ્રામ ચલાવવાની ઓપરેટિંગ સિસ્ટમની ક્ષમતાને શું કહે છે?",["મલ્ટીટાસ્કિંગ","બૂટિંગ","મલ્ટીપ્લેક્સિંગ","મલ્ટીમીડિયા"],0,"Windows મલ્ટીટાસ્કિંગ OS છે, જેમાં ગીત સાંભળતાં સાથે ટાઇપ પણ થઈ શકે."],
+[3,"ફાઇલ કે પ્રોગ્રામને ઝડપથી ખોલવા ડેસ્કટોપ પર બનાવેલી લિંકને શું કહે છે?",["શોર્ટકટ","એક્સ્ટેન્શન","ફોલ્ડર","ડ્રાઇવ"],0,"શોર્ટકટ આઇકન પર નાનું તીર હોય છે, તેને ડિલીટ કરવાથી મૂળ ફાઇલ ડિલીટ થતી નથી."],
+[3,"કોમ્પ્યુટરનું બધું કામ સેવ કરીને ઓછી વીજળી વાપરતી સ્થિતિમાં રાખવાને શું કહે છે, જેથી તરત ફરી શરૂ થાય?",["સ્લીપ","લોગ ઓફ","શટડાઉન","ફોર્મેટ"],0,"સ્લીપમાં કામ RAM માં રહે છે અને માઉસ કે કી દબાવતાં તરત ફરી શરૂ થાય."],
+[3,"ઇન્સ્ટોલ થયેલા સોફ્ટવેરને કોમ્પ્યુટરમાંથી સંપૂર્ણ દૂર કરવાને શું કહે છે?",["ડિલીટ","અપડેટ","અનઇન્સ્ટોલ","ફોર્મેટ"],2,"કંટ્રોલ પેનલના 'Programs and Features' કે Settings > Apps માંથી સોફ્ટવેર અનઇન્સ્ટોલ થાય છે."],
+[3,"ઓપરેટિંગ સિસ્ટમનો મુખ્ય (કેન્દ્રીય) ભાગ, જે હાર્ડવેર સાથે સીધો સંપર્ક રાખે છે, તેને શું કહે છે?",["કર્નલ","ડેસ્કટોપ","શેલ","BIOS"],0,"કર્નલ મેમરી, પ્રોસેસ અને ઉપકરણોનું સંચાલન કરે છે. શેલ યુઝર અને કર્નલ વચ્ચેનું પડ છે."],
+[3,"Windows માં ફાઇલ કે ફોલ્ડરનું નામ બદલવા માટે કઈ કી વપરાય છે?",["F5","F12","F1","F2"],3,"ફાઇલ પસંદ કરીને F2 દબાવવાથી Rename થઈ શકે છે."],
+[4,"MS Word કયા પ્રકારનું સોફ્ટવેર છે?",["સ્પ્રેડશીટ","પ્રેઝન્ટેશન","ડેટાબેઝ","વર્ડ પ્રોસેસર"],3,"MS Word થી પત્ર, અરજી, રિપોર્ટ જેવા દસ્તાવેજ બનાવી અને ફોર્મેટ કરી શકાય છે."],
+[4,"MS Word 2007 અને પછીના વર્ઝનમાં ફાઇલનું ડિફોલ્ટ એક્સ્ટેન્શન કયું છે?",[".doc",".pptx",".docx",".xlsx"],2,"Word 2007 થી .docx અને જૂના Word 97–2003 માં .doc એક્સ્ટેન્શન હતું."],
+[4,"MS Word માં ખુલતા નવા ડોક્યુમેન્ટનું ડિફોલ્ટ નામ શું હોય છે?",["Presentation1","Document1","Sheet1","Book1"],1,"Word માં Document1, Excel માં Book1 અને PowerPoint માં Presentation1 નામ હોય છે."],
+[4,"MS Word માં ટાઇપ કરતાં લાઇન પૂરી થાય ત્યારે આપોઆપ નવી લાઇનમાં જવાની સુવિધાને શું કહે છે?",["ઓટો કરેક્ટ","ઓટો ફિટ","જસ્ટિફાઇ","વર્ડ રેપ"],3,"Word Wrap ને લીધે લાઇનના અંતે Enter દબાવવાની જરૂર નથી."],
+[4,"MS Word માં જોડણીની ભૂલવાળા શબ્દ નીચે કયા રંગની વાંકીચૂકી લાઇન આવે છે?",["લાલ","પીળી","લીલી","વાદળી"],0,"લાલ લાઇન જોડણીની ભૂલ બતાવે છે. જૂના વર્ઝનમાં લીલી લાઇન વ્યાકરણની ભૂલ માટે હતી."],
+[4,"Word માં જોડણી અને વ્યાકરણ તપાસવા કઈ ફંક્શન કી વપરાય છે?",["F2","F7","F5","F12"],1,"F7 દબાવવાથી Spelling & Grammar ચેક ખુલે છે (Review ટેબ)."],
+[4,"Word માં 'Save As' ડાયલોગ ખોલવા કઈ ફંક્શન કી વપરાય છે?",["F7","F1","F4","F12"],3,"F12 દબાવવાથી ફાઇલને નવા નામ કે જગ્યાએ સેવ કરવાનું Save As ખુલે છે."],
+[4,"પસંદ કરેલા લખાણને ઘાટું (Bold) કરવા કઈ શોર્ટકટ કી છે?",["Ctrl + D","Ctrl + I","Ctrl + B","Ctrl + U"],2,"B = Bold. ફરી Ctrl+B દબાવતાં બોલ્ડ દૂર થાય છે."],
+[4,"પસંદ કરેલા લખાણને ત્રાંસું (Italic) કરવા કઈ શોર્ટકટ કી છે?",["Ctrl + L","Ctrl + B","Ctrl + T","Ctrl + I"],3,"I = Italic, તેનાથી અક્ષરો ત્રાંસા થાય છે."],
+[4,"પસંદ કરેલા લખાણ નીચે લીટી (Underline) કરવા કઈ શોર્ટકટ કી છે?",["Ctrl + U","Ctrl + L","Ctrl + I","Ctrl + B"],0,"U = Underline."],
+[4,"Word માં લખાણને પાનાની વચ્ચે (Center) ગોઠવવા કઈ શોર્ટકટ કી છે?",["Ctrl + C","Ctrl + R","Ctrl + M","Ctrl + E"],3,"Ctrl+E = Center. Ctrl+C કોપી માટે છે."],
+[4,"Word માં લખાણને જમણી બાજુ (Right Align) ગોઠવવા કઈ શોર્ટકટ કી છે?",["Ctrl + E","Ctrl + J","Ctrl + L","Ctrl + R"],3,"Ctrl+R = Right, Ctrl+L = Left, Ctrl+E = Center, Ctrl+J = Justify."],
+[4,"Word માં લખાણને બંને બાજુ સરખું (Justify) ગોઠવવા કઈ શોર્ટકટ કી છે?",["Ctrl + L","Ctrl + J","Ctrl + R","Ctrl + E"],1,"Justify થી લાઇન ડાબી અને જમણી બંને બાજુ એક સીધી રેખામાં આવે છે, જેમ છાપામાં."],
+[4,"Word માં પસંદ કરેલા લખાણના અક્ષરોનું કદ (ફોન્ટ સાઇઝ) વધારવા કઈ શોર્ટકટ કી છે?",["Ctrl + ]","Ctrl + [","Ctrl + -","Ctrl + ="],0,"Ctrl+] એક પોઇન્ટ વધારે છે અને Ctrl+[ એક પોઇન્ટ ઘટાડે છે. Ctrl+Shift+> પણ વાપરી શકાય."],
+[4,"MS Word માં H₂O જેવું નીચે નાનું લખાણ (સબસ્ક્રિપ્ટ) લખવા કઈ શોર્ટકટ કી છે?",["Ctrl + =","Ctrl + Shift + =","Ctrl + Alt + S","Ctrl + S"],0,"Ctrl+= સબસ્ક્રિપ્ટ (H₂O) અને Ctrl+Shift+= સુપરસ્ક્રિપ્ટ (x²) માટે છે."],
+[4,"x² જેવું ઉપર નાનું લખાણ (સુપરસ્ક્રિપ્ટ) લખવા Word માં કઈ શોર્ટકટ કી છે?",["Ctrl + =","Ctrl + U","Ctrl + Shift + S","Ctrl + Shift + ="],3,"સુપરસ્ક્રિપ્ટ ઘાત (પાવર) લખવા માટે વપરાય છે."],
+[4,"Word માં લાઇન વચ્ચેનું અંતર (Line Spacing) ડબલ કરવા કઈ શોર્ટકટ કી છે?",["Ctrl + D","Ctrl + 2","Ctrl + 5","Ctrl + 1"],1,"Ctrl+1 = સિંગલ, Ctrl+5 = 1.5 અને Ctrl+2 = ડબલ લાઇન સ્પેસિંગ."],
+[4,"Word માં ચાલુ લાઇનથી તરત નવું પાનું (Page Break) શરૂ કરવા કઈ શોર્ટકટ કી છે?",["Alt + Enter","Shift + Enter","Enter","Ctrl + Enter"],3,"Ctrl+Enter પેજ બ્રેક ઉમેરે છે અને Shift+Enter એ જ પેરેગ્રાફમાં નવી લાઇન (Line Break) આપે છે."],
+[4,"Word માં શબ્દ શોધીને બીજા શબ્દથી બદલવા (Find & Replace) કઈ શોર્ટકટ કી છે?",["Ctrl + H","Ctrl + F","Ctrl + R","Ctrl + G"],0,"Ctrl+H થી Replace ખુલે છે અને Ctrl+F ફક્ત શોધવા (Find) માટે છે."],
+[4,"Word માં કોઈ ચોક્કસ પાના નંબર પર સીધા જવા (Go To) કઈ શોર્ટકટ કી છે?",["Ctrl + P","Ctrl + J","Ctrl + H","Ctrl + G"],3,"Ctrl+G (અથવા F5) થી Go To ખુલે છે."],
+[4,"Word માં ડોક્યુમેન્ટની શરૂઆત પર સીધા જવા કઈ કી વપરાય છે?",["Ctrl + Home","Ctrl + End","Home","Page Up"],0,"Ctrl+Home ડોક્યુમેન્ટની શરૂઆતમાં અને Ctrl+End અંતમાં લઈ જાય છે. ફક્ત Home લાઇનની શરૂઆતમાં લઈ જાય."],
+[4,"Word માં છેલ્લે કરેલી ક્રિયા ફરી કરવા (Repeat) કઈ ફંક્શન કી વપરાય છે?",["F4","F7","F2","F9"],0,"F4 છેલ્લી ક્રિયાનું પુનરાવર્તન કરે છે, જેમ કે ફરી બોલ્ડ કરવું."],
+[4,"Word માં ફોન્ટ ડાયલોગ બોક્સ ખોલવા કઈ શોર્ટકટ કી છે?",["Ctrl + D","Ctrl + Shift + D","Ctrl + T","Ctrl + F"],0,"Ctrl+D થી ફોન્ટ, સાઇઝ, સ્ટાઇલ, ઇફેક્ટ બદલવાનું બોક્સ ખુલે છે."],
+[4,"Word માં લખાણની બરાબર વચ્ચેથી આડી લીટી ખેંચવાની ફોર્મેટિંગ સુવિધાને શું કહે છે?",["અંડરલાઇન","સબસ્ક્રિપ્ટ","સ્ટ્રાઇકથ્રુ","હાઇલાઇટ"],2,"Strikethrough લખાણની વચ્ચેથી લીટી કરે છે, તે Home ટેબના Font ગ્રુપમાં હોય છે."],
+[4,"લખાણની પાછળ માર્કર પેન જેવો રંગ લગાવવાના ટૂલને શું કહે છે?",["વોટરમાર્ક","ટેક્સ્ટ હાઇલાઇટ કલર","ફોન્ટ કલર","શેડિંગ"],1,"Text Highlight Color થી મહત્ત્વનું લખાણ પીળા કે અન્ય રંગથી ચિહ્નિત થાય છે."],
+[4,"એક લખાણનું ફોર્મેટિંગ (ફોન્ટ, રંગ, સાઇઝ) બીજા લખાણ પર લગાવવા કયું ટૂલ વપરાય છે?",["થીમ","ક્લિપબોર્ડ","સ્ટાઇલ","ફોર્મેટ પેઇન્ટર"],3,"Format Painter (બ્રશ જેવું આઇકન) Home ટેબમાં ક્લિપબોર્ડ ગ્રુપમાં હોય છે."],
+[4,"Word માં દરેક પાનાની ઉપર આપોઆપ છપાતા લખાણને શું કહે છે?",["ફૂટનોટ","માર્જિન","હેડર","ફૂટર"],2,"હેડર પાનાની ઉપર અને ફૂટર પાનાની નીચે દરેક પાને દેખાય છે."],
+[4,"Word માં પાના નંબર સામાન્ય રીતે ક્યાં મૂકવામાં આવે છે?",["ટેબલમાં","ટાઇટલ બારમાં","હેડર કે ફૂટરમાં","માર્જિનની બહાર"],2,"Insert ટેબ > Page Number થી હેડર કે ફૂટરમાં પાના નંબર આવે છે."],
+[4,"પાનાની ચારે બાજુ છોડવામાં આવતી ખાલી જગ્યાને શું કહે છે?",["ગટર","ઇન્ડેન્ટ","માર્જિન","બોર્ડર"],2,"Layout (Page Layout) ટેબમાંથી માર્જિન બદલી શકાય છે."],
+[4,"Word માં પાનું ઊભું કે આડું રાખવાના વિકલ્પને શું કહે છે?",["કૉલમ","ઓરિએન્ટેશન (Portrait / Landscape)","સાઇઝ","માર્જિન"],1,"Portrait = ઊભું પાનું અને Landscape = આડું પાનું. તે Layout ટેબમાં હોય છે."],
+[4,"Word માં પાનાની પાછળ આછું દેખાતું લખાણ (જેમ કે 'CONFIDENTIAL' કે 'નમૂનો') ને શું કહે છે?",["વોટરમાર્ક","થીમ","હેડર","બોર્ડર"],0,"Watermark Design (જૂના વર્ઝનમાં Page Layout) ટેબમાં મળે છે."],
+[4,"છાપામાં હોય તેમ લખાણને બે કે વધુ ઊભાં ભાગમાં વહેંચવા કયો વિકલ્પ વપરાય છે?",["ટેબલ","કૉલમ્સ (Columns)","ઇન્ડેન્ટ","સેક્શન"],1,"Layout ટેબ > Columns થી લખાણ અખબારની જેમ કૉલમમાં ગોઠવાય છે."],
+[4,"પેરેગ્રાફના પહેલા અક્ષરને મોટો કરીને નીચે સુધી લઈ જવાની સુવિધાને શું કહે છે?",["વર્ડ આર્ટ","ચેન્જ કેસ","ડ્રોપ કેપ","સ્માર્ટ આર્ટ"],2,"Drop Cap Insert ટેબમાં હોય છે, તે વાર્તાની ચોપડીમાં જોવા મળે છે."],
+[4,"આકર્ષક, રંગીન અને ખાસ આકારવાળું શોભાયમાન લખાણ બનાવવા કયો વિકલ્પ વપરાય છે?",["Drop Cap","SmartArt","WordArt","ClipArt"],2,"WordArt Insert ટેબમાં હોય છે અને શીર્ષક શણગારવા વપરાય છે."],
+[4,"Word માં ફ્લોચાર્ટ, હાયરાર્કી જેવા તૈયાર ડાયાગ્રામ ઉમેરવા કયો વિકલ્પ વપરાય છે?",["WordArt","SmartArt","Shapes","Chart"],1,"SmartArt થી માહિતીને સુંદર ડાયાગ્રામ સ્વરૂપે બતાવી શકાય છે."],
+[4,"Word માં એક જ પત્ર ઘણા લોકોને તેમના અલગ નામ-સરનામા સાથે મોકલવાની સુવિધાને શું કહે છે?",["ટેમ્પ્લેટ","ઇમેઇલ લિંક","મેઇલ મર્જ","મેઇલ મેનેજર"],2,"Mailings ટેબમાં Mail Merge હોય છે, તે એક મુખ્ય ડોક્યુમેન્ટ અને ડેટા સોર્સ (યાદી) જોડે છે."],
+[4,"Mail Merge વાપરવા માટે મુખ્ય ડોક્યુમેન્ટ ઉપરાંત બીજું શું જરૂરી છે?",["ટેમ્પ્લેટ","ઇન્ટરનેટ","ડેટા સોર્સ (નામ-સરનામાની યાદી)","પ્રિન્ટર"],2,"ડેટા સોર્સ Excel શીટ, Access ટેબલ કે Word ટેબલ હોઈ શકે."],
+[4,"Word માં શબ્દનો સમાનાર્થી શબ્દ શોધવા કયું ટૂલ વપરાય છે?",["ડિક્શનરી","ઓટો કરેક્ટ","થિસોરસ (Thesaurus)","ટ્રાન્સલેટ"],2,"Shift+F7 થી થિસોરસ ખુલે છે, તે Review ટેબમાં હોય છે."],
+[4,"Word માં ટાઇપ કરતી વખતે 'teh' જેવી સામાન્ય ભૂલ આપોઆપ 'the' થઈ જાય તે સુવિધા કઈ છે?",["ઓટો ફિલ","વર્ડ રેપ","ઓટો ટેક્સ્ટ","ઓટો કરેક્ટ"],3,"AutoCorrect સામાન્ય જોડણીની ભૂલ આપોઆપ સુધારે છે."],
+[4,"Word માં 'Change Case' થી નીચેનામાંથી શું કરી શકાય?",["ફોન્ટ બદલવો","લાઇન સ્પેસિંગ બદલવું","અક્ષરોને UPPERCASE / lowercase માં બદલવા","રંગ બદલવો"],2,"Shift+F3 દબાવવાથી પણ પસંદ કરેલા લખાણનો કેસ બદલાય છે."],
+[4,"Word માં ટેબલ ઉમેરવાનો વિકલ્પ કયા ટેબમાં હોય છે?",["View","Review","Insert","Home"],2,"Insert > Table થી હરોળ અને કૉલમ પસંદ કરીને ટેબલ બને છે."],
+[4,"Word ના ટેબલમાં બે કે વધુ સેલને જોડીને એક સેલ બનાવવાને શું કહે છે?",["બોર્ડર","ઓટો ફિટ","સ્પ્લિટ સેલ","મર્જ સેલ"],3,"Merge Cells થી સેલ ભેગા થાય અને Split Cells થી એક સેલના ભાગ પડે."],
+[4,"Word ના ટેબલમાં છેલ્લા સેલમાં Tab દબાવવાથી શું થાય છે?",["નવી કૉલમ ઉમેરાય છે","નવી હરોળ (Row) ઉમેરાય છે","ટેબલ ડિલીટ થાય છે","ટેબલ બહાર કર્સર જાય છે"],1,"ટેબલના છેલ્લા સેલમાં Tab દબાવતાં આપોઆપ નવી હરોળ બને છે."],
+[4,"પાનાના તળિયે આપેલી વધારાની સમજૂતી કે સંદર્ભને શું કહે છે?",["કૅપ્શન","એન્ડનોટ","ફૂટનોટ","ફૂટર"],2,"ફૂટનોટ તે જ પાનાની નીચે અને એન્ડનોટ આખા ડોક્યુમેન્ટના અંતે આવે છે. તે References ટેબમાં છે."],
+[4,"Word માં ડોક્યુમેન્ટમાં કરેલા દરેક ફેરફારનો રેકોર્ડ રાખવાની સુવિધાને શું કહે છે?",["ટ્રેક ચેન્જીસ","વર્ઝન હિસ્ટ્રી","કમેન્ટ","ઓટો સેવ"],0,"Review ટેબ > Track Changes ચાલુ રાખવાથી ઉમેરેલું-ભૂંસેલું લખાણ અલગ રંગમાં દેખાય છે."],
+[4,"Word માં ડોક્યુમેન્ટ છાપતાં પહેલાં કેવું દેખાશે તે જોવા શું વપરાય છે?",["પ્રિન્ટ લેઆઉટ","વેબ લેઆઉટ","ઝૂમ","પ્રિન્ટ પ્રિવ્યૂ"],3,"File > Print માં જમણી બાજુ Print Preview દેખાય છે."],
+[4,"Word માં ડોક્યુમેન્ટના શબ્દો, અક્ષરો અને પેરેગ્રાફની સંખ્યા જાણવા કયું ટૂલ વપરાય છે?",["થિસોરસ","સ્પેલિંગ","વર્ડ કાઉન્ટ","ટ્રેક ચેન્જીસ"],2,"Review ટેબમાં Word Count હોય છે, સ્ટેટસ બારમાં પણ શબ્દ સંખ્યા દેખાય છે."],
+[4,"Word માં માઉસથી શબ્દ પર ડબલ ક્લિક કરવાથી શું થાય છે?",["લાઇન પસંદ થાય છે","પેરેગ્રાફ પસંદ થાય છે","આખો શબ્દ પસંદ (Select) થાય છે","આખું પાનું પસંદ થાય છે"],2,"ડબલ ક્લિક = શબ્દ, ટ્રિપલ ક્લિક = આખો પેરેગ્રાફ પસંદ થાય છે."],
+[4,"Word માં પેરેગ્રાફની પહેલી લાઇન થોડી અંદરથી શરૂ કરવાને શું કહે છે?",["માર્જિન","ટેબ સ્ટોપ","ફર્સ્ટ લાઇન ઇન્ડેન્ટ","હેંગિંગ ઇન્ડેન્ટ"],2,"Indent એટલે માર્જિનથી લખાણને અંદર ખસેડવું. હેંગિંગ ઇન્ડેન્ટમાં પહેલી સિવાયની લાઇનો અંદર જાય."],
+[4,"Word માં ક્રમાંકવાળી (1, 2, 3...) યાદી બનાવવા કયો વિકલ્પ વપરાય છે?",["મલ્ટીલેવલ લિસ્ટ","બુલેટ્સ","નંબરિંગ","સોર્ટ"],2,"Numbering 1, 2, 3 વાળી યાદી અને Bullets ટપકાં (•) વાળી યાદી બનાવે છે."],
+[5,"MS Excel કયા પ્રકારનું સોફ્ટવેર છે?",["વર્ડ પ્રોસેસર","પ્રેઝન્ટેશન","વેબ બ્રાઉઝર","સ્પ્રેડશીટ"],3,"Excel માં હરોળ-કૉલમના કોષ્ટકમાં ગણતરી, હિસાબ અને ચાર્ટ બનાવી શકાય છે."],
+[5,"MS Excel 2007 અને પછીના વર્ઝનમાં ફાઇલનું ડિફોલ્ટ એક્સ્ટેન્શન કયું છે?",[".csv",".xls",".docx",".xlsx"],3,"Excel 2007 થી .xlsx અને જૂના Excel 97–2003 માં .xls હતું."],
+[5,"Excel ની ફાઇલને શું કહે છે?",["વર્કશીટ","વર્કબુક","ડોક્યુમેન્ટ","પ્રેઝન્ટેશન"],1,"એક વર્કબુકમાં એક કે વધુ વર્કશીટ (Sheet1, Sheet2...) હોય છે."],
+[5,"Excel માં હરોળ (Row) અને કૉલમ (Column) જ્યાં મળે તે ખાનાને શું કહે છે?",["ફીલ્ડ","રેન્જ","ટેબલ","સેલ"],3,"સેલ Excel નો સૌથી નાનો એકમ છે, જેમાં ડેટા કે ફોર્મ્યુલા લખાય છે."],
+[5,"Excel માં કૉલમ (Column) ને કેવી રીતે ઓળખવામાં આવે છે?",["અક્ષરો (A, B, C...) થી","આંકડા (1, 2, 3...) થી","રંગથી","રોમન અંક થી"],0,"કૉલમ A, B, C... અક્ષરોથી અને હરોળ 1, 2, 3... આંકડાથી ઓળખાય છે."],
+[5,"સેલ એડ્રેસ 'C5' માં C અને 5 શું દર્શાવે છે?",["C = કૉલમ, 5 = હરોળ","C = શીટ, 5 = સેલ","C = હરોળ, 5 = કૉલમ","C = રેન્જ, 5 = કૉલમ"],0,"સેલ એડ્રેસમાં હંમેશાં પહેલાં કૉલમનો અક્ષર અને પછી હરોળનો નંબર આવે છે."],
+[5,"હાલમાં પસંદ કરેલા (જેમાં કામ થઈ રહ્યું છે) સેલને શું કહે છે?",["હેડર","રેન્જ","ફોર્મ્યુલા સેલ","એક્ટિવ સેલ"],3,"એક્ટિવ સેલની આસપાસ ઘાટી બોર્ડર હોય છે અને તેનું એડ્રેસ Name Box માં દેખાય છે."],
+[5,"Excel માં એક્ટિવ સેલનું એડ્રેસ ક્યાં દેખાય છે?",["ફોર્મ્યુલા બાર","નેમ બોક્સ","ટાઇટલ બાર","સ્ટેટસ બાર"],1,"Name Box ફોર્મ્યુલા બારની ડાબી બાજુ હોય છે."],
+[5,"Excel માં સેલની અંદરની ફોર્મ્યુલા કે ડેટા ક્યાં દેખાય છે અને એડિટ થાય છે?",["રિબન","ફોર્મ્યુલા બાર","સ્ટેટસ બાર","નેમ બોક્સ"],1,"ફોર્મ્યુલા બારમાં સેલનું સાચું સમાવિષ્ટ (ફોર્મ્યુલા) દેખાય છે, જ્યારે સેલમાં તેનું પરિણામ દેખાય."],
+[5,"Excel 2007 અને પછીના વર્ઝનમાં એક વર્કશીટમાં કુલ કેટલી હરોળ (Rows) હોય છે?",["1,00,000","10,48,576","65,536","16,384"],1,"Excel 2007 થી 1,048,576 હરોળ છે. જૂના Excel 2003 માં 65,536 હરોળ હતી."],
+[5,"Excel 2007 અને પછીના વર્ઝનમાં એક વર્કશીટમાં કુલ કેટલી કૉલમ હોય છે?",["65,536","256","16,384","1,024"],2,"16,384 કૉલમ છે, છેલ્લી કૉલમ XFD છે. જૂના Excel માં 256 કૉલમ (IV સુધી) હતી."],
+[5,"Excel 2007 અને પછીના વર્ઝનમાં છેલ્લી કૉલમનું નામ શું છે?",["ZZZ","IV","XFD","XFZ"],2,"A થી XFD સુધી કુલ 16,384 કૉલમ છે."],
+[5,"Excel માં દરેક ફોર્મ્યુલા કયા ચિહ્નથી શરૂ થાય છે?",["= (બરાબર)","@","+ (વત્તા)","#"],0,"= લખ્યા વગર Excel તેને સાદું લખાણ માને છે, ગણતરી નથી કરતું."],
+[5,"Excel માં ઘણા સેલનો સરવાળો કરવા કયું ફંક્શન વપરાય છે?",["PLUS","TOTAL","ADD","SUM"],3,"જેમ કે =SUM(A1:A10) એ A1 થી A10 સુધીનો સરવાળો આપે છે."],
+[5,"Excel માં સરેરાશ (Average) કાઢવા કયું ફંક્શન વપરાય છે?",["AVERAGE","MEDIAN","AVG","MEAN"],0,"=AVERAGE(A1:A5) પાંચેય સંખ્યાનો સરવાળો કરી 5 વડે ભાગે છે."],
+[5,"Excel માં સંખ્યાઓમાંથી સૌથી મોટી કિંમત શોધવા કયું ફંક્શન વપરાય છે?",["MAX","LARGE","TOP","MIN"],0,"MAX સૌથી મોટી અને MIN સૌથી નાની કિંમત આપે છે."],
+[5,"Excel માં સંખ્યા ધરાવતા સેલની ગણતરી (કેટલા સેલ છે) કરવા કયું ફંક્શન છે?",["SUM","COUNT","NUMBER","COUNTA"],1,"COUNT ફક્ત સંખ્યાવાળા સેલ ગણે છે, COUNTA ખાલી ન હોય તેવા બધા સેલ ગણે છે."],
+[5,"Excel માં ખાલી ન હોય તેવા (લખાણ કે સંખ્યા ધરાવતા) બધા સેલ ગણવા કયું ફંક્શન છે?",["COUNT","SUM","COUNTBLANK","COUNTA"],3,"COUNTA = Count All (non-empty). ખાલી સેલ ગણવા COUNTBLANK વપરાય."],
+[5,"શરત પ્રમાણે 'પાસ' કે 'નાપાસ' જેવું પરિણામ આપવા Excel માં કયું ફંક્શન વપરાય છે?",["COUNT","SUM","IF","LOOKUP"],2,"જેમ કે =IF(B2>=35,\"પાસ\",\"નાપાસ\")."],
+[5,"શરત પૂરી કરતા સેલ જ ગણવા (જેમ કે 'પાસ' કેટલા) કયું ફંક્શન વપરાય છે?",["IF","SUMIF","COUNTIF","COUNTA"],2,"=COUNTIF(C2:C50,\"પાસ\") કેટલા વિદ્યાર્થી પાસ થયા તે ગણે છે."],
+[5,"કોઈ કોષ્ટકની પહેલી કૉલમમાં કિંમત શોધી તે જ હરોળમાંથી બીજી કૉલમની કિંમત લાવવા કયું ફંક્શન વપરાય છે?",["MATCH","COUNTIF","HLOOKUP","VLOOKUP"],3,"V = Vertical. VLOOKUP ઊભી કૉલમમાં શોધે છે અને HLOOKUP આડી હરોળમાં શોધે છે."],
+[5,"Excel માં આજની તારીખ આપતું ફંક્શન કયું છે?",["DAY()","DATE()","TODAY()","NOW()"],2,"TODAY() ફક્ત તારીખ અને NOW() તારીખ સાથે સમય પણ આપે છે."],
+[5,"Excel માં બે કે વધુ સેલનું લખાણ જોડવા કયું ફંક્શન વપરાય છે?",["ADD","MERGE","JOIN","CONCATENATE (અથવા CONCAT / &)"],3,"જેમ કે =A1&\" \"&B1 નામ અને અટક જોડે છે."],
+[5,"Excel માં સંખ્યાને નજીકના પૂર્ણાંક કે દશાંશ સ્થાન સુધી રાઉન્ડ કરવા કયું ફંક્શન છે?",["ROUND","INT","TRUNC","ABS"],0,"=ROUND(12.567,2) નો જવાબ 12.57 આવે છે."],
+[5,"=SUM(A1:A3) માં A1, A2, A3 ની કિંમત અનુક્રમે 10, 20, 30 હોય તો જવાબ શું આવે?",["20","60","6","30"],1,"10 + 20 + 30 = 60."],
+[5,"=AVERAGE(10, 20, 30, 40) નો જવાબ શું આવે?",["40","25","10","100"],1,"સરવાળો 100 ÷ 4 = 25."],
+[5,"=MAX(5, 12, 3, 9) નો જવાબ શું આવે?",["9","3","29","12"],3,"આપેલી સંખ્યાઓમાં સૌથી મોટી 12 છે."],
+[5,"Excel ફોર્મ્યુલા =10+5*2 નો જવાબ શું આવે?",["20","30","15","25"],0,"BODMAS પ્રમાણે પહેલાં ગુણાકાર: 5×2 = 10, પછી 10+10 = 20."],
+[5,"Excel ફોર્મ્યુલા =(10+5)*2 નો જવાબ શું આવે?",["20","17","25","30"],3,"કૌંસ પહેલાં: 10+5 = 15, પછી 15×2 = 30."],
+[5,"Excel માં ઘાત (Power) માટે કયું ચિહ્ન વપરાય છે? જેમ કે 2 ની ઘાત 3",["#","**","*","^ (કેરેટ)"],3,"=2^3 નો જવાબ 8 આવે છે."],
+[5,"Excel માં A1 થી D1 સુધીના સેલને રેન્જ તરીકે કેવી રીતે લખાય?",["A1-D1","A1;D1","A1..D1","A1:D1"],3,"રેન્જમાં બે સેલ એડ્રેસ વચ્ચે કોલન (:) મૂકાય છે."],
+[5,"ફોર્મ્યુલા કોપી કરવા છતાં સેલ એડ્રેસ ન બદલાય તે માટે શું વપરાય છે?",["એબ્સોલ્યુટ રેફરન્સ ($A$1)","રિલેટિવ રેફરન્સ (A1)","રેન્જ (A1:A5)","નેમ બોક્સ"],0,"$ ચિહ્ન કૉલમ અને હરોળને લૉક કરે છે. F4 દબાવવાથી $ આપોઆપ લાગે છે."],
+[5,"Excel માં ફોર્મ્યુલા લખતી વખતે રિલેટિવ અને એબ્સોલ્યુટ રેફરન્સ બદલવા કઈ કી વપરાય છે?",["F4","F9","F11","F2"],0,"F4 વારંવાર દબાવતાં A1 → $A$1 → A$1 → $A1 બદલાય છે."],
+[5,"Excel માં પસંદ કરેલા સેલને એડિટ કરવા કઈ ફંક્શન કી વપરાય છે?",["F2","F4","F12","F7"],0,"F2 દબાવવાથી સેલમાં જ કર્સર આવે છે અને એડિટ થાય છે."],
+[5,"Excel માં પસંદ કરેલા ડેટાનો તરત ચાર્ટ બનાવવા કઈ કી વપરાય છે?",["F7","F11","F5","F12"],1,"F11 નવી ચાર્ટ શીટમાં ડિફોલ્ટ ચાર્ટ બનાવે છે. Alt+F1 તે જ શીટમાં ચાર્ટ મૂકે છે."],
+[5,"Excel માં સેલમાં '#####' દેખાય તેનો અર્થ શું થાય?",["વાયરસ","શૂન્ય વડે ભાગાકાર","ફોર્મ્યુલા ખોટી છે","કૉલમ સાંકડી છે, સંખ્યા સમાતી નથી"],3,"કૉલમ પહોળી કરવાથી સંખ્યા બરાબર દેખાવા લાગે છે."],
+[5,"Excel માં કોઈ સંખ્યાને શૂન્ય (0) વડે ભાગતાં કઈ ભૂલ દેખાય છે?",["#NAME?","#REF!","#VALUE!","#DIV/0!"],3,"#DIV/0! = Division by zero, ગણિતમાં શૂન્ય વડે ભાગાકાર શક્ય નથી."],
+[5,"Excel માં ફંક્શનનું નામ ખોટું લખાય (જેમ કે =SUMM(A1:A5)) તો કઈ ભૂલ દેખાય?",["#N/A","#NUM!","#NAME?","#DIV/0!"],2,"Excel ઓળખી ન શકે તેવું નામ હોય ત્યારે #NAME? આવે છે."],
+[5,"ફોર્મ્યુલામાં વપરાયેલો સેલ ડિલીટ થઈ જાય ત્યારે કઈ ભૂલ દેખાય છે?",["#REF!","#VALUE!","#####","#NAME?"],0,"#REF! = અમાન્ય સેલ રેફરન્સ."],
+[5,"Excel માં ડેટાને A થી Z કે નાનાથી મોટા ક્રમમાં ગોઠવવાને શું કહે છે?",["વેલિડેશન","ફિલ્ટર","સોર્ટિંગ (Sort)","ગ્રુપ"],2,"Data ટેબમાં Sort A→Z (ચડતો) અને Z→A (ઉતરતો) વિકલ્પ હોય છે."],
+[5,"Excel માં ફક્ત જરૂરી શરત વાળો ડેટા બતાવી બાકીનો છુપાવવા કયો વિકલ્પ વપરાય છે?",["ફ્રીઝ","સોર્ટ","ફિલ્ટર","મર્જ"],2,"Filter લગાવવાથી હેડરમાં ડ્રોપડાઉન તીર આવે છે, જેથી ચોક્કસ ડેટા જ દેખાય."],
+[5,"Excel માં સ્ક્રોલ કરતી વખતે હેડરની હરોળ હંમેશાં દેખાતી રહે તે માટે કયો વિકલ્પ વપરાય છે?",["હાઇડ","ફ્રીઝ પેન્સ (Freeze Panes)","સ્પ્લિટ","ફિલ્ટર"],1,"View ટેબ > Freeze Panes > Freeze Top Row."],
+[5,"Excel માં સેલમાં ફક્ત માન્ય ડેટા (જેમ કે 1 થી 100 વચ્ચેની સંખ્યા) જ દાખલ થાય તે માટે શું વપરાય છે?",["સોર્ટ","કન્ડિશનલ ફોર્મેટિંગ","ફિલ્ટર","ડેટા વેલિડેશન"],3,"Data ટેબ > Data Validation થી નિયમ બનાવી શકાય છે."],
+[5,"શરત પ્રમાણે સેલનો રંગ આપોઆપ બદલાય (જેમ કે 35 થી ઓછા ગુણ લાલ) તે સુવિધા કઈ છે?",["ડેટા વેલિડેશન","ઓટો ફિલ","કન્ડિશનલ ફોર્મેટિંગ","ફોર્મેટ પેઇન્ટર"],2,"Home ટેબમાં Conditional Formatting હોય છે."],
+[5,"સેલના ખૂણાના નાના ચોરસ (Fill Handle) ને ખેંચીને 1, 2, 3... કે જાન્યુઆરી, ફેબ્રુઆરી... આપોઆપ ભરવાને શું કહે છે?",["ઓટો ફિલ","ઓટો સમ","ફ્લેશ ફિલ","ઓટો કરેક્ટ"],0,"AutoFill થી ક્રમવાળો ડેટા અને ફોર્મ્યુલા ઝડપથી નીચે ભરી શકાય છે."],
+[5,"Excel માં સરવાળા માટેનું AutoSum બટન કયા ચિહ્નથી દર્શાવાય છે?",["∞","π","√","Σ (સિગ્મા)"],3,"Σ ગ્રીક અક્ષર સિગ્મા છે, જે ગણિતમાં સરવાળો દર્શાવે છે. શોર્ટકટ Alt+= છે."],
+[5,"મોટા ડેટાનો ઝડપથી સારાંશ (સમરી) બનાવવા Excel નું કયું ટૂલ ઉપયોગી છે?",["પિવોટ ટેબલ","મેઇલ મર્જ","સ્લાઇડ શો","વર્ડ આર્ટ"],0,"Pivot Table થી ડેટાને જૂથ પ્રમાણે સરવાળો, ગણતરી વગેરે સાથે ગોઠવી શકાય."],
+[5,"કુલનો કેટલો ભાગ છે તે ટકાવારીમાં બતાવવા કયો ચાર્ટ સૌથી યોગ્ય છે?",["સ્કેટર ચાર્ટ","બાર ચાર્ટ","પાઇ ચાર્ટ","લાઇન ચાર્ટ"],2,"પાઇ ચાર્ટ ગોળ હોય છે અને દરેક ભાગ કુલનો હિસ્સો બતાવે છે."],
+[5,"સમય સાથે થતો ફેરફાર (જેમ કે મહિનાવાર વેચાણ) બતાવવા કયો ચાર્ટ સૌથી યોગ્ય છે?",["એરિયા ચાર્ટ","ડોનટ ચાર્ટ","લાઇન ચાર્ટ","પાઇ ચાર્ટ"],2,"લાઇન ચાર્ટ વધઘટનો ટ્રેન્ડ સ્પષ્ટ બતાવે છે."],
+[5,"Excel માં એક જ સેલમાં નવી લાઇન (Line Break) લખવા કઈ કી વપરાય છે?",["Tab","Ctrl + Enter","Shift + Enter","Alt + Enter"],3,"Alt+Enter થી એ જ સેલમાં બીજી લાઇન શરૂ થાય છે."],
+[6,"MS PowerPoint કયા કામ માટે વપરાય છે?",["હિસાબ રાખવા","પ્રેઝન્ટેશન (સ્લાઇડ શો) બનાવવા","ડેટાબેઝ બનાવવા","પત્ર લખવા"],1,"PowerPoint થી ચિત્ર, લખાણ, ચાર્ટ અને એનિમેશનવાળી સ્લાઇડ બનાવી રજૂઆત કરી શકાય."],
+[6,"PowerPoint 2007 અને પછીના વર્ઝનમાં ફાઇલનું ડિફોલ્ટ એક્સ્ટેન્શન કયું છે?",[".docx",".ppt",".pptx",".pps"],2,"PowerPoint 2007 થી .pptx અને જૂના વર્ઝનમાં .ppt હતું."],
+[6,"PowerPoint પ્રેઝન્ટેશનના દરેક પાનાને શું કહે છે?",["સેલ","શીટ","સ્લાઇડ","પેજ"],2,"પ્રેઝન્ટેશન એ સ્લાઇડનો સમૂહ છે."],
+[6,"PowerPoint માં પહેલી સ્લાઇડથી સ્લાઇડ શો શરૂ કરવા કઈ કી વપરાય છે?",["F12","F2","F5","F7"],2,"F5 પહેલી સ્લાઇડથી અને Shift+F5 હાલની સ્લાઇડથી શો શરૂ કરે છે."],
+[6,"PowerPoint માં હાલની (ચાલુ) સ્લાઇડથી સ્લાઇડ શો શરૂ કરવા કઈ શોર્ટકટ કી છે?",["Alt + F5","Shift + F5","Ctrl + F5","F5"],1,"Shift+F5 જ્યાં છો તે સ્લાઇડથી શો શરૂ કરે છે."],
+[6,"ચાલુ સ્લાઇડ શો બંધ કરવા કઈ કી વપરાય છે?",["Enter","Space","F5","Esc"],3,"Esc દબાવવાથી સ્લાઇડ શો બંધ થઈને એડિટ વ્યૂમાં પાછા આવીએ છીએ."],
+[6,"PowerPoint માં નવી સ્લાઇડ ઉમેરવા કઈ શોર્ટકટ કી છે?",["Ctrl + M","Ctrl + D","Ctrl + S","Ctrl + N"],0,"Ctrl+M નવી સ્લાઇડ ઉમેરે છે, Ctrl+N નવું પ્રેઝન્ટેશન ખોલે છે."],
+[6,"PowerPoint માં પસંદ કરેલી સ્લાઇડની નકલ (Duplicate) બનાવવા કઈ શોર્ટકટ કી છે?",["Ctrl + M","Ctrl + C","Ctrl + R","Ctrl + D"],3,"Ctrl+D પસંદ કરેલી સ્લાઇડ કે ઓબ્જેક્ટની તરત નકલ બનાવે છે."],
+[6,"PowerPoint માં બધી સ્લાઇડને નાના ચિત્ર રૂપે એક સાથે જોઈને ક્રમ બદલવા કયો વ્યૂ ઉપયોગી છે?",["નોટ્સ પેજ વ્યૂ","રીડિંગ વ્યૂ","નોર્મલ વ્યૂ","સ્લાઇડ સોર્ટર વ્યૂ"],3,"Slide Sorter માં સ્લાઇડને ખેંચીને ક્રમ બદલી શકાય છે."],
+[6,"PowerPoint નો ડિફોલ્ટ (સામાન્ય રીતે ખુલતો) વ્યૂ કયો છે?",["આઉટલાઇન વ્યૂ","સ્લાઇડ સોર્ટર","નોર્મલ વ્યૂ","સ્લાઇડ શો વ્યૂ"],2,"Normal View માં ડાબી બાજુ સ્લાઇડની યાદી અને વચ્ચે મોટી સ્લાઇડ દેખાય છે."],
+[6,"એક સ્લાઇડથી બીજી સ્લાઇડ પર જતી વખતે આવતી અસર (ઇફેક્ટ) ને શું કહે છે?",["લેઆઉટ","થીમ","એનિમેશન","ટ્રાન્ઝિશન"],3,"Transitions ટેબમાંથી Fade, Push, Wipe જેવી અસરો આપી શકાય."],
+[6,"સ્લાઇડની અંદરના લખાણ કે ચિત્રને ગતિ (હલનચલન) આપવાની અસરને શું કહે છે?",["ટ્રાન્ઝિશન","માસ્ટર","ડિઝાઇન","એનિમેશન"],3,"Animations ટેબમાંથી Entrance, Emphasis, Exit જેવી અસરો આપી શકાય."],
+[6,"બધી સ્લાઇડની ડિઝાઇન (ફોન્ટ, લોગો, રંગ) એક જ જગ્યાએથી બદલવા શું વપરાય છે?",["સ્લાઇડ માસ્ટર","નોટ્સ","હેન્ડઆઉટ","સ્લાઇડ સોર્ટર"],0,"View > Slide Master માં કરેલો ફેરફાર બધી સ્લાઇડ પર લાગુ પડે છે."],
+[6,"PowerPoint માં તૈયાર રંગ, ફોન્ટ અને પૃષ્ઠભૂમિનો સેટ કયા ટેબમાંથી પસંદ થાય છે?",["Design (થીમ)","Review","Insert","View"],0,"Design ટેબમાં વિવિધ Themes હોય છે, જે આખા પ્રેઝન્ટેશનનો દેખાવ બદલે છે."],
+[6,"સ્લાઇડ પર લખાણ, ચિત્ર, શીર્ષક ક્યાં મૂકવા તેની ગોઠવણને શું કહે છે?",["બેકગ્રાઉન્ડ","સ્લાઇડ લેઆઉટ","ટ્રાન્ઝિશન","થીમ"],1,"જેમ કે Title Slide, Title and Content, Two Content વગેરે લેઆઉટ હોય છે."],
+[6,"PowerPoint માં નવા પ્રેઝન્ટેશનની પહેલી સ્લાઇડનો ડિફોલ્ટ લેઆઉટ કયો હોય છે?",["Title and Content","Title Slide","Blank","Two Content"],1,"પહેલી સ્લાઇડ શીર્ષક અને ઉપશીર્ષક માટે Title Slide લેઆઉટમાં આવે છે."],
+[6,"રજૂઆત કરનાર માટે સ્લાઇડ નીચે લખેલી નોંધ, જે પ્રેક્ષકોને દેખાતી નથી, તેને શું કહે છે?",["સ્પીકર નોટ્સ","હેન્ડઆઉટ","કમેન્ટ","ફૂટર"],0,"Notes Pane માં લખેલી નોંધ ફક્ત પ્રેઝન્ટરને દેખાય છે."],
+[6,"પ્રેક્ષકોને આપવા માટે એક કાગળમાં અનેક સ્લાઇડ છાપેલી નકલને શું કહે છે?",["હેન્ડઆઉટ","માસ્ટર","આઉટલાઇન","નોટ્સ પેજ"],0,"Handouts માં એક પાને 1, 2, 3, 4, 6 કે 9 સ્લાઇડ છાપી શકાય."],
+[6,"સ્લાઇડ શો દરમિયાન દરેક સ્લાઇડ કેટલો સમય દેખાશે તે અગાઉથી રેકોર્ડ કરવાના વિકલ્પને શું કહે છે?",["લૂપ","એનિમેશન પેઇન","ટ્રાન્ઝિશન","રિહર્સ ટાઇમિંગ્સ"],3,"Slide Show ટેબ > Rehearse Timings થી દરેક સ્લાઇડનો સમય નક્કી થાય છે."],
+[6,"સ્લાઇડ શો દરમિયાન આગળની સ્લાઇડ પર જવા કઈ કી વપરાય છે?",["F1","Backspace / ડાબી એરો","Esc","Space / Enter / જમણી એરો કી"],3,"Space, Enter, N, Page Down અથવા → થી આગળની સ્લાઇડ આવે છે."],
+[6,"સ્લાઇડ શો દરમિયાન સ્ક્રીન કાળી (Black) કરવા કઈ કી દબાવવી પડે?",["S","B","W","K"],1,"B = Black screen, W = White screen. ફરી દબાવતાં સ્લાઇડ પાછી દેખાય છે."],
+[6,"PowerPoint ફાઇલને ખોલતાં જ સીધો સ્લાઇડ શો શરૂ થાય તે માટે કયા ફોર્મેટમાં સેવ કરવી?",[".pptx",".ppsx (PowerPoint Show)",".potx",".pdf"],1,".ppsx ફાઇલ ડબલ ક્લિક કરતાં જ શો મોડમાં ખુલે છે."],
+[6,"PowerPoint માં ચિત્ર ઉમેરવાનો વિકલ્પ (Pictures) કયા ટેબમાં હોય છે?",["Transitions","Review","Design","Insert"],3,"Insert ટેબમાં Picture, Shapes, Chart, Table, Video, Audio વગેરે હોય છે."],
+[6,"પ્રેઝન્ટેશન સતત ફરી-ફરી ચાલતું રહે (જેમ કે પ્રદર્શનમાં) તે માટે કયો વિકલ્પ વપરાય છે?",["Custom Show","Loop continuously until Esc","Hide Slide","Rehearse Timings"],1,"Slide Show > Set Up Slide Show માં આ વિકલ્પ હોય છે."],
+[6,"કોઈ સ્લાઇડ પ્રેઝન્ટેશનમાં રાખીને પણ શો વખતે ન દેખાય તે માટે શું કરવું?",["Delete Slide","Hide Slide","New Slide","Duplicate Slide"],1,"Hide Slide કરેલી સ્લાઇડ એડિટ વ્યૂમાં રહે છે પણ શોમાં દેખાતી નથી."],
+[6,"સ્લાઇડ પરના એનિમેશનનો ક્રમ અને સમય જોવા-બદલવા કઈ પેનલ વપરાય છે?",["સ્લાઇડ પેઇન","સિલેક્શન પેઇન","ફોર્મેટ પેઇન","એનિમેશન પેઇન"],3,"Animations ટેબ > Animation Pane માં બધાં એનિમેશનની યાદી દેખાય છે."],
+[6,"PowerPoint માં એક ક્લિકથી બીજી સ્લાઇડ, ફાઇલ કે વેબસાઇટ પર જવા માટે શું ઉમેરવામાં આવે છે?",["સેક્શન","કમેન્ટ","હાઇપરલિંક","ટ્રાન્ઝિશન"],2,"Ctrl+K થી હાઇપરલિંક ઉમેરી શકાય છે."],
+[6,"PowerPoint માં સ્લાઇડ શો દરમિયાન સ્લાઇડ પર પેનથી લખવા (માર્ક કરવા) કઈ શોર્ટકટ કી છે?",["Ctrl + P","Ctrl + H","Ctrl + E","Ctrl + A"],0,"શો દરમિયાન Ctrl+P પેન ચાલુ કરે છે અને Ctrl+A પાછું એરો પોઇન્ટર લાવે છે."],
+[6,"PowerPoint માં સ્લાઇડ નંબર, તારીખ ઉમેરવાનો વિકલ્પ કયો છે?",["Header & Footer","Notes","Comments","Slide Master"],0,"Insert > Header & Footer માં Slide Number અને Date વિકલ્પ હોય છે."],
+[6,"PowerPoint પ્રેઝન્ટેશનને વિડિયો ફાઇલ તરીકે સેવ કરવા કયું ફોર્મેટ પસંદ કરી શકાય?",[".docx",".xlsx",".mp3",".mp4"],3,"File > Export > Create a Video થી પ્રેઝન્ટેશન .mp4 વિડિયો તરીકે સેવ થાય છે."],
+[6,"MS Office સ્યુટમાં ડેટાબેઝ બનાવવા માટે કયું સોફ્ટવેર છે?",["MS PowerPoint","MS Excel","MS Paint","MS Access"],3,"MS Access ડેટાબેઝ મેનેજમેન્ટ સિસ્ટમ (DBMS) છે, તેની ફાઇલ .accdb હોય છે."],
+[6,"MS Office માં ઇમેઇલ અને કેલેન્ડર સંભાળવા માટે કયું સોફ્ટવેર છે?",["MS Access","MS Publisher","MS OneNote","MS Outlook"],3,"Outlook ઇમેઇલ, કોન્ટેક્ટ અને મીટિંગ કેલેન્ડર માટે છે."],
+[6,"MS Office ના પ્રોગ્રામમાં ઉપરની બાજુ ટેબ અને બટનોવાળી પટ્ટીને શું કહે છે?",["રિબન","સ્ક્રોલ બાર","ટાસ્કબાર","સ્ટેટસ બાર"],0,"Office 2007 થી મેનુ બારને બદલે Ribbon આવી, જેમાં Home, Insert જેવા ટેબ હોય છે."],
+[6,"MS Office માં ટાઇટલ બારની ડાબી બાજુ Save, Undo જેવાં બટનોવાળી નાની પટ્ટીને શું કહે છે?",["સ્ટેટસ બાર","ટાસ્કબાર","રિબન","ક્વિક એક્સેસ ટૂલબાર"],3,"Quick Access Toolbar માં વારંવાર વપરાતાં બટન ઉમેરી શકાય છે."],
+[6,"MS Office ની ઓનલાઇન (ક્લાઉડ આધારિત, સબ્સ્ક્રિપ્શન) સેવા કયા નામે ઓળખાય છે?",["Office XP","Windows Live","Bing","Microsoft 365"],3,"Microsoft 365 (પહેલાં Office 365) માં Word, Excel, PowerPoint ઓનલાઇન અને OneDrive મળે છે."],
+[7,"ઇન્ટરનેટ એટલે શું?",["વિશ્વભરના કોમ્પ્યુટર નેટવર્કનું નેટવર્ક","એક સોફ્ટવેર","એક વેબસાઇટ","એક કોમ્પ્યુટર"],0,"Internet = Interconnected Network, તે વિશ્વભરનાં કરોડો કોમ્પ્યુટર અને નેટવર્કને જોડે છે."],
+[7,"ઇન્ટરનેટની શરૂઆત કયા નેટવર્કથી થઈ હતી?",["BSNL","ERNET","ARPANET","NICNET"],2,"ARPANET અમેરિકાના સંરક્ષણ વિભાગે 1969 માં શરૂ કર્યું હતું."],
+[7,"ઇન્ટરનેટના પિતા તરીકે કોણ ઓળખાય છે?",["વિન્ટન સર્ફ","બિલ ગેટ્સ","ચાર્લ્સ બેબેજ","ટિમ બર્નર્સ-લી"],0,"વિન્ટન સર્ફ અને બોબ કાહને TCP/IP પ્રોટોકોલ બનાવ્યો, તેથી તેમને ઇન્ટરનેટના પિતા કહે છે."],
+[7,"વર્લ્ડ વાઇડ વેબ (WWW) ની શોધ કોણે કરી?",["વિન્ટન સર્ફ","માર્ક ઝુકરબર્ગ","લેરી પેજ","ટિમ બર્નર્સ-લી"],3,"ટિમ બર્નર્સ-લીએ 1989 માં CERN માં WWW ની શોધ કરી."],
+[7,"ભારતમાં જાહેર જનતા માટે ઇન્ટરનેટ સેવા ક્યારે અને કોણે શરૂ કરી?",["15 ઓગસ્ટ 1995, VSNL","2 ઓક્ટોબર 1998, Jio","26 જાન્યુઆરી 2000, BSNL","1 એપ્રિલ 1991, MTNL"],0,"VSNL (વિદેશ સંચાર નિગમ લિમિટેડ) એ 15 ઓગસ્ટ 1995 ના રોજ ભારતમાં ઇન્ટરનેટ શરૂ કર્યું."],
+[7,"ઇન્ટરનેટનો મૂળભૂત પ્રોટોકોલ કયો છે?",["HTTP","TCP/IP","SMTP","FTP"],1,"TCP/IP = Transmission Control Protocol / Internet Protocol, તેના વડે જ ઇન્ટરનેટ પર ડેટા મોકલાય છે."],
+[7,"વેબ પેજ જોવા માટે વપરાતા સોફ્ટવેરને શું કહે છે?",["સર્ચ એન્જિન","ઓપરેટિંગ સિસ્ટમ","વેબ બ્રાઉઝર","વેબ સર્વર"],2,"Chrome, Firefox, Edge, Safari વેબ બ્રાઉઝર છે."],
+[7,"નીચેનામાંથી વેબ બ્રાઉઝર કયું નથી?",["Mozilla Firefox","Microsoft Edge","Safari","Google"],3,"Google મુખ્યત્વે સર્ચ એન્જિન/કંપની છે, તેનું બ્રાઉઝર Chrome છે."],
+[7,"વિશ્વનું પ્રથમ ગ્રાફિકલ વેબ બ્રાઉઝર કયું ગણાય છે?",["Internet Explorer","Mosaic","Chrome","Opera"],1,"Mosaic 1993 માં આવ્યું અને તેનાથી ઇન્ટરનેટ લોકપ્રિય બન્યું."],
+[7,"ઇન્ટરનેટ પર માહિતી શોધવા માટે વપરાતી વેબસાઇટને શું કહે છે?",["સર્વર","વેબ બ્રાઉઝર","ઇમેઇલ","સર્ચ એન્જિન"],3,"Google, Bing, Yahoo, DuckDuckGo સર્ચ એન્જિન છે."],
+[7,"નીચેનામાંથી સર્ચ એન્જિન કયું છે?",["Outlook","Bing","Windows","Chrome"],1,"Bing એ Microsoft નું સર્ચ એન્જિન છે."],
+[7,"વેબસાઇટનું પહેલું (મુખ્ય) પાનું શું કહેવાય છે?",["લેન્ડિંગ બાર","ઇન્ડેક્સ બાર","વેબ પેજ","હોમ પેજ"],3,"હોમ પેજ પરથી વેબસાઇટનાં બીજાં પાનાં પર જઈ શકાય છે."],
+[7,"URL નું પૂરું નામ શું છે?",["Uniform Reference Locator","Uniform Resource Locator","Unique Resource Locator","Universal Resource Link"],1,"URL એ વેબસાઇટનું સરનામું છે, જેમ કે https://gsrtc.in."],
+[7,"HTTP નું પૂરું નામ શું છે?",["HyperText Transfer Protocol","HyperLink Transfer Protocol","HyperText Transmission Program","HighText Transfer Protocol"],0,"HTTP વેબ પેજ મોકલવા-મેળવવાનો પ્રોટોકોલ છે."],
+[7,"HTTPS માં 'S' નો અર્થ શું થાય છે?",["Secure (સુરક્ષિત)","Speed","Server","System"],0,"HTTPS માં ડેટા એન્ક્રિપ્ટ થઈને જાય છે, બ્રાઉઝરમાં તાળાનું (🔒) ચિહ્ન દેખાય છે."],
+[7,"www.gsrtc.in માં '.in' શું દર્શાવે છે?",["ઇન્ફોર્મેશન","ભારત દેશનું ડોમેઇન","ઇન્સ્ટિટ્યૂટ","ઇન્ટરનેટ"],1,".in એ ભારતનું કન્ટ્રી કોડ ટોપ લેવલ ડોમેઇન (ccTLD) છે."],
+[7,"ભારત સરકારની વેબસાઇટ સામાન્ય રીતે કયા ડોમેઇનમાં હોય છે?",[".net",".com",".org",".gov.in"],3,"જેમ કે ojas.gujarat.gov.in, india.gov.in."],
+[7,"શૈક્ષણિક સંસ્થાઓ માટે કયું ડોમેઇન વપરાય છે?",[".mil",".edu (ભારતમાં .ac.in / .edu.in)",".com",".biz"],1,".edu શૈક્ષણિક સંસ્થા માટે છે, ભારતમાં યુનિવર્સિટીઓ માટે .ac.in વધુ વપરાય છે."],
+[7,"બિન-નફાકારક સંસ્થાઓ (NGO) માટે સામાન્ય રીતે કયું ડોમેઇન વપરાય છે?",[".gov",".com",".org",".net"],2,".org = Organization."],
+[7,"વેબસાઇટના નામ (જેમ કે google.com) ને IP એડ્રેસમાં ફેરવતી સિસ્ટમ કઈ છે?",["DNS","DHCP","FTP","HTML"],0,"DNS = Domain Name System, તે ઇન્ટરનેટની ફોન ડિરેક્ટરી જેવું કામ કરે છે."],
+[7,"ઇન્ટરનેટ સાથે જોડાયેલા દરેક ઉપકરણને આપવામાં આવતા અનન્ય નંબરને શું કહે છે?",["પિન કોડ","URL","IP એડ્રેસ","ઇમેઇલ ID"],2,"જેમ કે 192.168.1.1. IPv4 32-બિટ અને IPv6 128-બિટનું હોય છે."],
+[7,"IPv4 એડ્રેસ કેટલા બિટનું હોય છે?",["32 બિટ","128 બિટ","64 બિટ","16 બિટ"],0,"IPv4 માં ચાર ભાગ (0 થી 255) હોય છે, કુલ 32 બિટ. IPv6 128 બિટનું છે."],
+[7,"નેટવર્ક કાર્ડ પર ઉત્પાદક દ્વારા આપેલા કાયમી હાર્ડવેર એડ્રેસને શું કહે છે?",["URL","DNS","IP એડ્રેસ","MAC એડ્રેસ"],3,"MAC = Media Access Control, તે 48 બિટનું હોય છે."],
+[7,"ઇન્ટરનેટ સેવા પૂરી પાડતી કંપની (જેમ કે Jio, Airtel, BSNL) ને શું કહે છે?",["IRS","ISP","ISO","ISBN"],1,"ISP = Internet Service Provider."],
+[7,"ઇન્ટરનેટ પરથી ફાઇલ પોતાના કોમ્પ્યુટરમાં લાવવાને શું કહે છે?",["સર્ફ","ડાઉનલોડ","બ્રાઉઝ","અપલોડ"],1,"ડાઉનલોડ = ઇન્ટરનેટ પરથી લેવું, અપલોડ = ઇન્ટરનેટ પર મોકલવું."],
+[7,"ઓનલાઇન ફોર્મમાં પોતાનો ફોટો અને સહી ચડાવવાને શું કહે છે?",["સ્કેન","ડાઉનલોડ","અપલોડ","પ્રિન્ટ"],2,"OJAS પર અરજી કરતી વખતે ફોટો-સહી અપલોડ કરવા પડે છે."],
+[7,"એક વેબ પેજથી બીજા પેજ પર લઈ જતા ક્લિક કરી શકાય તેવા લખાણ કે ચિત્રને શું કહે છે?",["કૂકી","હાઇપરલિંક","હાઇપરટેક્સ્ટ બાર","બુકમાર્ક"],1,"હાઇપરલિંક પર માઉસ લઈ જતાં પોઇન્ટર હાથ (👆) જેવું બને છે."],
+[7,"વારંવાર ખોલાતી વેબસાઇટને બ્રાઉઝરમાં સાચવી રાખવાને શું કહે છે?",["કૂકી","બુકમાર્ક (ફેવરિટ)","કેશ","હિસ્ટ્રી"],1,"Ctrl+D થી ચાલુ વેબ પેજ બુકમાર્ક થાય છે."],
+[7,"વેબસાઇટ દ્વારા યુઝરના બ્રાઉઝરમાં સંગ્રહ કરાતી નાની ટેક્સ્ટ ફાઇલને શું કહે છે?",["પ્લગઇન","કૂકી","બુકમાર્ક","વાયરસ"],1,"કૂકીમાં લોગિન, ભાષા જેવી પસંદગી સચવાય છે."],
+[7,"બ્રાઉઝરમાં અગાઉ જોયેલી વેબસાઇટની યાદીને શું કહે છે?",["ડાઉનલોડ","હિસ્ટ્રી","બુકમાર્ક","કૂકી"],1,"Ctrl+H થી બ્રાઉઝરની હિસ્ટ્રી ખુલે છે."],
+[7,"હિસ્ટ્રી કે કૂકી સાચવ્યા વગર બ્રાઉઝ કરવા Chrome નો કયો મોડ વપરાય છે?",["રીડિંગ મોડ","ઇન્કોગ્નિટો મોડ","ફુલ સ્ક્રીન મોડ","ડાર્ક મોડ"],1,"Ctrl+Shift+N થી Chrome માં Incognito વિન્ડો ખુલે છે."],
+[7,"ઇમેઇલ (E-mail) નું પૂરું નામ શું છે?",["Electric Mail","Easy Mail","Electronic Mail","Express Mail"],2,"ઇમેઇલ દ્વારા ઇન્ટરનેટથી સંદેશ અને ફાઇલ મોકલી શકાય છે."],
+[7,"ઇમેઇલના શોધક (પ્રથમ ઇમેઇલ મોકલનાર) કોણ ગણાય છે?",["બિલ ગેટ્સ","સબીર ભાટિયા","રે ટોમલિન્સન","ટિમ બર્નર્સ-લી"],2,"રે ટોમલિન્સને 1971 માં પ્રથમ ઇમેઇલ મોકલ્યો અને @ ચિહ્ન વાપર્યું."],
+[7,"Hotmail ના સહ-સ્થાપક ભારતીય કોણ હતા?",["સત્ય નડેલા","નંદન નીલેકણી","સુંદર પિચાઈ","સબીર ભાટિયા"],3,"સબીર ભાટિયા અને જેક સ્મિથે 1996 માં Hotmail શરૂ કર્યું."],
+[7,"ઇમેઇલ એડ્રેસમાં હંમેશાં કયું ચિહ્ન હોય છે?",["&","#","$","@"],3,"જેમ કે name@gmail.com, @ યુઝરનેમ અને ડોમેઇનને અલગ કરે છે."],
+[7,"ઇમેઇલ એડ્રેસ abc@gmail.com માં 'gmail.com' શું છે?",["IP એડ્રેસ","પાસવર્ડ","યુઝરનેમ","ડોમેઇન નેમ"],3,"@ પહેલાંનો ભાગ યુઝરનેમ અને પછીનો ભાગ ડોમેઇન નેમ છે."],
+[7,"ઇમેઇલમાં CC નું પૂરું નામ શું છે?",["Copy Center","Carbon Copy","Clear Copy","Computer Copy"],1,"CC માં લખેલા બધા લોકોને ઇમેઇલની નકલ મળે છે અને બધાનાં નામ દેખાય છે."],
+[7,"ઇમેઇલમાં BCC નો ઉપયોગ શા માટે થાય છે?",["ફાઇલ જોડવા","જવાબ આપવા","ઇમેઇલ ડિલીટ કરવા","બીજા પ્રાપ્તકર્તાઓને ખબર ન પડે તે રીતે નકલ મોકલવા"],3,"BCC = Blind Carbon Copy, BCC માં લખેલાં નામ બીજાને દેખાતાં નથી."],
+[7,"ઇમેઇલ સાથે ફાઇલ (ફોટો, PDF) જોડવાને શું કહે છે?",["એટેચમેન્ટ","ફોરવર્ડ","ડ્રાફ્ટ","રિપ્લાય"],0,"એટેચમેન્ટ માટે પેપરક્લિપ (📎) નું ચિહ્ન વપરાય છે."],
+[7,"આવેલો ઇમેઇલ બીજા વ્યક્તિને મોકલવાને શું કહે છે?",["ફોરવર્ડ","રિપ્લાય","આર્કાઇવ","ડ્રાફ્ટ"],0,"Forward થી મળેલો મેઇલ એટેચમેન્ટ સાથે બીજાને મોકલી શકાય."],
+[7,"લખેલો પણ હજી ન મોકલેલો ઇમેઇલ કયા ફોલ્ડરમાં સચવાય છે?",["ડ્રાફ્ટ","સેન્ટ","સ્પામ","ઇનબોક્સ"],0,"Drafts માં અધૂરા મેઇલ સચવાય છે."],
+[7,"આવેલા ઇમેઇલ કયા ફોલ્ડરમાં આવે છે?",["સેન્ટ","આઉટબોક્સ","ઇનબોક્સ","ડ્રાફ્ટ"],2,"Inbox માં મળેલા મેઇલ અને Sent માં મોકલેલા મેઇલ હોય છે."],
+[7,"અનિચ્છનીય, જાહેરાતવાળા કે છેતરપિંડીવાળા ઇમેઇલને શું કહે છે?",["ઇનબોક્સ","સ્પામ","ડ્રાફ્ટ","એટેચમેન્ટ"],1,"Spam (Junk) મેઇલ આપોઆપ અલગ ફોલ્ડરમાં જાય છે."],
+[7,"ઇમેઇલ મોકલવા માટે કયો પ્રોટોકોલ વપરાય છે?",["SMTP","POP3","FTP","HTTP"],0,"SMTP = Simple Mail Transfer Protocol. મેઇલ મેળવવા POP3 કે IMAP વપરાય છે."],
+[7,"ઇન્ટરનેટ પર ફાઇલ મોકલવા-મેળવવા માટેનો પ્રોટોકોલ કયો છે?",["POP","FTP","HTTP","SMTP"],1,"FTP = File Transfer Protocol."],
+[7,"એક જ ઓફિસ કે બિલ્ડિંગમાં કોમ્પ્યુટરને જોડતું નેટવર્ક કયું છે?",["Internet","WAN","MAN","LAN"],3,"LAN = Local Area Network, તે નાના વિસ્તાર (થોડા કિમી) માં હોય છે."],
+[7,"એક શહેરમાં ફેલાયેલું નેટવર્ક (જેમ કે કેબલ ટીવી નેટવર્ક) કયું છે?",["PAN","WAN","LAN","MAN"],3,"MAN = Metropolitan Area Network."],
+[7,"દેશ કે વિશ્વભરમાં ફેલાયેલું મોટું નેટવર્ક કયું છે?",["MAN","PAN","LAN","WAN"],3,"WAN = Wide Area Network, ઇન્ટરનેટ સૌથી મોટું WAN છે."],
+[7,"મોબાઇલ અને બ્લૂટૂથ ઇયરફોન વચ્ચેનું ખૂબ નાનું નેટવર્ક કયું છે?",["MAN","PAN","LAN","WAN"],1,"PAN = Personal Area Network, તે આશરે 10 મીટર સુધી કામ કરે છે."],
+[7,"નેટવર્કની બધી કોમ્પ્યુટર એક કેન્દ્રિય ઉપકરણ (હબ/સ્વિચ) સાથે જોડાય તેવી ટોપોલોજી કઈ છે?",["રિંગ ટોપોલોજી","બસ ટોપોલોજી","સ્ટાર ટોપોલોજી","મેશ ટોપોલોજી"],2,"સ્ટાર ટોપોલોજીમાં એક કેબલ ખરાબ થાય તો ફક્ત તે જ કોમ્પ્યુટર અટકે છે."],
+[7,"ડિજિટલ સિગ્નલને એનાલોગમાં અને એનાલોગને ડિજિટલમાં ફેરવતું ઉપકરણ કયું છે?",["રાઉટર","સ્વિચ","મોડેમ","હબ"],2,"MODEM = MOdulator + DEModulator."],
+[7,"જુદાં જુદાં નેટવર્કને જોડીને ડેટાને યોગ્ય માર્ગે મોકલતું ઉપકરણ કયું છે?",["મોડેમ","હબ","રાઉટર","રિપીટર"],2,"ઘરમાં Wi-Fi રાઉટર ઇન્ટરનેટને મોબાઇલ અને લેપટોપ સુધી પહોંચાડે છે."],
+[7,"તાર વગર ઇન્ટરનેટ જોડતી ટેક્નોલોજી કઈ છે?",["HDMI","USB","LAN કેબલ","Wi-Fi"],3,"Wi-Fi = Wireless Fidelity, તે રેડિયો તરંગો વાપરે છે."],
+[7,"ઇન્ટરનેટની ઝડપ (ડેટા ટ્રાન્સફર રેટ) શેમાં મપાય છે?",["Mbps (મેગાબિટ પ્રતિ સેકન્ડ)","GHz","RPM","DPI"],0,"bps = bits per second. જેમ કે 100 Mbps બ્રોડબેન્ડ."],
+[7,"પ્રકાશના રૂપમાં ખૂબ ઝડપથી ડેટા લઈ જતો કેબલ કયો છે?",["કોએક્સિયલ કેબલ","ટ્વિસ્ટેડ પેર","ઓપ્ટિકલ ફાઇબર","પાવર કેબલ"],2,"ઓપ્ટિકલ ફાઇબર કાચ/પ્લાસ્ટિકના તાર છે, તે સૌથી ઝડપી માધ્યમ છે."],
+[8,"કોમ્પ્યુટર વાયરસ શું છે?",["એક પ્રકારનું હાર્ડવેર","એક જીવાણુ","ધૂળ","નુકસાન કરતો પ્રોગ્રામ (સોફ્ટવેર)"],3,"વાયરસ એ જાતે નકલ બનાવીને ફેલાતો નુકસાનકારક પ્રોગ્રામ છે."],
+[8,"VIRUS નું પ્રચલિત પૂરું નામ શું છે?",["Very Important Resource Under Search","Vital Information Resources Under Siege","Virtual Information Recovery Utility System","Vital Internet Resource User System"],1,"આ પરીક્ષામાં પૂછાતું પ્રચલિત પૂરું નામ છે."],
+[8,"Malware શબ્દ કયા બે શબ્દોથી બન્યો છે?",["Malicious + Software","Mall + Ware","Mail + Software","Male + Hardware"],0,"Malware એટલે નુકસાનકારક સોફ્ટવેર, તેમાં વાયરસ, વર્મ, ટ્રોજન, સ્પાયવેર બધું આવે."],
+[8,"ઉપયોગી સોફ્ટવેર જેવો દેખાય પણ અંદર છુપાઈને નુકસાન કરે તેવા પ્રોગ્રામને શું કહે છે?",["વર્મ","સ્પામ","કૂકી","ટ્રોજન હોર્સ"],3,"ગ્રીક કથાના લાકડાના ઘોડા પરથી નામ પડ્યું છે, તે જાતે નકલ બનાવતો નથી."],
+[8,"યુઝરની જાણ વગર તેની માહિતી ચોરીને બીજાને મોકલતા સોફ્ટવેરને શું કહે છે?",["સ્પાયવેર","ફર્મવેર","એડવેર","ફ્રીવેર"],0,"Spy = જાસૂસ, સ્પાયવેર ખાનગી માહિતી ચોરે છે."],
+[8,"કોમ્પ્યુટરની ફાઇલો લૉક (એન્ક્રિપ્ટ) કરીને ખોલવા માટે પૈસા (ખંડણી) માગતા માલવેરને શું કહે છે?",["શેરવેર","એડવેર","સ્પાયવેર","રેન્સમવેર"],3,"Ransom = ખંડણી. WannaCry (2017) જાણીતો રેન્સમવેર હુમલો હતો."],
+[8,"જાતે નેટવર્ક દ્વારા એક કોમ્પ્યુટરથી બીજામાં ફેલાતા, બીજા પ્રોગ્રામની જરૂર ન પડે તેવા માલવેરને શું કહે છે?",["બગ","ટ્રોજન","કૂકી","વર્મ"],3,"વર્મ (Worm) નેટવર્કમાં જાતે જ નકલ બનાવીને ફેલાય છે."],
+[8,"વારંવાર જાહેરાતો (Ads) બતાવતા સોફ્ટવેરને શું કહે છે?",["એડવેર","ફ્રીવેર","સ્પાયવેર","ફર્મવેર"],0,"Adware = Advertisement + Software."],
+[8,"વાયરસ શોધીને દૂર કરતા સોફ્ટવેરને શું કહે છે?",["ડ્રાઇવર","ફાયરવોલ","એન્ટિવાયરસ","બ્રાઉઝર"],2,"Quick Heal, Norton, McAfee, Windows Defender એન્ટિવાયરસ છે."],
+[8,"નીચેનામાંથી એન્ટિવાયરસ સોફ્ટવેર કયું છે?",["WinRAR","VLC","Tally","Quick Heal"],3,"Quick Heal ભારતીય (પુણે) કંપનીનું એન્ટિવાયરસ છે."],
+[8,"નીચેનામાંથી કયું એન્ટિવાયરસ નથી?",["Norton","Kaspersky","Avast","Photoshop"],3,"Photoshop ફોટો એડિટિંગ સોફ્ટવેર છે."],
+[8,"એન્ટિવાયરસને નિયમિત અપડેટ કરવો શા માટે જરૂરી છે?",["ઇન્ટરનેટ મફત મેળવવા","નવા વાયરસ ઓળખી શકે તે માટે","સ્ક્રીન સાફ કરવા","કોમ્પ્યુટર ઝડપી કરવા"],1,"રોજ નવા વાયરસ આવે છે, અપડેટથી એન્ટિવાયરસને તેની ઓળખ (સિગ્નેચર) મળે છે."],
+[8,"શંકાસ્પદ ફાઇલને એન્ટિવાયરસ અલગ સુરક્ષિત જગ્યાએ રાખે તેને શું કહે છે?",["બેકઅપ","ક્વોરેન્ટાઇન","ફોર્મેટ","ડિલીટ"],1,"Quarantine કરેલી ફાઇલ કોઈ નુકસાન કરી શકતી નથી."],
+[8,"નેટવર્કમાં અનધિકૃત પ્રવેશ રોકતી સુરક્ષા દીવાલ (સોફ્ટવેર/હાર્ડવેર) ને શું કહે છે?",["રાઉટર","પ્રોક્સી","ફાયરવોલ","એન્ટિવાયરસ"],2,"ફાયરવોલ નક્કી કરેલા નિયમ પ્રમાણે આવતો-જતો ડેટા રોકે કે જવા દે છે."],
+[8,"બેંક જેવો નકલી ઇમેઇલ કે મેસેજ મોકલી પાસવર્ડ, OTP કે કાર્ડ નંબર ચોરવાને શું કહે છે?",["ફિશિંગ","હેકિંગ","સ્નૂપિંગ","સ્પામિંગ"],0,"Phishing એટલે માછલી પકડવા જાળ નાખવી. બેંક ક્યારેય OTP કે પાસવર્ડ માગતી નથી."],
+[8,"ફોન કોલ દ્વારા બેંક અધિકારી બનીને OTP કે માહિતી મેળવવાની છેતરપિંડીને શું કહે છે?",["વિશિંગ (Vishing)","ફાર્મિંગ","સ્પૂફિંગ","સ્મિશિંગ"],0,"Vishing = Voice + Phishing. SMS દ્વારા થાય તો તેને Smishing કહે છે."],
+[8,"SMS દ્વારા લિંક મોકલીને થતી ફિશિંગ છેતરપિંડીને શું કહે છે?",["સ્પામિંગ","હેકિંગ","વિશિંગ","સ્મિશિંગ (Smishing)"],3,"Smishing = SMS + Phishing."],
+[8,"પરવાનગી વગર બીજાના કોમ્પ્યુટર કે નેટવર્કમાં ઘૂસવાને શું કહે છે?",["બ્રાઉઝિંગ","બૂટિંગ","ફોર્મેટિંગ","હેકિંગ"],3,"ગેરકાયદે હેકિંગ IT Act, 2000 હેઠળ ગુનો છે."],
+[8,"કંપનીની પરવાનગીથી તેની સિસ્ટમની નબળાઈ શોધતા હેકરને શું કહે છે?",["બ્લેક હેટ હેકર","એથિકલ (વ્હાઇટ હેટ) હેકર","ક્રેકર","સ્પામર"],1,"વ્હાઇટ હેટ હેકર સુરક્ષા સુધારવા માટે કાયદેસર હેકિંગ કરે છે."],
+[8,"ભારતમાં સાયબર ગુનાઓ સંબંધિત મુખ્ય કાયદો કયો છે?",["કંપની અધિનિયમ","RTI Act, 2005","માહિતી ટેક્નોલોજી અધિનિયમ (IT Act), 2000","મોટર વાહન અધિનિયમ"],2,"IT Act, 2000 ઇલેક્ટ્રોનિક વ્યવહાર અને સાયબર ગુનાઓ માટેનો ભારતનો મુખ્ય કાયદો છે."],
+[8,"ભારતમાં સાયબર છેતરપિંડીની ફરિયાદ કરવા માટેનો રાષ્ટ્રીય હેલ્પલાઇન નંબર કયો છે?",["108","1098","1930","100"],2,"1930 નંબર પર તરત ફોન કરો અને cybercrime.gov.in પર ઓનલાઇન ફરિયાદ કરો."],
+[8,"ભારતમાં ઓનલાઇન સાયબર ગુનાની ફરિયાદ નોંધાવવાનું સરકારી પોર્ટલ કયું છે?",["india.gov.in","digilocker.gov.in","umang.gov.in","cybercrime.gov.in"],3,"National Cyber Crime Reporting Portal પર ફરિયાદ થઈ શકે છે."],
+[8,"ભારતમાં સાયબર સુરક્ષાના બનાવો સંભાળતી રાષ્ટ્રીય સંસ્થા કઈ છે?",["TRAI","CERT-In","ISRO","DRDO"],1,"CERT-In = Indian Computer Emergency Response Team, તે MeitY હેઠળ છે."],
+[8,"નીચેનામાંથી સૌથી મજબૂત પાસવર્ડ કયો છે?",["ashish","Gsrtc@2026#Bus","123456","password"],1,"મજબૂત પાસવર્ડમાં કેપિટલ, સ્મોલ અક્ષર, આંકડા અને ખાસ ચિહ્ન (@, #) હોવાં જોઈએ."],
+[8,"OTP નું પૂરું નામ શું છે?",["One Type Password","One Time Password","Online Transfer Password","Only Their Password"],1,"OTP એક જ વાર અને થોડી મિનિટ માટે માન્ય હોય છે, તે કોઈને આપવો નહીં."],
+[8,"પાસવર્ડ ઉપરાંત OTP જેવી બીજી ઓળખથી લોગિન કરવાની સુરક્ષા પદ્ધતિને શું કહે છે?",["એન્ક્રિપ્શન","સિંગલ સાઇન-ઓન","ટુ-ફેક્ટર ઓથેન્ટિકેશન (2FA)","ફાયરવોલ"],2,"2FA થી પાસવર્ડ ચોરાય તો પણ એકાઉન્ટ સુરક્ષિત રહે છે."],
+[8,"ડેટાને કોડ (ગુપ્ત સ્વરૂપ) માં ફેરવવાની ક્રિયાને શું કહે છે, જેથી બીજો વાંચી ન શકે?",["કમ્પ્રેશન","ડિક્રિપ્શન","એન્ક્રિપ્શન","ફોર્મેટિંગ"],2,"એન્ક્રિપ્શનથી સાદું લખાણ (Plain text) કોડેડ લખાણ (Cipher text) બને છે. તેને પાછું ફેરવવું ડિક્રિપ્શન."],
+[8,"વેબસાઇટ પર 'હું રોબોટ નથી' ચકાસવા માટે વાંકાચૂકા અક્ષરો કે ચિત્ર પસંદ કરાવવાની પદ્ધતિ કઈ છે?",["Cookie","PIN","CAPTCHA","OTP"],2,"CAPTCHA માણસ અને કોમ્પ્યુટર પ્રોગ્રામ (બોટ) વચ્ચે ફરક ઓળખે છે."],
+[8,"ઇન્ટરનેટ પર કોઈને વારંવાર ધમકાવવા, હેરાન કરવાને શું કહે છે?",["સાયબર બુલિંગ","ફિશિંગ","સ્પામિંગ","હેકિંગ"],0,"સાયબર બુલિંગ સાયબર ગુનો છે, તેની ફરિયાદ થઈ શકે છે."],
+[8,"બીજાની ઓળખ (નામ, ફોટો, આધાર) ચોરીને તેના નામે છેતરપિંડી કરવાને શું કહે છે?",["સાયબર બુલિંગ","સ્પામ","આઇડેન્ટિટી થેફ્ટ","પાઇરસી"],2,"IT Act ની કલમ 66C ઓળખ ચોરી માટે સજા આપે છે."],
+[8,"પરવાનગી વગર સોફ્ટવેર, ફિલ્મ કે ગીતની નકલ કરવી કે વહેંચવી તેને શું કહે છે?",["સોફ્ટવેર પાઇરસી","હેકિંગ","ફિશિંગ","સ્પૂફિંગ"],0,"પાઇરસી કોપીરાઇટ કાયદાનો ભંગ છે."],
+[8,"જાહેર Wi-Fi (રેલવે સ્ટેશન, બસ સ્ટેન્ડ) વાપરતી વખતે શું ન કરવું જોઈએ?",["હવામાન જોવું","બસનો સમય જોવો","નેટ બેંકિંગ કે ઓનલાઇન પેમેન્ટ","સમાચાર વાંચવા"],2,"જાહેર Wi-Fi પર ડેટા ચોરાઈ શકે છે, તેથી બેંકિંગ જેવા સંવેદનશીલ કામ ટાળવાં."],
+[8,"ઓનલાઇન સુરક્ષા માટે નીચેનામાંથી શું કરવું યોગ્ય છે?",["બધાને OTP આપવો","અજાણી લિંક પર ક્લિક ન કરવું","એક જ પાસવર્ડ બધે રાખવો","પાસવર્ડ ડાયરીમાં લખી બધાને બતાવવો"],1,"અજાણી લિંક, એટેચમેન્ટ અને ઇનામની લાલચવાળા મેસેજથી સાવધ રહો."],
+[8,"UPI નું પૂરું નામ શું છે?",["Universal Payment Internet","United Payment Interface","Unified Payments Interface","Unique Payment ID"],2,"UPI થી મોબાઇલ વડે તરત બેંક ખાતામાંથી પૈસા મોકલી શકાય છે."],
+[8,"UPI ને કઈ સંસ્થાએ વિકસાવ્યું છે?",["SBI","NPCI","SEBI","RBI"],1,"NPCI = National Payments Corporation of India, તેણે 2016 માં UPI શરૂ કર્યું."],
+[8,"UPI માં પૈસા મેળવવા (Receive) માટે શું કરવું પડે?",["QR કોડ સ્કેન કરી PIN નાખવો પડે","કંઈ નહીં, PIN નાખવાની જરૂર નથી","OTP આપવો પડે","UPI PIN નાખવો પડે"],1,"પૈસા મેળવવા કદી PIN જોઈતો નથી. કોઈ 'પૈસા મેળવવા PIN નાખો' કહે તો તે છેતરપિંડી છે."],
+[8,"દસ્તાવેજો (આધાર, માર્કશીટ, લાઇસન્સ) ડિજિટલ રૂપે સાચવવાની ભારત સરકારની સેવા કઈ છે?",["DigiLocker","BHIM","UMANG","e-Shram"],0,"DigiLocker માંના દસ્તાવેજ અસલ દસ્તાવેજ જેટલા જ માન્ય ગણાય છે."],
+[8,"એક જ એપમાં કેન્દ્ર અને રાજ્ય સરકારની અનેક સેવાઓ આપતી મોબાઇલ એપ કઈ છે?",["UMANG","DigiLocker","BHIM","Aarogya Setu"],0,"UMANG = Unified Mobile Application for New-age Governance."],
+[8,"ગુજરાત સરકારની ભરતી માટે ઓનલાઇન અરજી કરવાનું પોર્ટલ કયું છે?",["OJAS","DigiLocker","e-Nagar","iORA"],0,"OJAS = Online Job Application System (ojas.gujarat.gov.in)."],
+[8,"ડિજિટલ ઇન્ડિયા અભિયાન કયા વર્ષે શરૂ થયું?",["2015","2010","2018","2020"],0,"ડિજિટલ ઇન્ડિયા 1 જુલાઈ 2015 ના રોજ શરૂ થયું."],
+[8,"ભારતમાં આધાર કાર્ડ આપતી સંસ્થા કઈ છે?",["CERT-In","UIDAI","NPCI","NIC"],1,"UIDAI = Unique Identification Authority of India. આધાર 12 અંકનો હોય છે."],
+[8,"ભારત સરકારની વેબસાઇટ અને ઇ-ગવર્નન્સ IT સેવા પૂરી પાડતી સંસ્થા કઈ છે?",["BSNL","NIC","ISRO","TRAI"],1,"NIC = National Informatics Centre."],
+[8,"ગામડાંમાં સરકારી અને ડિજિટલ સેવાઓ પહોંચાડતાં કેન્દ્રોને શું કહે છે?",["પોસ્ટ ઓફિસ","કોમન સર્વિસ સેન્ટર (CSC)","ATM","બેંક મિત્ર"],1,"CSC (ગુજરાતમાં ગ્રામ પંચાયતમાં ઇ-ગ્રામ કેન્દ્ર) પર ઓનલાઇન ફોર્મ, બિલ, પ્રમાણપત્ર જેવી સેવાઓ મળે છે."],
+[8,"ઇલેક્ટ્રોનિક દસ્તાવેજની પ્રમાણિકતા સાબિત કરવા વપરાતી સહીને શું કહે છે?",["હસ્તાક્ષર","સ્કેન સહી","ફોટો સહી","ડિજિટલ સિગ્નેચર"],3,"IT Act, 2000 ડિજિટલ સિગ્નેચરને કાયદેસર માન્યતા આપે છે."],
+[8,"GSRTC ની બસ ટિકિટ ઓનલાઇન બુક કરવાની સત્તાવાર વેબસાઇટ કઈ છે?",["digilocker.gov.in","irctc.co.in","ojas.gujarat.gov.in","gsrtc.in"],3,"gsrtc.in પરથી ઓનલાઇન બસ ટિકિટ બુક થઈ શકે છે, રેલવે માટે IRCTC છે."],
+[8,"ઇ-ગવર્નન્સમાં G2C નો અર્થ શું થાય છે?",["Government to Company","Government to Citizen","Government to Computer","Group to Citizen"],1,"G2C સેવામાં સરકાર સીધી નાગરિકને સેવા આપે છે, જેમ કે ઓનલાઇન પ્રમાણપત્ર."],
+[8,"કોમ્પ્યુટર પર કામ કરતી વખતે આંખ પર ઓછો તાણ પડે તે માટે શું કરવું જોઈએ?",["અંધારામાં કામ કરવું","થોડા સમયે વિરામ લેવો અને સ્ક્રીનથી યોગ્ય અંતર રાખવું","સ્ક્રીનની ખૂબ નજીક બેસવું","બ્રાઇટનેસ મહત્તમ રાખવી"],1,"20-20-20 નિયમ: દર 20 મિનિટે 20 ફૂટ દૂર 20 સેકન્ડ જુઓ. સ્ક્રીન હાથની લંબાઈ જેટલી દૂર રાખો."],
+[8,"ઇન્ટરનેટ પર ખોટા સમાચાર (Fake News) ફેલાતા રોકવા શું કરવું જોઈએ?",["સત્તાવાર સ્રોતમાંથી ચકાસ્યા પછી જ શેર કરવું","સાચું માની લેવું","તરત બધાને ફોરવર્ડ કરવું","વધુ ગ્રુપમાં મોકલવું"],0,"PIB Fact Check જેવા સત્તાવાર સ્રોતથી ચકાસણી કરો."],
+[8,"ઓનલાઇન નોકરીની લાલચમાં 'રજિસ્ટ્રેશન ફી' માગવામાં આવે તો શું સમજવું?",["મોટાભાગે છેતરપિંડી હોઈ શકે છે","મિત્રોને પણ ભરાવવા","ચોક્કસ સરકારી નોકરી છે","તરત પૈસા ભરવા"],0,"સરકારી ભરતીની સાચી માહિતી ફક્ત સત્તાવાર વેબસાઇટ (gsrtc.in, ojas) પરથી જ મેળવો."],
+[8,"ATM કાર્ડનો PIN સામાન્ય રીતે કેટલા અંકનો હોય છે?",["12 અંક","4 અંક","6 અંક","8 અંક"],1,"ATM PIN સામાન્ય રીતે 4 અંકનો હોય છે (UPI PIN 4 કે 6 અંકનો હોય)."],
+[9,"પસંદ કરેલું લખાણ કે ફાઇલ કોપી કરવા કઈ શોર્ટકટ કી છે?",["Ctrl + V","Ctrl + P","Ctrl + X","Ctrl + C"],3,"C = Copy. કોપી કરેલું ક્લિપબોર્ડમાં જાય છે."],
+[9,"કોપી કે કટ કરેલું લખાણ પેસ્ટ કરવા કઈ શોર્ટકટ કી છે?",["Ctrl + V","Ctrl + C","Ctrl + P","Ctrl + Z"],0,"Ctrl+V ક્લિપબોર્ડમાંનું લખાણ કર્સરની જગ્યાએ મૂકે છે."],
+[9,"લખાણ કે ફાઇલને એક જગ્યાએથી ખસેડવા (Cut) કઈ શોર્ટકટ કી છે?",["Ctrl + X","Ctrl + K","Ctrl + C","Ctrl + U"],0,"Cut કરવાથી મૂળ જગ્યાએથી લખાણ નીકળીને ક્લિપબોર્ડમાં જાય છે, પછી Ctrl+V થી બીજે મૂકાય."],
+[9,"કોપી કે કટ કરેલો ડેટા કામચલાઉ ક્યાં સચવાય છે?",["ક્લિપબોર્ડ","ડેસ્કટોપ","રિસાયકલ બિન","હાર્ડ ડિસ્ક"],0,"ક્લિપબોર્ડ RAM માંનો કામચલાઉ સંગ્રહ છે."],
+[9,"છેલ્લી ક્રિયા રદ (Undo) કરવા કઈ શોર્ટકટ કી છે?",["Ctrl + Z","Ctrl + Y","Ctrl + R","Ctrl + U"],0,"Ctrl+Z ભૂલથી થયેલું કામ પાછું વાળે છે."],
+[9,"Undo કરેલી ક્રિયા ફરી કરવા (Redo) કઈ શોર્ટકટ કી છે?",["Ctrl + R","Ctrl + Z","Ctrl + Y","Ctrl + D"],2,"Ctrl+Y = Redo."],
+[9,"ફાઇલ સેવ કરવા કઈ શોર્ટકટ કી છે?",["Ctrl + A","Ctrl + V","Ctrl + Shift + V","Ctrl + S"],3,"S = Save. વારંવાર Ctrl+S દબાવતા રહેવાથી કામ સુરક્ષિત રહે છે."],
+[9,"પ્રિન્ટ કાઢવા કઈ શોર્ટકટ કી છે?",["Ctrl + R","Ctrl + T","Ctrl + P","Ctrl + Shift + P"],2,"P = Print."],
+[9,"આખા પાના કે ફોલ્ડરનું બધું એક સાથે પસંદ (Select All) કરવા કઈ શોર્ટકટ કી છે?",["Ctrl + L","Ctrl + A","Ctrl + S","Ctrl + E"],1,"A = All."],
+[9,"નવી ફાઇલ (ડોક્યુમેન્ટ) ખોલવા કઈ શોર્ટકટ કી છે?",["Ctrl + N","Ctrl + M","Ctrl + W","Ctrl + O"],0,"N = New. Ctrl+O સેવ કરેલી જૂની ફાઇલ ખોલવા (Open) માટે છે."],
+[9,"અગાઉ સેવ કરેલી ફાઇલ ખોલવા (Open) કઈ શોર્ટકટ કી છે?",["Ctrl + F","Ctrl + O","Ctrl + G","Ctrl + N"],1,"O = Open."],
+[9,"લખાણમાં કોઈ શબ્દ શોધવા (Find) કઈ શોર્ટકટ કી છે?",["Ctrl + H","Ctrl + G","Ctrl + S","Ctrl + F"],3,"F = Find. બ્રાઉઝરમાં પણ પેજ પર શબ્દ શોધવા Ctrl+F વપરાય છે."],
+[9,"ચાલુ વિન્ડો કે પ્રોગ્રામ બંધ કરવા કઈ શોર્ટકટ કી છે?",["Shift + F4","Alt + Tab","Alt + F4","Ctrl + F4"],2,"Alt+F4 પ્રોગ્રામ બંધ કરે છે. ડેસ્કટોપ પર દબાવતાં Shut Down બોક્સ ખુલે છે."],
+[9,"ખુલ્લા પ્રોગ્રામ વચ્ચે ફેરબદલ (Switch) કરવા કઈ શોર્ટકટ કી છે?",["Win + Tab","Alt + Tab","Ctrl + Tab","Shift + Tab"],1,"Alt દબાવી રાખી Tab દબાવતાં ખુલ્લી વિન્ડો વારાફરતી બદલાય છે."],
+[9,"બ્રાઉઝરમાં નવું ટેબ ખોલવા કઈ શોર્ટકટ કી છે?",["Ctrl + T","Ctrl + Tab","Ctrl + W","Ctrl + N"],0,"T = Tab. Ctrl+W ચાલુ ટેબ બંધ કરે છે."],
+[9,"બ્રાઉઝરમાં ચાલુ ટેબ બંધ કરવા કઈ શોર્ટકટ કી છે?",["Ctrl + Q","Ctrl + B","Ctrl + T","Ctrl + W"],3,"Ctrl+W (અથવા Ctrl+F4) ચાલુ ટેબ બંધ કરે છે."],
+[9,"ભૂલથી બંધ થયેલું બ્રાઉઝર ટેબ ફરી ખોલવા કઈ શોર્ટકટ કી છે?",["Ctrl + Shift + N","Ctrl + R","Ctrl + T","Ctrl + Shift + T"],3,"Ctrl+Shift+T છેલ્લે બંધ કરેલું ટેબ પાછું ખોલે છે."],
+[9,"વેબ પેજ રિફ્રેશ (Reload) કરવા કઈ કી વપરાય છે?",["F7","F2","F10","F5"],3,"F5 અથવા Ctrl+R થી પેજ ફરી લોડ થાય છે."],
+[9,"લગભગ દરેક પ્રોગ્રામમાં મદદ (Help) ખોલવા કઈ ફંક્શન કી વપરાય છે?",["F1","F12","F2","F3"],0,"F1 = Help."],
+[9,"ટાસ્ક મેનેજર સીધું ખોલવા કઈ શોર્ટકટ કી છે?",["Shift + Esc","Ctrl + Shift + Esc","Ctrl + Alt + Tab","Alt + F4"],1,"Ctrl+Alt+Delete દબાવીને પણ ટાસ્ક મેનેજર પસંદ કરી શકાય."],
+[9,"Windows માં સ્ટાર્ટ મેનુ ખોલવા કઈ કી વપરાય છે?",["Alt","Ctrl","Fn","Windows કી"],3,"Windows લોગોવાળી કી (અથવા Ctrl+Esc) થી સ્ટાર્ટ મેનુ ખુલે છે."],
+[9,"Windows માં બધી વિન્ડો નાની કરીને સીધું ડેસ્કટોપ બતાવવા કઈ શોર્ટકટ કી છે?",["Windows + E","Windows + D","Windows + L","Windows + R"],1,"D = Desktop. ફરી દબાવતાં વિન્ડો પાછી આવે છે."],
+[9,"Windows માં File Explorer (માય કોમ્પ્યુટર) ખોલવા કઈ શોર્ટકટ કી છે?",["Windows + D","Windows + R","Windows + E","Windows + I"],2,"E = Explorer."],
+[9,"કોમ્પ્યુટર છોડીને જતી વખતે સ્ક્રીન લૉક કરવા કઈ શોર્ટકટ કી છે?",["Windows + L","Windows + M","Windows + D","Ctrl + L"],0,"L = Lock. ફરી ખોલવા પાસવર્ડ/PIN જોઈએ."],
+[9,"Windows માં Run ડાયલોગ બોક્સ ખોલવા કઈ શોર્ટકટ કી છે?",["Ctrl + R","Windows + R","Alt + R","Windows + E"],1,"Run બોક્સમાં calc, notepad, cmd જેવા કમાન્ડ લખી પ્રોગ્રામ સીધો ખોલી શકાય."],
+[9,"Windows માં આખી સ્ક્રીનનો ફોટો (સ્ક્રીનશોટ) લઈ Pictures ફોલ્ડરમાં સેવ કરવા કઈ શોર્ટકટ કી છે?",["Ctrl + P","Shift + S","Alt + S","Windows + PrtScn"],3,"Windows+PrtScn સ્ક્રીનશોટ સેવ કરે છે. ફક્ત PrtScn દબાવતાં તે ક્લિપબોર્ડમાં જાય છે."],
+[9,"ફાઇલ કે ફોલ્ડરની પ્રોપર્ટીઝ (કદ, તારીખ) જોવા કઈ શોર્ટકટ કી છે?",["Ctrl + Enter","Shift + Enter","Alt + Enter","Alt + P"],2,"ફાઇલ પસંદ કરીને Alt+Enter દબાવતાં Properties બોક્સ ખુલે છે."],
+[9,"File Explorer માં નવું ફોલ્ડર બનાવવા કઈ શોર્ટકટ કી છે?",["Alt + N","Ctrl + N","Shift + N","Ctrl + Shift + N"],3,"Ctrl+Shift+N થી New Folder બને છે."],
+[9,"લખાણમાં કર્સરને લાઇનની શરૂઆતમાં લઈ જવા કઈ કી વપરાય છે?",["Insert","Home","Page Up","End"],1,"Home = લાઇનની શરૂઆત, End = લાઇનનો અંત."],
+[9,"Shift + એરો કી દબાવવાથી શું થાય છે?",["લખાણ થોડું-થોડું પસંદ (Select) થાય છે","લખાણ ડિલીટ થાય છે","નવી લાઇન આવે છે","કેપિટલ અક્ષર થાય છે"],0,"Shift સાથે એરો કી દબાવતાં કર્સર જ્યાં ખસે ત્યાં સુધીનું લખાણ પસંદ થાય છે."],
+[10,"કોમ્પ્યુટર કઈ સંખ્યા પદ્ધતિ (નંબર સિસ્ટમ) માં કામ કરે છે?",["ડેસિમલ","બાઇનરી (દ્વિ-અંકી)","રોમન","ઓક્ટલ"],1,"બાઇનરી પદ્ધતિમાં ફક્ત બે અંક 0 અને 1 હોય છે, જે વીજળી બંધ/ચાલુ દર્શાવે છે."],
+[10,"બાઇનરી નંબર સિસ્ટમનો આધાર (Base) કેટલો છે?",["10","16","8","2"],3,"બાઇનરીમાં 2 અંક (0, 1) હોવાથી આધાર 2 છે."],
+[10,"ઓક્ટલ નંબર સિસ્ટમનો આધાર કેટલો છે?",["10","8","16","2"],1,"ઓક્ટલમાં 0 થી 7 એમ 8 અંક હોય છે."],
+[10,"હેક્સાડેસિમલ નંબર સિસ્ટમનો આધાર કેટલો છે?",["16","8","10","12"],0,"હેક્સાડેસિમલમાં 0–9 અને A–F એમ 16 અંક હોય છે."],
+[10,"હેક્સાડેસિમલમાં 'F' ની દશાંશ (ડેસિમલ) કિંમત કેટલી છે?",["14","16","10","15"],3,"A=10, B=11, C=12, D=13, E=14, F=15."],
+[10,"દશાંશ સંખ્યા 10 ને બાઇનરીમાં લખો.",["1010","1001","1100","0110"],0,"10 = 8 + 2 = 1×8 + 0×4 + 1×2 + 0×1 → 1010."],
+[10,"બાઇનરી સંખ્યા 1011 ની દશાંશ કિંમત કેટલી છે?",["13","9","11","10"],2,"1×8 + 0×4 + 1×2 + 1×1 = 8 + 2 + 1 = 11."],
+[10,"બાઇનરી સંખ્યા 1111 ની દશાંશ કિંમત કેટલી છે?",["16","14","7","15"],3,"8 + 4 + 2 + 1 = 15."],
+[10,"દશાંશ સંખ્યા 5 ની બાઇનરી કિંમત કઈ છે?",["101","111","110","100"],0,"5 = 4 + 1 → 101."],
+[10,"બાઇનરીમાં 1 + 1 = ?",["11","2","10","0"],2,"બાઇનરીમાં 2 નથી, તેથી 1+1 = 10 (એટલે 0 અને 1 કેરી)."],
+[10,"ASCII નું પૂરું નામ શું છે?",["American Standard Code for Internet Interchange","American System Code for Information Interface","American Standard Code for Information Interchange","Asian Standard Code for Information Interchange"],2,"ASCII માં દરેક અક્ષરને એક નંબર અપાય છે, જેમ કે A = 65."],
+[10,"ASCII કોડમાં કેપિટલ 'A' ની કિંમત કેટલી છે?",["65","97","32","48"],0,"A = 65, a = 97, 0 (અંક) = 48."],
+[10,"ગુજરાતી, હિન્દી સહિત વિશ્વની બધી ભાષાના અક્ષરો કોમ્પ્યુટરમાં દર્શાવવા કયું કોડિંગ વપરાય છે?",["BCD","EBCDIC","યુનિકોડ (Unicode)","ASCII"],2,"Unicode થી જ આપણે ગુજરાતી લખાણ મોબાઇલ-કોમ્પ્યુટરમાં લખી-વાંચી શકીએ છીએ."],
+[10,"PDF નું પૂરું નામ શું છે?",["Portable Document Format","Portable Data File","Public Data Format","Printed Document File"],0,"PDF Adobe કંપનીએ બનાવ્યું, તે દરેક ઉપકરણ પર એક સરખું દેખાય છે."],
+[10,"JPEG નું પૂરું નામ શું છે?",["Joint Picture Expert Graphics","Joint Photographic Experts Group","Java Photo Exchange Group","Joint Photo Editing Group"],1,"JPEG (.jpg) ફોટા માટેનું સૌથી પ્રચલિત ફોર્મેટ છે."],
+[10,"GIF નું પૂરું નામ શું છે?",["Graphics Internet File","General Image Format","Graphical Image File","Graphics Interchange Format"],3,"GIF માં નાનાં એનિમેશન (હલતાં ચિત્રો) બની શકે છે."],
+[10,"PNG નું પૂરું નામ શું છે?",["Portable Network Graphics","Photo Network Group","Picture Network Graphics","Portable New Graphics"],0,"PNG માં પારદર્શક પૃષ્ઠભૂમિ (Transparent background) રાખી શકાય છે."],
+[10,"MP3 કયા પ્રકારની ફાઇલ છે?",["ઓડિયો (ગીત)","લખાણ","વિડિયો","ચિત્ર"],0,"MP3 સંકુચિત (કમ્પ્રેસ્ડ) ઓડિયો ફોર્મેટ છે. MP4 વિડિયો માટે છે."],
+[10,"નીચેનામાંથી વિડિયો ફાઇલનું એક્સ્ટેન્શન કયું છે?",[".txt",".mp4",".jpg",".mp3"],1,".mp4, .avi, .mkv વિડિયો ફોર્મેટ છે."],
+[10,"Windows માં ચાલતા પ્રોગ્રામ (એપ્લિકેશન) ફાઇલનું એક્સ્ટેન્શન કયું હોય છે?",[".doc",".pdf",".exe",".jpg"],2,".exe = Executable, તેને ખોલતાં પ્રોગ્રામ ચાલુ થાય છે. અજાણી .exe ફાઇલથી સાવધ રહો."],
+[10,"IT નું પૂરું નામ શું છે?",["Indian Technology","Information Technology","Internet Technology","Integrated Terminal"],1,"Information Technology એટલે કોમ્પ્યુટર અને સંચાર દ્વારા માહિતીનું સંચાલન."],
+[10,"ICT નું પૂરું નામ શું છે?",["Information and Communication Technology","Internet and Computer Technology","Information Control Technology","Indian Computer Technology"],0,"ICT માં કોમ્પ્યુટર, ઇન્ટરનેટ, મોબાઇલ સહિતની સંચાર ટેક્નોલોજી આવે છે."],
+[10,"LED નું પૂરું નામ શું છે?",["Low Energy Device","Light Emitting Diode","Liquid Emitting Diode","Light Electronic Display"],1,"LED ઓછી વીજળી વાપરતો પ્રકાશ આપતો ડાયોડ છે, LED મોનિટરમાં બેકલાઇટ તરીકે વપરાય છે."],
+[10,"LCD નું પૂરું નામ શું છે?",["Light Crystal Display","Liquid Crystal Display","Liquid Computer Display","Low Cost Display"],1,"LCD પાતળા, હળવા અને ઓછી વીજળી વાપરતા મોનિટર છે."],
+[10,"WWW નું પૂરું નામ શું છે?",["World Web Wide","Wide World Web","World Wide Web","Web World Wide"],2,"WWW એ ઇન્ટરનેટ પરનાં વેબ પેજનો સમૂહ છે."],
+[10,"OS નું પૂરું નામ શું છે?",["Output System","Operating System","Open Software","Office Software"],1,"Operating System (જેમ કે Windows, Linux, Android) કોમ્પ્યુટરનું સંચાલન કરે છે."],
+[10,"GPS નું પૂરું નામ શું છે?",["General Positioning System","Global Positioning System","Ground Positioning Service","Global Power Supply"],1,"GPS ઉપગ્રહોની મદદથી સ્થાન જાણે છે. GSRTC ની બસના લાઇવ ટ્રેકિંગમાં પણ GPS વપરાય છે."],
+[10,"SIM નું પૂરું નામ શું છે?",["System Identity Module","Subscriber Identity Module","Subscriber Internet Mobile","Secure Identity Mobile"],1,"SIM કાર્ડ મોબાઇલ ગ્રાહકની ઓળખ રાખે છે."],
+[10,"AI નું પૂરું નામ શું છે?",["Automatic Information","Artificial Internet","Artificial Intelligence","Advanced Internet"],2,"AI એટલે કૃત્રિમ બુદ્ધિ, જેમાં મશીન માણસની જેમ શીખે અને નિર્ણય લે."],
+[10,"IoT નું પૂરું નામ શું છે?",["Internet of Things","Intranet of Things","Internet of Technology","Input Output Technology"],0,"IoT માં રોજિંદી વસ્તુઓ (પંખો, લાઇટ, વાહન) ઇન્ટરનેટથી જોડાયેલી હોય છે."]
+];
+</script>
+<script>
+(function(){
+"use strict";
+const Q=window.MCQ,TP=window.TOPICS,L=["A","B","C","D"],$=id=>document.getElementById(id);
+const KEY="gsrtc_computer_v1";
+let S={a:{},xp:0,best:0,mute:false,bm:{},sb:0,theme:""};
+try{Object.assign(S,JSON.parse(localStorage.getItem(KEY)||"{}"));}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}};
+let streak=0;
+$("totalQ").textContent=Q.length;
+
+/* theme */
+function applyTheme(){if(S.theme)document.documentElement.setAttribute("data-theme",S.theme);else document.documentElement.removeAttribute("data-theme");}
+$("theme").onclick=()=>{const dark=S.theme?S.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;S.theme=dark?"light":"dark";save();applyTheme();SFX.tap();};
+
+/* sound: soft digital beeps */
+let AC=null;
+function ac(){if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)();}catch(e){}}if(AC&&AC.state==="suspended")AC.resume();return AC;}
+function tone(f,t0,dur,type,vol){const a=ac();if(!a||S.mute)return;const o=a.createOscillator(),g=a.createGain(),t=a.currentTime+t0;o.type=type||"square";o.frequency.setValueAtTime(f,t);
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol||.12,t+.005);g.gain.exponentialRampToValueAtTime(.001,t+dur);o.connect(g);g.connect(a.destination);o.start(t);o.stop(t+dur+.05);}
+const SFX={tap:()=>tone(1200,0,.04,"square",.06),
+  ok:()=>{tone(880,0,.08);tone(1320,.08,.14);},
+  bad:()=>{tone(220,0,.16,"sawtooth",.1);tone(165,.16,.22,"sawtooth",.1);},
+  streak:()=>[660,880,1100,1320,1760].forEach((f,i)=>tone(f,i*.06,.1)),
+  win:()=>[523,659,784,1046,1318,1568].forEach((f,i)=>tone(f,i*.1,.18,"triangle",.18)),
+  next:()=>tone(700,0,.05,"sine",.08)};
+function vib(p){if(navigator.vibrate)try{navigator.vibrate(p);}catch(e){}}
+function setSnd(){$("snd").textContent=S.mute?"🔇":"🔊";}
+$("snd").onclick=()=>{S.mute=!S.mute;save();setSnd();SFX.tap();};
+
+/* confetti (squares like pixels) */
+const cv=$("confetti"),cx=cv.getContext("2d");let parts=[],raf=null;
+function confetti(n){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;cv.width=innerWidth;cv.height=innerHeight;const cols=["#0E9F8E","#7CF5D9","#F5A524","#3B82F6","#16A34A"];
+  for(let i=0;i<(n||100);i++)parts.push({x:innerWidth/2+(Math.random()-.5)*100,y:innerHeight*.3,vx:(Math.random()-.5)*11,vy:-Math.random()*11-4,s:Math.random()*5+4,c:cols[i%5],life:0});
+  if(!raf)loop();}
+function loop(){cx.clearRect(0,0,cv.width,cv.height);parts.forEach(p=>{p.vy+=.33;p.x+=p.vx;p.y+=p.vy;p.life++;cx.fillStyle=p.c;cx.fillRect(Math.round(p.x),Math.round(p.y),p.s,p.s);});
+  parts=parts.filter(p=>p.y<cv.height+20&&p.life<200);raf=parts.length?requestAnimationFrame(loop):(cx.clearRect(0,0,cv.width,cv.height),null);}
+
+/* stats + levels */
+const LV=[[0,"નવો યુઝર 🖱️"],[150,"કીબોર્ડ કિંગ ⌨️"],[400,"ફાઇલ મેનેજર 📁"],[800,"ઓફિસ એક્સપર્ટ 📊"],[1400,"નેટવર્ક નિષ્ણાત 🌐"],[2200,"કોમ્પ્યુટર માસ્ટર 💻"]];
+function stats(){
+  const ids=Object.keys(S.a).filter(k=>Q[k]&&S.a[k]>=0),ok=ids.filter(k=>S.a[k]===Q[k][3]).length,pct=ids.length?Math.round(ok*100/ids.length):0;
+  $("kDone").textContent=ids.length+"/"+Q.length;$("kOk").textContent=ok;$("kStreak").textContent=S.best;$("kXp").textContent=S.xp;$("kPct").textContent=pct+"%";
+  $("ringFg").style.strokeDashoffset=263.9*(1-pct/100);
+  let i=0;while(i+1<LV.length&&S.xp>=LV[i+1][0])i++;const nx=LV[i+1];
+  $("lvName").textContent=`Lv ${i+1} · ${LV[i][1]}`;$("lvBar").style.width=(nx?((S.xp-LV[i][0])*100/(nx[0]-LV[i][0])):100)+"%";
+  if(stats.lv!==undefined&&i>stats.lv)levelUp(i);stats.lv=i;}
+function levelUp(i){$("lvTitle").textContent=`લેવલ ${i+1} અનલૉક! 🎉`;$("lvText").textContent=`હવે તમે "${LV[i][1]}" છો. આમ જ આગળ વધો!`;$("lvup").classList.add("on");SFX.win();vib([60,40,60,40,120]);confetti(160);}
+$("lvOk").onclick=()=>{$("lvup").classList.remove("on");SFX.tap();};
+function toast(ok,rk){const t=$("toast");t.className="toast "+(ok?"ok":"no")+" on";
+  t.innerHTML=ok?`<span class="ti">✓</span><span><b>સાચો જવાબ!</b> · 🔥 ${streak} · ⚡ ${S.xp} XP</span>`:`<span class="ti">✗</span><span><b>ખોટો.</b> સાચો જવાબ: ${rk}</span>`;
+  clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove("on"),1900);}
+function floatXp(t){const x=document.createElement("div");x.className="xpf";x.textContent=t;document.body.appendChild(x);setTimeout(()=>x.remove(),900);}
+
+/* option order (shuffled each time; 'all of the above' type stays fixed) */
+const ORD={};
+function order(i){if(ORD[i])return ORD[i];const o=[0,1,2,3];
+  if(!Q[i][2].some(t=>/ઉપરના|એક પણ નહીં|બંને/.test(t))){for(let k=3;k>0;k--){const r=Math.floor(Math.random()*(k+1));[o[k],o[r]]=[o[r],o[k]];}}
+  return ORD[i]=o;}
+
+/* question card */
+function card(i,num,opts){
+  opts=opts||{};const q=Q[i],ord=order(i),d=document.createElement("div");d.className="qcard";
+  d.innerHTML=`<div class="qmeta"><span class="qno"></span><span style="display:flex;gap:6px;align-items:center"><span class="tag"></span><button class="bm${S.bm[i]?" on":""}" aria-label="સેવ કરો">⭐</button></span></div><p class="qt"></p><div class="opts"></div>`;
+  d.querySelector(".qno").textContent=num;d.querySelector(".tag").textContent=TP[q[0]];d.querySelector(".qt").textContent=q[1];
+  d.querySelector(".bm").onclick=e=>{const b=e.currentTarget;if(S.bm[i])delete S.bm[i];else S.bm[i]=1;b.classList.toggle("on",!!S.bm[i]);save();SFX.tap();};
+  const box=d.querySelector(".opts");
+  const btns=ord.map((oi,k)=>{const b=document.createElement("button");b.className="opt";b.innerHTML=`<span class="k">${L[k]}</span><span></span>`;b.lastChild.textContent=q[2][oi];b.dataset.oi=oi;box.appendChild(b);return b;});
+  const reveal=(ch,fresh)=>{
+    btns.forEach(b=>{b.disabled=true;const oi=+b.dataset.oi;if(oi===q[3])b.classList.add("right");else if(oi===ch)b.classList.add("wrong");});
+    const right=ch===q[3],rk=L[ord.indexOf(q[3])],e=document.createElement("div");e.className="exp"+(right?"":" no");
+    e.innerHTML=`<b>${right?"✅ સાચો જવાબ!":"❌ ખોટો. સાચો જવાબ: "+rk}</b>`;const s=document.createElement("span");s.textContent="💡 "+q[4];e.appendChild(s);d.appendChild(e);
+    if(fresh){toast(right,rk);if(opts.scroll)setTimeout(()=>e.scrollIntoView({behavior:"smooth",block:"nearest"}),80);}};
+  if(opts.show&&S.a[i]>=0)reveal(S.a[i],false);
+  else btns.forEach(b=>b.onclick=()=>{
+    const ch=+b.dataset.oi,right=ch===q[3];S.a[i]=ch;
+    if(right){streak++;const g=10+Math.min(streak-1,5)*2;S.xp+=g;if(streak>S.best)S.best=streak;
+      if(streak%5===0){SFX.streak();vib([30,40,30,40,90]);confetti(90);floatXp("🔥 "+streak+" સળંગ!");}else{SFX.ok();vib(30);floatXp("+"+g+" XP");}}
+    else{streak=0;SFX.bad();vib([90,50,90]);}
+    save();stats();reveal(ch,true);if(opts.onAnswer)opts.onAnswer(right);});
+  return d;}
+
+/* topic chips */
+function inT(k,t){return t===-1||Q[k][0]===t;}
+function makeChips(el,onPick){
+  [["બધા વિષય",-1]].concat(TP.map((t,i)=>[t,i])).forEach(([t,i])=>{const b=document.createElement("button");
+    b.textContent=t+` (${i===-1?Q.length:Q.filter(q=>q[0]===i).length})`;
+    b.onclick=()=>{SFX.tap();[...el.children].forEach(c=>c.classList.toggle("on",c===b));onPick(i);};if(i<0)b.classList.add("on");el.appendChild(b);});}
+
+/* quiz */
+let qTopic=-1,qCur=null;
+function nextQuiz(){
+  const pool=Q.map((q,i)=>i).filter(i=>inT(i,qTopic)),fresh=pool.filter(i=>!(S.a[i]>=0)),wrongs=pool.filter(i=>S.a[i]>=0&&S.a[i]!==Q[i][3]);
+  const src=fresh.length?fresh:(wrongs.length?wrongs:pool);let pick=src[Math.floor(Math.random()*src.length)];if(src.length>1&&pick===qCur)pick=src[(src.indexOf(pick)+1)%src.length];
+  qCur=pick;delete ORD[pick];const box=$("qBox");box.innerHTML="";
+  const head=document.createElement("div");head.className="info";
+  head.innerHTML=fresh.length?`બાકી: <b>${fresh.length}</b> / ${pool.length} · 🔥 સ્ટ્રીક <b class="st">${streak}</b>`:`🎉 આ વિભાગના બધા પ્રશ્નો થઈ ગયા! હવે ભૂલવાળા પ્રશ્નો ફરી આવશે. · 🔥 <b class="st">${streak}</b>`;
+  box.appendChild(head);
+  const nb=document.createElement("button");nb.className="btn hide";nb.textContent="આગળનો પ્રશ્ન →";
+  box.appendChild(card(pick,`#${pool.length-fresh.length+1}`,{scroll:true,onAnswer:()=>{nb.classList.remove("hide");head.querySelector(".st").textContent=streak;}}));
+  nb.onclick=()=>{SFX.next();nextQuiz();window.scrollTo({top:$("qChips").offsetTop-10,behavior:"smooth"});};box.appendChild(nb);}
+makeChips($("qChips"),i=>{qTopic=i;nextQuiz();});
+
+/* all questions */
+let aTopic=-1,aShown=0,aPool=[];
+makeChips($("aChips"),i=>{aTopic=i;buildAll();});
+(function(){const b=document.createElement("button");b.textContent="⭐ સેવ કરેલા";b.onclick=()=>{SFX.tap();[...$("aChips").children].forEach(c=>c.classList.toggle("on",c===b));aTopic=-2;buildAll();};$("aChips").insertBefore(b,$("aChips").children[1]);})();
+function buildAll(){const s=$("search").value.trim().toLowerCase();
+  aPool=Q.map((q,i)=>i).filter(i=>(aTopic===-2?!!S.bm[i]:(s||inT(i,aTopic)))&&(!s||(Q[i][1]+" "+Q[i][2].join(" ")+" "+Q[i][4]).toLowerCase().includes(s)));
+  $("aList").innerHTML="";aShown=0;moreAll();$("aInfo").textContent=aPool.length?`${aPool.length} પ્રશ્નો`:"";
+  if(!aPool.length)$("aList").innerHTML=aTopic===-2?'<div class="empty">હજી કોઈ પ્રશ્ન સેવ નથી કર્યો. અઘરા પ્રશ્ન પર ⭐ દબાવો.</div>':'<div class="empty">કોઈ પ્રશ્ન મળ્યો નહીં</div>';}
+function moreAll(){const end=Math.min(aPool.length,aShown+15);for(let k=aShown;k<end;k++)$("aList").appendChild(card(aPool[k],`#${k+1}`,{show:true}));aShown=end;$("aMore").classList.toggle("hide",aShown>=aPool.length);}
+$("aMore").onclick=()=>{SFX.tap();moreAll();};
+let stt;$("search").oninput=()=>{clearTimeout(stt);stt=setTimeout(buildAll,250);};
+
+/* mock test */
+let M=[],mi=0,mok=0,tEnd=0,tick=null;
+$("mGo").onclick=()=>{SFX.tap();
+  const ids=Q.map((q,i)=>i);for(let k=ids.length-1;k>0;k--){const r=Math.floor(Math.random()*(k+1));[ids[k],ids[r]]=[ids[r],ids[k]];}
+  M=ids.slice(0,25);mi=0;mok=0;tEnd=Date.now()+20*60*1000;
+  $("mStart").classList.add("hide");$("mEnd").classList.add("hide");$("mRun").classList.remove("hide");
+  clearInterval(tick);tick=setInterval(()=>{const s=Math.max(0,Math.round((tEnd-Date.now())/1000));
+    $("mTime").textContent=`⏱ ${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`;$("mTime").style.color=s<60?"var(--bad)":"";if(s<=0)endMock();},500);
+  showMock();};
+function showMock(){$("mPos").textContent=`${mi+1} / ${M.length}`;$("mBar").style.width=(mi/M.length*100)+"%";$("mScore").textContent="✅ "+mok;$("mNext").classList.add("hide");delete ORD[M[mi]];
+  const box=$("mQ");box.innerHTML="";
+  box.appendChild(card(M[mi],`પ્રશ્ન ${mi+1}`,{scroll:true,onAnswer:ok=>{if(ok)mok++;$("mScore").textContent="✅ "+mok;$("mNext").textContent=mi+1<M.length?"આગળ →":"પરિણામ જુઓ 🏁";$("mNext").classList.remove("hide");}}));}
+$("mNext").onclick=()=>{SFX.next();mi++;if(mi<M.length){showMock();window.scrollTo({top:0,behavior:"smooth"});}else endMock();};
+function endMock(){clearInterval(tick);$("mRun").classList.add("hide");const pct=Math.round(mok*100/M.length);
+  const msg=pct>=80?"🏆 શાનદાર! તમે પરીક્ષા માટે તૈયાર છો.":pct>=60?"👍 સારું! થોડી વધુ પ્રેક્ટિસ કરો.":"💪 હિંમત રાખો! ભૂલો ફરી વાંચો અને ફરી પ્રયત્ન કરો.";
+  const e=$("mEnd");e.classList.remove("hide");e.innerHTML=`<div class="panel"><div class="big">${mok}/${M.length}</div><p style="font-weight:700;color:var(--ink)">${pct}%</p><p>${msg}</p><button class="btn" id="mAgain">↻ નવી ટેસ્ટ</button></div>`;
+  $("mAgain").onclick=()=>$("mGo").click();if(pct>=60){SFX.win();confetti(150);}else SFX.next();}
+
+/* wrong answers */
+function buildWrong(){const ids=Object.keys(S.a).filter(k=>Q[k]&&S.a[k]>=0&&S.a[k]!==Q[k][3]).map(Number);
+  $("wInfo").textContent=ids.length?`${ids.length} પ્રશ્નોમાં ભૂલ થઈ છે. ફરી જવાબ આપો, સાચો જવાબ આપશો એટલે યાદીમાંથી નીકળી જશે.`:"";
+  const box=$("wList");box.innerHTML="";if(!ids.length){box.innerHTML='<div class="empty">🎉 હજી કોઈ ભૂલ નથી! ક્વિઝ કે મોક ટેસ્ટ આપો.</div>';return;}
+  ids.forEach((i,n)=>{delete ORD[i];box.appendChild(card(i,`ભૂલ ${n+1}`,{}));});}
+
+/* speed round */
+const SP={on:false,score:0,end:0,t:null,n:0,w:0};
+$("sGo").onclick=()=>{SFX.streak();SP.on=true;SP.score=0;SP.n=0;SP.w=0;SP.end=Date.now()+60000;$("sScore").textContent="⚡ 0";
+  $("sStart").classList.add("hide");$("sEnd").classList.add("hide");$("sRun").classList.remove("hide");
+  clearInterval(SP.t);SP.t=setInterval(()=>{const s=Math.max(0,(SP.end-Date.now())/1000);$("sTime").textContent="⏱ "+Math.ceil(s);$("sBar").style.width=(s/60*100)+"%";if(s<=10&&!SP.w){SP.w=1;tone(1000,0,.08);}if(s<=0)endSpeed();},200);nextSpeed();};
+function nextSpeed(){if(!SP.on)return;const i=Math.floor(Math.random()*Q.length);delete ORD[i];SP.n++;const box=$("sQ");box.innerHTML="";
+  box.appendChild(card(i,`⚡ ${SP.n}`,{onAnswer:ok=>{if(ok)SP.score++;$("sScore").textContent="⚡ "+SP.score;setTimeout(nextSpeed,ok?550:1400);}}));}
+function endSpeed(){if(!SP.on)return;SP.on=false;clearInterval(SP.t);$("sRun").classList.add("hide");const nb=SP.score>(S.sb||0);if(nb){S.sb=SP.score;save();}
+  const e=$("sEnd");e.classList.remove("hide");e.innerHTML=`<div class="panel"><div class="ico">${nb?"🏆":SP.score>=5?"🎉":"💪"}</div><div class="big">${SP.score}</div><p style="font-weight:700;color:var(--ink)">${nb?"નવો રેકોર્ડ! 🎊":"એક મિનિટમાં સાચા જવાબ"}</p><p>🏅 બેસ્ટ: ${S.sb||0}</p><button class="btn amb" id="sAgain">↻ ફરી રમો</button></div>`;
+  $("sAgain").onclick=()=>$("sGo").click();if(nb){SFX.win();confetti(140);}else SFX.next();}
+
+/* bottom nav */
+document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>{
+  SFX.tap();document.querySelectorAll(".nav button").forEach(x=>x.classList.toggle("on",x===b));const tab=b.dataset.tab;
+  ["quiz","speed","mock","all","wrong"].forEach(id=>$(id).classList.toggle("hide",id!==tab));
+  if(tab==="speed"&&!SP.on){$("sStart").classList.remove("hide");$("sEnd").classList.add("hide");$("sRun").classList.add("hide");$("sBest").textContent=S.sb||0;}
+  if(tab==="all")buildAll();if(tab==="wrong")buildWrong();if(tab==="quiz")nextQuiz();
+  if(tab==="mock"&&$("mRun").classList.contains("hide")){$("mStart").classList.remove("hide");$("mEnd").classList.add("hide");}
+  window.scrollTo({top:0,behavior:"smooth"});});
+$("reset").onclick=()=>{if(confirm("તમારા બધા જવાબ, XP અને સ્કોર ભૂંસાઈ જશે. ખાતરી છે?")){S.a={};S.xp=0;S.best=0;S.sb=0;streak=0;save();stats();nextQuiz();}};
+
+/* visit counter: Google Sheet + backup counter */
+(function(){
+  var URL="https://script.google.com/macros/s/AKfycbzq-NWMilN2-H003w-YM3MtRWFg2XIeBR0ynh68zqtlKoHac2uiY7JBilnPotXM2GAU/exec";
+  var PAGE="computer-mcq",key="vc_"+PAGE+"_"+new Date().toDateString(),first=true,shown=false;
+  try{first=!localStorage.getItem(key);}catch(e){}
+  function show(t,td){t=Number(t);if(!(t>0))return false;shown=true;$("vCount").textContent=t.toLocaleString("en-IN");
+    if(td!=null){$("vToday").textContent=Number(td).toLocaleString("en-IN");$("vTodayWrap").classList.remove("hide");}$("visits").classList.remove("hide");return true;}
+  function backup(){fetch("https://abacus.jasoncameron.dev/"+(first?"hit":"get")+"/ashish119055-gsrtc/computer-mcq").then(function(r){return r.json();}).then(function(j){if(!shown)show(j.value,null);}).catch(function(){});}
+  fetch(URL+"?page="+PAGE+"&n="+(first?1:0)).then(function(r){return r.text();}).then(function(txt){var d=null;try{d=JSON.parse(txt);}catch(e){}
+    if(!(d&&show(d.total,d.today)))backup();}).catch(backup).finally(function(){try{localStorage.setItem(key,"1");}catch(e){}});
+})();
+
+applyTheme();setSnd();stats();nextQuiz();
+})();
+</script>
+</body>
+</html>
